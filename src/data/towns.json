@@ -186,30 +186,32 @@
       "El Palmar (zona Vejer)"
     ],
     "gallerySeed": "vejer",
+    "nameCardPhoto": 4,
+    "nameCardZoom": 0.72,
     "gallery": [
       {
-        "es": "Callejones empedrados del casco histórico",
-        "en": "Cobbled lanes of the historic centre",
-        "de": "Gepflasterte Gassen der Altstadt",
-        "fr": "Ruelles pavées du centre historique"
+        "es": "Vejer iluminado al anochecer, con su iglesia y castillo sobre el pueblo",
+        "en": "Vejer lit up at dusk, with its church and castle above the village",
+        "de": "Vejer beleuchtet in der Abenddämmerung, mit Kirche und Burg über dem Ort",
+        "fr": "Vejer illuminé au crépuscule, avec son église et son château dominant le village"
       },
       {
-        "es": "Vistas al Atlántico desde el castillo",
-        "en": "Atlantic views from the castle",
-        "de": "Atlantikblick von der Burg aus",
-        "fr": "Vue sur l'Atlantique depuis le château"
+        "es": "La fuente de azulejos de la Plazuela, entre palmeras",
+        "en": "The tiled fountain of the Plazuela, among palm trees",
+        "de": "Der Kachelbrunnen der Plazuela zwischen Palmen",
+        "fr": "La fontaine en azulejos de la Plazuela, parmi les palmiers"
       },
       {
-        "es": "Terrazas y arte urbano en Vejer",
-        "en": "Terraces and street art in Vejer",
-        "de": "Terrassen und Straßenkunst in Vejer",
-        "fr": "Terrasses et art urbain à Vejer"
+        "es": "Vista aérea de Vejer sobre el cerro al atardecer",
+        "en": "Aerial view of Vejer on its hilltop at sunset",
+        "de": "Luftaufnahme von Vejer auf dem Hügel bei Sonnenuntergang",
+        "fr": "Vue aérienne de Vejer sur sa colline au coucher du soleil"
       },
       {
-        "es": "Puesta de sol sobre los tejados blancos",
-        "en": "Sunset over the white rooftops",
-        "de": "Sonnenuntergang über den weißen Dächern",
-        "fr": "Coucher de soleil sur les toits blancs"
+        "es": "El cartel de Vejer entre palmeras",
+        "en": "The Vejer sign among palm trees",
+        "de": "Das Vejer-Schild zwischen Palmen",
+        "fr": "Le panneau de Vejer parmi les palmiers"
       }
     ]
   },
