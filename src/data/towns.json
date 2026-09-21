@@ -82,28 +82,22 @@
     "gallerySeed": "chiclana",
     "gallery": [
       {
-        "es": "Playa de La Barrosa al mediodía",
-        "en": "La Barrosa beach at midday",
-        "de": "Strand La Barrosa am Mittag",
-        "fr": "La plage de La Barrosa à midi"
+        "es": "Fuente en una plaza del centro",
+        "en": "Fountain in a town centre square",
+        "de": "Brunnen auf einem Platz im Zentrum",
+        "fr": "Fontaine sur une place du centre"
       },
       {
-        "es": "Torre y castillo de Sancti Petri",
-        "en": "Sancti Petri tower and castle",
-        "de": "Turm und Burg von Sancti Petri",
-        "fr": "Tour et château de Sancti Petri"
+        "es": "Iglesia principal en el centro histórico",
+        "en": "The main church in the historic centre",
+        "de": "Die Hauptkirche im historischen Zentrum",
+        "fr": "L'église principale du centre historique"
       },
       {
-        "es": "Paseo marítimo de Novo Sancti Petri",
-        "en": "Novo Sancti Petri seafront promenade",
-        "de": "Strandpromenade von Novo Sancti Petri",
-        "fr": "Promenade en bord de mer de Novo Sancti Petri"
-      },
-      {
-        "es": "Pinares junto a la playa",
-        "en": "Pine groves next to the beach",
-        "de": "Pinienwälder am Strand",
-        "fr": "Pinèdes en bord de plage"
+        "es": "Paseo marítimo y playa",
+        "en": "Seafront promenade and beach",
+        "de": "Strandpromenade und Strand",
+        "fr": "Promenade en bord de mer et plage"
       }
     ]
   },
