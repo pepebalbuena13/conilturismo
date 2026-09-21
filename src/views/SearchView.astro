@@ -198,7 +198,7 @@ const searchData = BUSINESSES.map((b) => {
       if (town && b.townSlug !== town) return false;
       if (category && b.category !== category) return false;
       if (q) {
-        const haystack = normalize(`${b.name} ${b.description} ${b.zone} ${b.townName}`);
+        const haystack = normalize(`${b.name} ${b.description} ${b.zone} ${b.townName} ${b.categoryLabel}`);
         if (!haystack.includes(q)) return false;
       }
       return true;
@@ -218,7 +218,8 @@ const searchData = BUSINESSES.map((b) => {
   }
 
   const initial = new URLSearchParams(location.search);
-  if (initial.get("q")) qInput.value = initial.get("q");
+  const initialQuery = [initial.get("q"), initial.get("cat_q")].filter(Boolean).join(" ");
+  if (initialQuery) qInput.value = initialQuery;
   if (initial.get("town")) townSelect.value = initial.get("town");
   if (initial.get("cat")) categorySelect.value = initial.get("cat");
 

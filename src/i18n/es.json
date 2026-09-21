@@ -30,7 +30,8 @@
     "featuredTitle": "Destacados de la temporada",
     "featuredSubtitle": "Una selección de negocios que no te puedes perder.",
     "categoriesTitle": "Explora por categoría",
-    "exploreTown": "Explorar"
+    "exploreTown": "Explorar",
+    "heroImageAlt": "Faro de Trafalgar al atardecer, Costa de la Luz"
   },
   "categoryChips": {
     "all": "Todos"

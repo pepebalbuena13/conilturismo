@@ -30,7 +30,8 @@
     "featuredTitle": "Empfehlungen der Saison",
     "featuredSubtitle": "Eine Auswahl an Orten, die du nicht verpassen solltest.",
     "categoriesTitle": "Nach Kategorie entdecken",
-    "exploreTown": "Entdecken"
+    "exploreTown": "Entdecken",
+    "heroImageAlt": "Leuchtturm von Trafalgar bei Sonnenuntergang, Costa de la Luz"
   },
   "categoryChips": {
     "all": "Alle"

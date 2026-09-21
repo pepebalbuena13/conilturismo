@@ -1,7 +1,6 @@
 ---
 import type { Locale } from "../data/categories";
 import { t } from "../lib/i18n";
-import HeroIllustration from "./HeroIllustration.astro";
 import SearchBar from "./SearchBar.astro";
 
 interface Props {
@@ -12,8 +11,13 @@ const { locale } = Astro.props;
 ---
 
 <section class="relative flex min-h-[92svh] items-end overflow-hidden sm:min-h-screen">
-  <HeroIllustration class="absolute inset-0 h-full w-full" />
-  <div class="absolute inset-0 bg-gradient-to-t from-tinta/40 via-transparent to-transparent"></div>
+  <img
+    src="/images/home/cover.webp"
+    alt={t(locale, "home.heroImageAlt")}
+    class="absolute inset-0 h-full w-full object-cover"
+    fetchpriority="high"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-tinta/85 via-tinta/25 to-tinta/10"></div>
 
   <div class="relative mx-auto w-full max-w-5xl px-4 pb-14 pt-32 text-center sm:px-6 sm:pb-20 lg:px-8">
     <p class="fade-in text-sm font-semibold uppercase tracking-[0.3em] text-arena-soft/90">
@@ -26,7 +30,7 @@ const { locale } = Astro.props;
       {t(locale, "home.heroSubtitle")}
     </p>
 
-    <div class="mx-auto mt-8 max-w-xl fade-in">
+    <div class="mx-auto mt-8 max-w-3xl fade-in">
       <p class="mb-2 text-left text-sm font-medium text-arena-soft/90 sm:text-center">{t(locale, "home.searchLabel")}</p>
       <SearchBar locale={locale} />
     </div>

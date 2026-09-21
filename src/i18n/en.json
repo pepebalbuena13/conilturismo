@@ -30,7 +30,8 @@
     "featuredTitle": "Featured this season",
     "featuredSubtitle": "A curated selection of places you shouldn't miss.",
     "categoriesTitle": "Explore by category",
-    "exploreTown": "Explore"
+    "exploreTown": "Explore",
+    "heroImageAlt": "Trafalgar Lighthouse at sunset, Costa de la Luz"
   },
   "categoryChips": {
     "all": "All"

@@ -1,9 +1,9 @@
 ---
 import type { Locale } from "../data/categories";
-import { CATEGORIES } from "../data/categories";
-import { TOWNS } from "../lib/business";
+import { getCategoryById } from "../data/categories";
+import { TOWNS, BUSINESSES, getTown } from "../lib/business";
 import { t } from "../lib/i18n";
-import { searchPath } from "../lib/paths";
+import { searchPath, businessPath } from "../lib/paths";
 import Icon from "./Icon.astro";
 
 interface Props {
@@ -12,16 +12,28 @@ interface Props {
 }
 
 const { locale, class: className = "" } = Astro.props;
+
+const suggestData = BUSINESSES.map((b) => {
+  const town = getTown(b.townSlug)!;
+  const category = getCategoryById(b.category)!;
+  return {
+    name: b.name,
+    categoryLabel: category.labelSingular[locale],
+    townName: town.name.split(" / ")[0],
+    href: businessPath(locale, b.id),
+  };
+});
 ---
 
 <form
+  id="hero-search-form"
   method="get"
   action={searchPath(locale)}
   class={`flex w-full flex-col gap-2 rounded-2xl bg-arena-soft/95 p-2 shadow-lift sm:flex-row sm:items-center ${className}`}
   role="search"
 >
   <label for="hero-search" class="sr-only">{t(locale, "home.searchLabel")}</label>
-  <div class="flex flex-1 items-center gap-2 rounded-xl px-3 py-2.5">
+  <div class="flex flex-1 items-center gap-2 rounded-xl px-3 py-3">
     <Icon name="search" class="h-5 w-5 shrink-0 text-atlantico/60" />
     <input
       id="hero-search"
@@ -33,31 +45,42 @@ const { locale, class: className = "" } = Astro.props;
     />
   </div>
 
-  <div class="grid grid-cols-2 gap-2 sm:contents">
+  <div class="flex flex-col gap-2 sm:flex-row">
     <div class="relative">
       <label for="hero-town" class="sr-only">{t(locale, "search.townLabel")}</label>
       <select
         id="hero-town"
         name="town"
-        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white px-3 py-2.5 pr-8 text-sm text-tinta focus:border-atlantico focus:outline-none sm:w-40"
+        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-10 text-base text-tinta focus:border-atlantico focus:outline-none sm:w-60"
       >
         <option value="">{t(locale, "search.allTowns")}</option>
         {TOWNS.map((town) => <option value={town.slug}>{town.name.split(" / ")[0]}</option>)}
       </select>
-      <Icon name="chevron-right" class="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
+      <Icon name="chevron-right" class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
     </div>
 
     <div class="relative">
       <label for="hero-category" class="sr-only">{t(locale, "search.categoryLabel")}</label>
-      <select
-        id="hero-category"
-        name="cat"
-        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white px-3 py-2.5 pr-8 text-sm text-tinta focus:border-atlantico focus:outline-none sm:w-44"
-      >
-        <option value="">{t(locale, "search.allCategories")}</option>
-        {CATEGORIES.map((cat) => <option value={cat.id}>{cat.label[locale]}</option>)}
-      </select>
-      <Icon name="chevron-right" class="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
+      <div class="flex items-center gap-2 rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-3 sm:w-56">
+        <Icon name="search" class="h-4 w-4 shrink-0 text-atlantico/40" />
+        <input
+          id="hero-category"
+          type="text"
+          name="cat_q"
+          placeholder={t(locale, "search.categoryLabel")}
+          class="w-full bg-transparent text-base text-tinta placeholder:text-tinta/40 focus:outline-none"
+          autocomplete="off"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="hero-category-suggestions"
+          aria-autocomplete="list"
+        />
+      </div>
+      <ul
+        id="hero-category-suggestions"
+        role="listbox"
+        class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-20 hidden max-h-72 overflow-y-auto rounded-xl bg-white p-1.5 shadow-lift ring-1 ring-tinta/10 sm:w-80"
+      ></ul>
     </div>
   </div>
 
@@ -68,3 +91,72 @@ const { locale, class: className = "" } = Astro.props;
     {t(locale, "home.searchCta")}
   </button>
 </form>
+
+<script type="application/json" id="hero-suggest-data" set:html={JSON.stringify(suggestData)} />
+
+<script>
+  function normalize(str: string) {
+    return str.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
+
+  const dataEl = document.getElementById("hero-suggest-data");
+  const data: { name: string; categoryLabel: string; townName: string; href: string }[] = dataEl
+    ? JSON.parse(dataEl.textContent || "[]")
+    : [];
+
+  const input = document.getElementById("hero-category") as HTMLInputElement | null;
+  const list = document.getElementById("hero-category-suggestions");
+
+  function closeList() {
+    if (!list || !input) return;
+    list.classList.add("hidden");
+    list.innerHTML = "";
+    input.setAttribute("aria-expanded", "false");
+  }
+
+  function renderSuggestions(query: string) {
+    if (!list || !input) return;
+    const q = normalize(query.trim());
+    if (!q) {
+      closeList();
+      return;
+    }
+    const matches = data
+      .filter((b) => normalize(`${b.name} ${b.categoryLabel} ${b.townName}`).includes(q))
+      .slice(0, 7);
+
+    if (matches.length === 0) {
+      closeList();
+      return;
+    }
+
+    list.innerHTML = matches
+      .map(
+        (b) => `
+        <li role="option">
+          <a href="${b.href}" class="flex flex-col gap-0.5 rounded-lg px-3 py-2 hover:bg-arena">
+            <span class="text-sm font-semibold text-tinta">${b.name}</span>
+            <span class="text-xs text-tinta/60">${b.categoryLabel} · ${b.townName}</span>
+          </a>
+        </li>`
+      )
+      .join("");
+    list.classList.remove("hidden");
+    input.setAttribute("aria-expanded", "true");
+  }
+
+  input?.addEventListener("input", () => renderSuggestions(input.value));
+  input?.addEventListener("focus", () => {
+    if (input.value.trim()) renderSuggestions(input.value);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!list || !input) return;
+    const target = e.target as Node;
+    if (!list.contains(target) && target !== input) closeList();
+  });
+
+  input?.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeList();
+  });
+</script>

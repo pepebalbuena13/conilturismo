@@ -1,6 +1,6 @@
 import businessesData from "../data/businesses.json";
 import townsData from "../data/towns.json";
-import type { Locale } from "../data/categories";
+import { getCategoryById, type Locale } from "../data/categories";
 
 export type LocalizedText = Record<Locale, string>;
 
@@ -96,8 +96,9 @@ export function filterBusinesses(options: {
     if (category && b.category !== category) return false;
     if (q) {
       const town = getTown(b.townSlug);
+      const cat = getCategoryById(b.category);
       const haystack = normalizeSearchText(
-        [b.name, b.description[locale], b.zone[locale], town?.name ?? ""].join(" ")
+        [b.name, b.description[locale], b.zone[locale], town?.name ?? "", cat?.label[locale] ?? ""].join(" ")
       );
       if (!haystack.includes(q)) return false;
     }

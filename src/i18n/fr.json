@@ -30,7 +30,8 @@
     "featuredTitle": "Sélection de la saison",
     "featuredSubtitle": "Une sélection d'adresses à ne pas manquer.",
     "categoriesTitle": "Explorer par catégorie",
-    "exploreTown": "Explorer"
+    "exploreTown": "Explorer",
+    "heroImageAlt": "Phare de Trafalgar au coucher du soleil, Costa de la Luz"
   },
   "categoryChips": {
     "all": "Tous"
