@@ -23,6 +23,7 @@
       "Fuente del Gallo"
     ],
     "gallerySeed": "conil",
+    "nameCardPhoto": 5,
     "gallery": [
       {
         "es": "Terrazas bajo las palmeras en el casco antiguo",
@@ -80,6 +81,8 @@
       "Centro"
     ],
     "gallerySeed": "chiclana",
+    "nameCardPhoto": 4,
+    "nameCardPosition": "10% 40%",
     "gallery": [
       {
         "es": "Fuente en una plaza del centro",

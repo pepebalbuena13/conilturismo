@@ -12,6 +12,8 @@ interface Props {
 }
 
 const { town, locale } = Astro.props;
+const hasNameCard = Boolean(town.nameCardPhoto);
+const photoIndex = town.nameCardPhoto ?? 1;
 ---
 
 <a
@@ -20,18 +22,23 @@ const { town, locale } = Astro.props;
 >
   <div class="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
     <SmartImage
-      relPath={`${town.slug}/hero/1`}
+      relPath={`${town.slug}/hero/${photoIndex}`}
       seed={town.gallerySeed}
       label={town.name}
-      alt={town.gallery[0]?.[locale] ?? town.name}
+      alt={town.gallery[photoIndex - 1]?.[locale] ?? town.name}
       class="h-full w-full object-cover"
       showInitials={false}
+      objectPosition={town.nameCardPosition}
     />
   </div>
-  <div class="absolute inset-0 bg-gradient-to-t from-tinta/85 via-tinta/20 to-transparent"></div>
+  <div class={`absolute inset-0 bg-gradient-to-t ${hasNameCard ? "from-tinta/55 via-transparent to-transparent" : "from-tinta/85 via-tinta/20 to-transparent"}`}></div>
   <div class="relative p-5 sm:p-6">
-    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-dorado-soft">{town.tagline[locale]}</p>
-    <h3 class="mt-1 font-display text-2xl font-semibold text-arena-soft text-balance">{town.name.split(" / ")[0]}</h3>
+    {!hasNameCard && (
+      <>
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-dorado-soft">{town.tagline[locale]}</p>
+        <h3 class="mt-1 font-display text-2xl font-semibold text-arena-soft text-balance">{town.name.split(" / ")[0]}</h3>
+      </>
+    )}
     <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-arena-soft/90">
       {t(locale, "home.exploreTown")}
       <Icon name="chevron-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
