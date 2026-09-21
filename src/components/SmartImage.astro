@@ -13,11 +13,12 @@ interface Props {
   label?: string;
   alt: string;
   class?: string;
+  style?: string;
   loading?: "lazy" | "eager";
   showInitials?: boolean;
 }
 
-const { relPath, seed, label, alt, class: className = "", loading = "lazy", showInitials = true } = Astro.props;
+const { relPath, seed, label, alt, class: className = "", style, loading = "lazy", showInitials = true } = Astro.props;
 
 const EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
 let foundUrl: string | null = null;
@@ -31,7 +32,7 @@ for (const ext of EXTENSIONS) {
 ---
 
 {foundUrl ? (
-  <img src={foundUrl} alt={alt} loading={loading} class={className} decoding="async" />
+  <img src={foundUrl} alt={alt} loading={loading} class={className} style={style} decoding="async" />
 ) : (
   <PlaceholderImage seed={seed} label={label} alt={alt} class={className} showInitials={showInitials} />
 )}

@@ -16,6 +16,7 @@ const hasNameCard = Boolean(town.nameCardPhoto);
 const photoIndex = town.nameCardPhoto ?? 1;
 const relPath = `${town.slug}/hero/${photoIndex}`;
 const photoAlt = town.gallery[photoIndex - 1]?.[locale] ?? town.name;
+const zoom = town.nameCardZoom ?? 1;
 ---
 
 <a
@@ -39,6 +40,7 @@ const photoAlt = town.gallery[photoIndex - 1]?.[locale] ?? town.name;
           label={town.name}
           alt={photoAlt}
           class="absolute inset-0 h-full w-full object-contain"
+          style={zoom !== 1 ? `transform: scale(${zoom});` : undefined}
           showInitials={false}
           loading="eager"
         />

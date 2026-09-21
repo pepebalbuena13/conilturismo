@@ -46,6 +46,8 @@ export interface Town {
   gallery: LocalizedText[];
   /** 1-based index into the hero photo folder for a photo that already shows the town's name (e.g. a welcome sign) — used as the home page card thumbnail without a text overlay. */
   nameCardPhoto?: number;
+  /** Extra zoom multiplier for the name-card photo, to compensate for signs that occupy a smaller fraction of their source frame than others so every card reads at a similar visual size. Defaults to 1. */
+  nameCardZoom?: number;
 }
 
 export const BUSINESSES = businessesData as Business[];
