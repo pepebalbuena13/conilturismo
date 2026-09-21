@@ -238,30 +238,32 @@
       "Centro"
     ],
     "gallerySeed": "zahara",
+    "nameCardPhoto": 3,
+    "nameCardZoom": 1.1,
     "gallery": [
       {
-        "es": "Playa de los Alemanes entre dunas",
-        "en": "Los Alemanes beach between dunes",
-        "de": "Strand Playa de los Alemanes zwischen Dünen",
-        "fr": "La plage de los Alemanes entre les dunes"
+        "es": "Vista aérea de Zahara entre la laguna y la playa",
+        "en": "Aerial view of Zahara between the lagoon and the beach",
+        "de": "Luftaufnahme von Zahara zwischen Lagune und Strand",
+        "fr": "Vue aérienne de Zahara entre la lagune et la plage"
       },
       {
-        "es": "Almadraba y tradición atunera",
-        "en": "Almadraba tuna trap tradition",
-        "de": "Almadraba und Thunfischtradition",
-        "fr": "Almadraba et tradition thonière"
+        "es": "Vista aérea de la playa junto a la Sierra de la Plata",
+        "en": "Aerial view of the beach next to the Sierra de la Plata",
+        "de": "Luftaufnahme des Strands neben der Sierra de la Plata",
+        "fr": "Vue aérienne de la plage près de la Sierra de la Plata"
       },
       {
-        "es": "Atlanterra al atardecer",
-        "en": "Atlanterra at sunset",
-        "de": "Atlanterra bei Sonnenuntergang",
-        "fr": "Atlanterra au coucher du soleil"
+        "es": "El cartel de Zahara a la entrada del pueblo",
+        "en": "The Zahara sign at the village entrance",
+        "de": "Das Zahara-Schild am Ortseingang",
+        "fr": "Le panneau de Zahara à l'entrée du village"
       },
       {
-        "es": "Calles marineras del centro de Zahara",
-        "en": "Seafaring streets of Zahara's centre",
-        "de": "Maritime Gassen im Zentrum von Zahara",
-        "fr": "Ruelles marines du centre de Zahara"
+        "es": "Terrazas al atardecer en el centro de Zahara",
+        "en": "Terraces at sunset in Zahara's centre",
+        "de": "Terrassen bei Sonnenuntergang im Zentrum von Zahara",
+        "fr": "Terrasses au coucher du soleil dans le centre de Zahara"
       }
     ]
   }
