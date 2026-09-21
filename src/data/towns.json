@@ -25,28 +25,34 @@
     "gallerySeed": "conil",
     "gallery": [
       {
-        "es": "Playa de Los Bateles al atardecer",
-        "en": "Los Bateles beach at sunset",
-        "de": "Strand Los Bateles bei Sonnenuntergang",
-        "fr": "La plage de Los Bateles au coucher du soleil"
+        "es": "Terrazas bajo las palmeras en el casco antiguo",
+        "en": "Terraces under the palm trees in the old town",
+        "de": "Terrassen unter Palmen in der Altstadt",
+        "fr": "Terrasses sous les palmiers dans la vieille ville"
       },
       {
-        "es": "Calles blancas del casco antiguo de Conil",
-        "en": "Whitewashed streets of Conil's old town",
-        "de": "Weiße Gassen der Altstadt von Conil",
-        "fr": "Ruelles blanches de la vieille ville de Conil"
+        "es": "Tejados blancos del casco antiguo entre palmeras",
+        "en": "White rooftops of the old town among palm trees",
+        "de": "Weiße Dächer der Altstadt zwischen Palmen",
+        "fr": "Toits blancs de la vieille ville parmi les palmiers"
       },
       {
-        "es": "El Palmar, playa infinita para el surf",
-        "en": "El Palmar, an endless beach for surfing",
-        "de": "El Palmar, ein endloser Strand zum Surfen",
-        "fr": "El Palmar, une plage infinie pour le surf"
+        "es": "Vista aérea de la playa y el paseo marítimo",
+        "en": "Aerial view of the beach and the seafront promenade",
+        "de": "Luftaufnahme von Strand und Strandpromenade",
+        "fr": "Vue aérienne de la plage et de la promenade en bord de mer"
       },
       {
-        "es": "Barcas de pesca en la Torre de Guzmán",
-        "en": "Fishing boats by the Guzmán Tower",
-        "de": "Fischerboote am Torre de Guzmán",
-        "fr": "Barques de pêcheurs près de la Torre de Guzmán"
+        "es": "El pueblo desde la playa al atardecer",
+        "en": "The village seen from the beach at sunset",
+        "de": "Der Ort vom Strand aus bei Sonnenuntergang",
+        "fr": "Le village vu depuis la plage au coucher du soleil"
+      },
+      {
+        "es": "El cartel de mosaico de Conil en el paseo",
+        "en": "Conil's mosaic sign on the promenade",
+        "de": "Das Mosaik-Schild von Conil auf der Promenade",
+        "fr": "Le panneau en mosaïque de Conil sur la promenade"
       }
     ]
   },
