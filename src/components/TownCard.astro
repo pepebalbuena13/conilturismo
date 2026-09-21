@@ -14,6 +14,8 @@ interface Props {
 const { town, locale } = Astro.props;
 const hasNameCard = Boolean(town.nameCardPhoto);
 const photoIndex = town.nameCardPhoto ?? 1;
+const relPath = `${town.slug}/hero/${photoIndex}`;
+const photoAlt = town.gallery[photoIndex - 1]?.[locale] ?? town.name;
 ---
 
 <a
@@ -21,15 +23,36 @@ const photoIndex = town.nameCardPhoto ?? 1;
   class="group relative flex aspect-[3/4] w-full flex-col justify-end overflow-hidden rounded-3xl shadow-card transition-transform duration-500 hover:-translate-y-1"
 >
   <div class="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
-    <SmartImage
-      relPath={`${town.slug}/hero/${photoIndex}`}
-      seed={town.gallerySeed}
-      label={town.name}
-      alt={town.gallery[photoIndex - 1]?.[locale] ?? town.name}
-      class="h-full w-full object-cover"
-      showInitials={false}
-      objectPosition={town.nameCardPosition}
-    />
+    {hasNameCard ? (
+      <>
+        <SmartImage
+          relPath={relPath}
+          seed={town.gallerySeed}
+          alt=""
+          class="h-full w-full scale-125 object-cover brightness-75 blur-2xl"
+          showInitials={false}
+          loading="eager"
+        />
+        <SmartImage
+          relPath={relPath}
+          seed={town.gallerySeed}
+          label={town.name}
+          alt={photoAlt}
+          class="absolute inset-0 h-full w-full object-contain"
+          showInitials={false}
+          loading="eager"
+        />
+      </>
+    ) : (
+      <SmartImage
+        relPath={relPath}
+        seed={town.gallerySeed}
+        label={town.name}
+        alt={photoAlt}
+        class="h-full w-full object-cover"
+        showInitials={false}
+      />
+    )}
   </div>
   <div class={`absolute inset-0 bg-gradient-to-t ${hasNameCard ? "from-tinta/55 via-transparent to-transparent" : "from-tinta/85 via-tinta/20 to-transparent"}`}></div>
   <div class="relative p-5 sm:p-6">
