@@ -133,30 +133,31 @@
       "Centro"
     ],
     "gallerySeed": "barbate",
+    "nameCardPhoto": 1,
     "gallery": [
       {
-        "es": "Acantilados del Parque Natural de La Breña",
-        "en": "Cliffs of La Breña Natural Park",
-        "de": "Klippen des Naturparks La Breña",
-        "fr": "Falaises du parc naturel de La Breña"
+        "es": "El cartel de Barbate en el paseo de la playa",
+        "en": "The Barbate sign on the beach promenade",
+        "de": "Das Barbate-Schild an der Strandpromenade",
+        "fr": "Le panneau de Barbate sur la promenade de la plage"
       },
       {
-        "es": "Puerto pesquero de Barbate al amanecer",
-        "en": "Barbate's fishing port at dawn",
-        "de": "Fischereihafen von Barbate bei Sonnenaufgang",
-        "fr": "Port de pêche de Barbate à l'aube"
+        "es": "Vista aérea del Faro de Trafalgar",
+        "en": "Aerial view of the Trafalgar lighthouse",
+        "de": "Luftaufnahme des Leuchtturms von Trafalgar",
+        "fr": "Vue aérienne du phare de Trafalgar"
       },
       {
-        "es": "Playa de Caños de Meca",
-        "en": "Caños de Meca beach",
-        "de": "Strand von Caños de Meca",
-        "fr": "Plage de Caños de Meca"
+        "es": "El Ayuntamiento de Barbate",
+        "en": "Barbate's town hall",
+        "de": "Das Rathaus von Barbate",
+        "fr": "L'hôtel de ville de Barbate"
       },
       {
-        "es": "Faro de Trafalgar desde la costa",
-        "en": "Trafalgar lighthouse from the coast",
-        "de": "Leuchtturm von Trafalgar von der Küste aus",
-        "fr": "Le phare de Trafalgar depuis la côte"
+        "es": "El mercado de abastos",
+        "en": "The indoor market",
+        "de": "Die Markthalle",
+        "fr": "Le marché couvert"
       }
     ]
   },
