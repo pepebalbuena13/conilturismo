@@ -24,6 +24,7 @@
     ],
     "gallerySeed": "conil",
     "nameCardPhoto": 5,
+    "nameCardZoom": 0.8,
     "gallery": [
       {
         "es": "Terrazas bajo las palmeras en el casco antiguo",
@@ -82,7 +83,7 @@
     ],
     "gallerySeed": "chiclana",
     "nameCardPhoto": 4,
-    "nameCardZoom": 1.1,
+    "nameCardZoom": 0.81,
     "gallery": [
       {
         "es": "Fuente en una plaza del centro",
@@ -135,7 +136,7 @@
     ],
     "gallerySeed": "barbate",
     "nameCardPhoto": 1,
-    "nameCardZoom": 1.25,
+    "nameCardZoom": 1.29,
     "gallery": [
       {
         "es": "El cartel de Barbate en el paseo de la playa",
@@ -187,7 +188,7 @@
     ],
     "gallerySeed": "vejer",
     "nameCardPhoto": 4,
-    "nameCardZoom": 0.72,
+    "nameCardZoom": 0.71,
     "gallery": [
       {
         "es": "Vejer iluminado al anochecer, con su iglesia y castillo sobre el pueblo",
@@ -239,7 +240,7 @@
     ],
     "gallerySeed": "zahara",
     "nameCardPhoto": 3,
-    "nameCardZoom": 1.1,
+    "nameCardZoom": 0.71,
     "gallery": [
       {
         "es": "Vista aérea de Zahara entre la laguna y la playa",
