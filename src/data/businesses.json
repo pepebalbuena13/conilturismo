@@ -2671,5 +2671,79 @@
         }
       }
     ]
+  },
+  {
+    "id": "discoteca-icaro-conil",
+    "townSlug": "conil-de-la-frontera",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Centro", "en": "Centre", "de": "Centro", "fr": "Centro" },
+    "name": "Discoteca Ícaro",
+    "description": {
+      "es": "Discoteca de dos plantas en pleno centro de Conil, con luces de neón, pista de baile y DJ en directo cada noche de verano. Dos ambientes musicales distintos según la planta, zona VIP y patio para fumadores.",
+      "en": "A two-floor nightclub right in the centre of Conil, with neon lights, a dance floor and live DJs every summer night. Two different music vibes depending on the floor, a VIP area and a smoking patio.",
+      "de": "Ein zweistöckiger Club mitten im Zentrum von Conil, mit Neonlichtern, Tanzfläche und Live-DJs an jedem Sommerabend. Zwei unterschiedliche Musikstile je nach Etage, VIP-Bereich und Raucherpatio.",
+      "fr": "Une discothèque sur deux étages en plein centre de Conil, avec néons, piste de danse et DJ en direct chaque soir d'été. Deux ambiances musicales différentes selon l'étage, espace VIP et patio fumeurs."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "featured": true,
+    "hours": {
+      "es": "Todos los días, 00:30–06:00 (temporada de verano)",
+      "en": "Daily, 12:30am–6am (summer season)",
+      "de": "Täglich, 00:30–06:00 Uhr (Sommersaison)",
+      "fr": "Tous les jours, 0h30–6h00 (saison d'été)"
+    },
+    "phone": "+34 635 29 31 98",
+    "website": "https://discotecaicaroconil.com/",
+    "instagram": "",
+    "address": {
+      "es": "Av. de Andalucía 2, Conil de la Frontera",
+      "en": "Av. de Andalucía 2, Conil de la Frontera",
+      "de": "Av. de Andalucía 2, Conil de la Frontera",
+      "fr": "Av. de Andalucía 2, Conil de la Frontera"
+    },
+    "lat": 36.2775,
+    "lng": -6.0895,
+    "photos": 3,
+    "reviews": []
+  },
+  {
+    "id": "discoteca-el-cortijo",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "El Palmar (zona Vejer)", "en": "El Palmar (Vejer area)", "de": "El Palmar (Vejer area)", "fr": "El Palmar (Vejer area)" },
+    "name": "Discoteca El Cortijo",
+    "description": {
+      "es": "Discoteca de verano al aire libre en pleno El Palmar, a un paso de la playa, con pista bajo las estrellas y el ambiente que reúne cada temporada a los veraneantes más jóvenes de la Costa de la Luz. Abre de junio a septiembre.",
+      "en": "An open-air summer nightclub right in El Palmar, steps from the beach, with a dance floor under the stars and the atmosphere that brings together the Costa de la Luz's younger summer crowd every season. Open June to September.",
+      "de": "Ein Open-Air-Sommerclub mitten in El Palmar, nur einen Steinwurf vom Strand entfernt, mit Tanzfläche unter freiem Himmel und der Atmosphäre, die jede Saison das jüngere Sommerpublikum der Costa de la Luz zusammenbringt. Geöffnet von Juni bis September.",
+      "fr": "Une discothèque d'été en plein air à El Palmar, à deux pas de la plage, avec une piste de danse à ciel ouvert et l'ambiance qui réunit chaque saison les jeunes vacanciers de la Costa de la Luz. Ouvert de juin à septembre."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 0,
+    "featured": true,
+    "hours": {
+      "es": "Ju–Sá 23:00–06:00 (junio a septiembre)",
+      "en": "Thu–Sat 11pm–6am (June to September)",
+      "de": "Do–Sa 23:00–06:00 Uhr (Juni bis September)",
+      "fr": "Jeu–Sam 23h00–6h00 (juin à septembre)"
+    },
+    "phone": "+34 645 41 77 79",
+    "website": "https://www.facebook.com/p/El-Cortijo-100068268853898/",
+    "instagram": "",
+    "address": {
+      "es": "A-2233, km 246, El Palmar, Vejer de la Frontera",
+      "en": "A-2233, km 246, El Palmar, Vejer de la Frontera",
+      "de": "A-2233, km 246, El Palmar, Vejer de la Frontera",
+      "fr": "A-2233, km 246, El Palmar, Vejer de la Frontera"
+    },
+    "lat": 36.223,
+    "lng": -6.121,
+    "photos": 3,
+    "reviews": []
   }
 ]
