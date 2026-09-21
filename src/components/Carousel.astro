@@ -8,7 +8,6 @@ interface Slide {
   relPath: string;
   seed: string;
   alt: string;
-  caption?: string;
   label?: string;
   showInitials?: boolean;
 }
@@ -19,9 +18,19 @@ interface Props {
   slides: Slide[];
   aspectClass?: string;
   roundedClass?: string;
+  autoplay?: boolean;
+  autoplayInterval?: number;
 }
 
-const { id, locale, slides, aspectClass = "aspect-[4/3]", roundedClass = "rounded-3xl" } = Astro.props;
+const {
+  id,
+  locale,
+  slides,
+  aspectClass = "aspect-[4/3]",
+  roundedClass = "rounded-3xl",
+  autoplay = false,
+  autoplayInterval = 5000,
+} = Astro.props;
 const total = slides.length;
 ---
 
@@ -45,11 +54,6 @@ const total = slides.length;
           loading={i === 0 ? "eager" : "lazy"}
           showInitials={slide.showInitials ?? true}
         />
-        {slide.caption && (
-          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-tinta/80 via-tinta/10 to-transparent p-5 pt-14">
-            <p class="font-display text-lg text-arena-soft text-balance">{slide.caption}</p>
-          </div>
-        )}
       </div>
     ))}
   </div>
@@ -89,13 +93,14 @@ const total = slides.length;
   )}
 </div>
 
-<script define:vars={{ id, total }}>
+<script define:vars={{ id, total, autoplay, autoplayInterval }}>
   const wrapper = document.querySelector(`[data-carousel-wrapper="${id}"]`);
   if (wrapper) {
     const track = wrapper.querySelector(`#${id}-track`);
     const dots = [...wrapper.querySelectorAll("[data-carousel-dot]")];
     const status = wrapper.querySelector("[data-carousel-status]");
     let current = 0;
+    let timer = null;
 
     function setActive(index) {
       current = index;
@@ -104,8 +109,8 @@ const total = slides.length;
     }
 
     function goTo(index) {
-      const clamped = Math.max(0, Math.min(total - 1, index));
-      const slide = track.querySelector(`[data-slide-index="${clamped}"]`);
+      const wrapped = ((index % total) + total) % total;
+      const slide = track.querySelector(`[data-slide-index="${wrapped}"]`);
       slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
     }
 
@@ -127,5 +132,27 @@ const total = slides.length;
 
     track.querySelectorAll("[data-slide-index]").forEach((slide) => observer.observe(slide));
     setActive(0);
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (autoplay && total > 1 && !reduceMotion) {
+      const start = () => {
+        stop();
+        timer = window.setInterval(() => goTo(current + 1), autoplayInterval);
+      };
+      const stop = () => {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      };
+
+      start();
+      wrapper.addEventListener("mouseenter", stop);
+      wrapper.addEventListener("mouseleave", start);
+      wrapper.addEventListener("focusin", stop);
+      wrapper.addEventListener("focusout", start);
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) stop();
+        else start();
+      });
+    }
   }
 </script>
