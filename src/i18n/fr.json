@@ -21,7 +21,7 @@
   "home": {
     "heroEyebrow": "Costa de la Luz, Cadix",
     "heroTitle": "Lumière atlantique, sable fin, vraie vie de village",
-    "heroSubtitle": "L'annuaire pour trouver un lit, une table, un verre et des idées de sorties dans les cinq villages de la Costa de la Luz.",
+    "heroSubtitle": "Le site de référence pour trouver les meilleurs hébergements, restaurants et bons plans pour organiser vos vacances dans les cinq villages de la Costa de la Luz.",
     "searchLabel": "Que cherchez-vous, et où ?",
     "searchPlaceholder": "Ex. restaurant à Conil, surf à El Palmar…",
     "searchCta": "Rechercher",
@@ -73,6 +73,7 @@
     "townLabel": "Village",
     "categoryLabel": "Catégorie",
     "queryLabel": "Mot-clé",
+    "whatLabel": "Que cherchez-vous ?",
     "allTowns": "Tous les villages",
     "allCategories": "Toutes les catégories",
     "resultsCount": "{count} résultats trouvés",

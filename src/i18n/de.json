@@ -21,7 +21,7 @@
   "home": {
     "heroEyebrow": "Costa de la Luz, Cádiz",
     "heroTitle": "Atlantisches Licht, feiner Sand, echtes Dorfleben",
-    "heroSubtitle": "Das Verzeichnis, um ein Bett, einen Tisch, einen Drink und Pläne in den fünf Orten der Costa de la Luz zu finden.",
+    "heroSubtitle": "Die Referenzseite, um die besten Unterkünfte, Restaurants und Pläne für deinen Urlaub in den fünf Orten der Costa de la Luz zu finden.",
     "searchLabel": "Wonach suchst du, und wo?",
     "searchPlaceholder": "z. B. Restaurant in Conil, Surfen in El Palmar…",
     "searchCta": "Suchen",
@@ -73,6 +73,7 @@
     "townLabel": "Ort",
     "categoryLabel": "Kategorie",
     "queryLabel": "Stichwort",
+    "whatLabel": "Wonach suchst du?",
     "allTowns": "Alle Orte",
     "allCategories": "Alle Kategorien",
     "resultsCount": "{count} Ergebnisse gefunden",

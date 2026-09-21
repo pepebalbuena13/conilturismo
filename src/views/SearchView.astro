@@ -218,8 +218,7 @@ const searchData = BUSINESSES.map((b) => {
   }
 
   const initial = new URLSearchParams(location.search);
-  const initialQuery = [initial.get("q"), initial.get("cat_q")].filter(Boolean).join(" ");
-  if (initialQuery) qInput.value = initialQuery;
+  if (initial.get("q")) qInput.value = initial.get("q");
   if (initial.get("town")) townSelect.value = initial.get("town");
   if (initial.get("cat")) categorySelect.value = initial.get("cat");
 

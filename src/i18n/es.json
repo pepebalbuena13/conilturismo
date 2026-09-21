@@ -21,7 +21,7 @@
   "home": {
     "heroEyebrow": "Costa de la Luz, Cádiz",
     "heroTitle": "Luz atlántica, arena fina y vida de pueblo",
-    "heroSubtitle": "El directorio para descubrir alojamiento, mesa, copas y planes en los cinco pueblos de la Costa de la Luz.",
+    "heroSubtitle": "La web de referencia para encontrar los mejores alojamientos, restaurantes y planes con los que organizar tus vacaciones en los cinco pueblos de la Costa de la Luz.",
     "searchLabel": "¿Qué buscas y en qué pueblo?",
     "searchPlaceholder": "Ej. restaurante en Conil, surf en El Palmar…",
     "searchCta": "Buscar",
@@ -73,6 +73,7 @@
     "townLabel": "Pueblo",
     "categoryLabel": "Categoría",
     "queryLabel": "Palabra clave",
+    "whatLabel": "¿Qué buscas?",
     "allTowns": "Todos los pueblos",
     "allCategories": "Todas las categorías",
     "resultsCount": "{count} resultados encontrados",

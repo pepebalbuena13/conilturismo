@@ -32,26 +32,13 @@ const suggestData = BUSINESSES.map((b) => {
   class={`flex w-full flex-col gap-2 rounded-2xl bg-arena-soft/95 p-2 shadow-lift sm:flex-row sm:items-center ${className}`}
   role="search"
 >
-  <label for="hero-search" class="sr-only">{t(locale, "home.searchLabel")}</label>
-  <div class="flex flex-1 items-center gap-2 rounded-xl px-3 py-3">
-    <Icon name="search" class="h-5 w-5 shrink-0 text-atlantico/60" />
-    <input
-      id="hero-search"
-      type="text"
-      name="q"
-      placeholder={t(locale, "home.searchPlaceholder")}
-      class="w-full bg-transparent text-base text-tinta placeholder:text-tinta/40 focus:outline-none"
-      autocomplete="off"
-    />
-  </div>
-
-  <div class="flex flex-col gap-2 sm:flex-row">
+  <div class="flex flex-1 flex-col gap-2 sm:flex-row">
     <div class="relative">
       <label for="hero-town" class="sr-only">{t(locale, "search.townLabel")}</label>
       <select
         id="hero-town"
         name="town"
-        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-10 text-base text-tinta focus:border-atlantico focus:outline-none sm:w-60"
+        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-10 text-base text-tinta focus:border-atlantico focus:outline-none sm:w-56"
       >
         <option value="">{t(locale, "search.allTowns")}</option>
         {TOWNS.map((town) => <option value={town.slug}>{town.name.split(" / ")[0]}</option>)}
@@ -59,27 +46,27 @@ const suggestData = BUSINESSES.map((b) => {
       <Icon name="chevron-right" class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
     </div>
 
-    <div class="relative">
-      <label for="hero-category" class="sr-only">{t(locale, "search.categoryLabel")}</label>
-      <div class="flex items-center gap-2 rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-3 sm:w-56">
+    <div class="relative flex-1">
+      <label for="hero-query" class="sr-only">{t(locale, "search.whatLabel")}</label>
+      <div class="flex items-center gap-2 rounded-xl border border-tinta/10 bg-white py-3 pl-4 pr-3">
         <Icon name="search" class="h-4 w-4 shrink-0 text-atlantico/40" />
         <input
-          id="hero-category"
+          id="hero-query"
           type="text"
-          name="cat_q"
-          placeholder={t(locale, "search.categoryLabel")}
+          name="q"
+          placeholder={t(locale, "search.whatLabel")}
           class="w-full bg-transparent text-base text-tinta placeholder:text-tinta/40 focus:outline-none"
           autocomplete="off"
           role="combobox"
           aria-expanded="false"
-          aria-controls="hero-category-suggestions"
+          aria-controls="hero-query-suggestions"
           aria-autocomplete="list"
         />
       </div>
       <ul
-        id="hero-category-suggestions"
+        id="hero-query-suggestions"
         role="listbox"
-        class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-20 hidden max-h-72 overflow-y-auto rounded-xl bg-white p-1.5 shadow-lift ring-1 ring-tinta/10 sm:w-80"
+        class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-20 hidden max-h-72 overflow-y-auto rounded-xl bg-white p-1.5 shadow-lift ring-1 ring-tinta/10"
       ></ul>
     </div>
   </div>
@@ -104,8 +91,8 @@ const suggestData = BUSINESSES.map((b) => {
     ? JSON.parse(dataEl.textContent || "[]")
     : [];
 
-  const input = document.getElementById("hero-category") as HTMLInputElement | null;
-  const list = document.getElementById("hero-category-suggestions");
+  const input = document.getElementById("hero-query") as HTMLInputElement | null;
+  const list = document.getElementById("hero-query-suggestions");
 
   function closeList() {
     if (!list || !input) return;
