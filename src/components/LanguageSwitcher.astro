@@ -1,14 +1,15 @@
 ---
-import type { Locale } from "../data/categories";
+import { LOCALES, type Locale } from "../data/categories";
+import { t } from "../lib/i18n";
 
 interface Props {
   locale: Locale;
-  altHref: string;
+  hrefs: Record<Locale, string>;
   class?: string;
   variant?: "light" | "dark";
 }
 
-const { locale, altHref, class: className = "", variant = "light" } = Astro.props;
+const { locale, hrefs, class: className = "", variant = "light" } = Astro.props;
 
 const containerClass =
   variant === "dark"
@@ -20,33 +21,19 @@ const inactiveClass =
   variant === "dark" ? "text-arena-soft/70 hover:text-arena-soft" : "text-atlantico/70 hover:text-atlantico";
 ---
 
-<div class={`inline-flex items-center gap-0.5 rounded-full border p-0.5 ${containerClass} ${className}`} role="group" aria-label="Language / Idioma">
-  <a
-    href="/"
-    data-locale="es"
-    aria-current={locale === "es" ? "page" : undefined}
-    class={`tap-target flex items-center justify-center rounded-full px-3 py-1.5 text-sm font-semibold transition-colors ${
-      locale === "es" ? activeClass : inactiveClass
-    }`}
-  >ES</a>
-  <a
-    href="/en/"
-    data-locale="en"
-    aria-current={locale === "en" ? "page" : undefined}
-    class={`tap-target flex items-center justify-center rounded-full px-3 py-1.5 text-sm font-semibold transition-colors ${
-      locale === "en" ? activeClass : inactiveClass
-    }`}
-  >EN</a>
+<div
+  class={`inline-flex items-center gap-0.5 rounded-full border p-0.5 ${containerClass} ${className}`}
+  role="group"
+  aria-label={t(locale, "lang.selectLabel")}
+>
+  {LOCALES.map((code) => (
+    <a
+      href={hrefs[code]}
+      aria-current={locale === code ? "page" : undefined}
+      title={t(locale, `lang.${code}`)}
+      class={`tap-target flex items-center justify-center rounded-full px-2.5 py-1.5 text-sm font-semibold uppercase transition-colors ${
+        locale === code ? activeClass : inactiveClass
+      }`}
+    >{code}</a>
+  ))}
 </div>
-
-<script define:vars={{ altHref, locale }}>
-  // Point both language links at the true equivalent of the current page
-  // (same town / category / business, just in the other locale) instead
-  // of always bouncing to each locale's homepage.
-  const group = document.currentScript?.previousElementSibling;
-  if (group) {
-    const other = locale === "es" ? "en" : "es";
-    const link = group.querySelector(`a[data-locale="${other}"]`);
-    if (link) link.setAttribute("href", altHref);
-  }
-</script>

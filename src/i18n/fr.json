@@ -1,0 +1,100 @@
+{
+  "site": {
+    "name": "Costa de la Luz Guide",
+    "description": "Annuaire des hébergements, restaurants, bars, discothèques et activités à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes."
+  },
+  "nav": {
+    "home": "Accueil",
+    "towns": "Villages",
+    "search": "Recherche",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "selectLabel": "Langue"
+  },
+  "home": {
+    "heroEyebrow": "Costa de la Luz, Cadix",
+    "heroTitle": "Lumière atlantique, sable fin, vraie vie de village",
+    "heroSubtitle": "L'annuaire pour trouver un lit, une table, un verre et des idées de sorties dans les cinq villages de la Costa de la Luz.",
+    "searchLabel": "Que cherchez-vous, et où ?",
+    "searchPlaceholder": "Ex. restaurant à Conil, surf à El Palmar…",
+    "searchCta": "Rechercher",
+    "townsTitle": "Choisissez votre village",
+    "townsSubtitle": "Cinq visages d'une même côte, chacun avec son propre rythme.",
+    "featuredTitle": "Sélection de la saison",
+    "featuredSubtitle": "Une sélection d'adresses à ne pas manquer.",
+    "categoriesTitle": "Explorer par catégorie",
+    "exploreTown": "Explorer"
+  },
+  "categoryChips": {
+    "all": "Tous"
+  },
+  "town": {
+    "backToTowns": "Tous les villages",
+    "resultsCount": "{count} résultats",
+    "noResults": "Aucune adresse ne correspond à ces filtres. Essayez une autre catégorie.",
+    "welcomeLabel": "Bienvenue"
+  },
+  "business": {
+    "featuredBadge": "Sélection",
+    "from": "À partir de",
+    "priceRange": "Prix",
+    "rating": "Note",
+    "reviews": "avis",
+    "review": "avis",
+    "hours": "Horaires",
+    "phone": "Téléphone",
+    "website": "Site web",
+    "social": "Réseaux sociaux",
+    "location": "Localisation",
+    "gallery": "Galerie",
+    "about": "Ambiance & style",
+    "reviewsTitle": "Avis des voyageurs",
+    "call": "Appeler",
+    "visitWebsite": "Visiter le site",
+    "viewOnMap": "Voir sur la carte",
+    "shareLabel": "Partager",
+    "backToTown": "Retour à",
+    "category": "Catégorie",
+    "zone": "Quartier",
+    "openInMaps": "Ouvrir la carte complète",
+    "noReviews": "Cette adresse n'a pas encore d'avis."
+  },
+  "search": {
+    "title": "Rechercher sur la Costa de la Luz",
+    "subtitle": "Combinez village, catégorie et texte libre pour trouver votre prochaine sortie.",
+    "townLabel": "Village",
+    "categoryLabel": "Catégorie",
+    "queryLabel": "Mot-clé",
+    "allTowns": "Tous les villages",
+    "allCategories": "Toutes les catégories",
+    "resultsCount": "{count} résultats trouvés",
+    "noResults": "Aucun résultat pour cette recherche. Essayez de modifier les filtres.",
+    "clearFilters": "Réinitialiser les filtres"
+  },
+  "carousel": {
+    "previous": "Photo précédente",
+    "next": "Photo suivante",
+    "goTo": "Aller à la photo {n}",
+    "photoOf": "Photo {n} sur {total}"
+  },
+  "footer": {
+    "tagline": "Un annuaire conçu avec soin par et pour la Costa de la Luz.",
+    "towns": "Villages",
+    "categories": "Catégories",
+    "about": "À propos de ce projet",
+    "aboutText": "Costa de la Luz Guide est un annuaire touristique local indépendant. Les données de ce site sont des exemples, prêts à être remplacés par de vraies adresses.",
+    "rights": "Tous droits réservés."
+  },
+  "priceLabels": {
+    "1": "€",
+    "2": "€€",
+    "3": "€€€"
+  }
+}

@@ -6,19 +6,48 @@
     "lng": -6.0928,
     "tagline": {
       "es": "Pueblo blanco, playas salvajes",
-      "en": "Whitewashed village, wild beaches"
+      "en": "Whitewashed village, wild beaches",
+      "de": "Weißes Dorf, wilde Strände",
+      "fr": "Village blanc, plages sauvages"
     },
     "welcome": {
       "es": "Pueblo blanco de pescadores con algunas de las playas más salvajes de Cádiz. Conil combina cocina de mar, surf y noches tranquilas frente al Atlántico.",
-      "en": "A whitewashed fishing village with some of Cádiz's wildest beaches. Conil blends seafood, surf culture and calm Atlantic nights."
+      "en": "A whitewashed fishing village with some of Cádiz's wildest beaches. Conil blends seafood, surf culture and calm Atlantic nights.",
+      "de": "Ein weißgetünchtes Fischerdorf mit einigen der wildesten Strände Cádiz'. Conil vereint Fischküche, Surfkultur und ruhige Nächte am Atlantik.",
+      "fr": "Un village de pêcheurs aux maisons blanches, doté de certaines des plages les plus sauvages de Cadix. Conil marie cuisine de la mer, surf et nuits paisibles face à l'Atlantique."
     },
-    "zones": ["Playa de los Bateles", "Casco Antiguo", "El Palmar", "Fuente del Gallo"],
+    "zones": [
+      "Playa de los Bateles",
+      "Casco Antiguo",
+      "El Palmar",
+      "Fuente del Gallo"
+    ],
     "gallerySeed": "conil",
     "gallery": [
-      { "es": "Playa de Los Bateles al atardecer", "en": "Los Bateles beach at sunset" },
-      { "es": "Calles blancas del casco antiguo de Conil", "en": "Whitewashed streets of Conil's old town" },
-      { "es": "El Palmar, playa infinita para el surf", "en": "El Palmar, an endless beach for surfing" },
-      { "es": "Barcas de pesca en la Torre de Guzmán", "en": "Fishing boats by the Guzmán Tower" }
+      {
+        "es": "Playa de Los Bateles al atardecer",
+        "en": "Los Bateles beach at sunset",
+        "de": "Strand Los Bateles bei Sonnenuntergang",
+        "fr": "La plage de Los Bateles au coucher du soleil"
+      },
+      {
+        "es": "Calles blancas del casco antiguo de Conil",
+        "en": "Whitewashed streets of Conil's old town",
+        "de": "Weiße Gassen der Altstadt von Conil",
+        "fr": "Ruelles blanches de la vieille ville de Conil"
+      },
+      {
+        "es": "El Palmar, playa infinita para el surf",
+        "en": "El Palmar, an endless beach for surfing",
+        "de": "El Palmar, ein endloser Strand zum Surfen",
+        "fr": "El Palmar, une plage infinie pour le surf"
+      },
+      {
+        "es": "Barcas de pesca en la Torre de Guzmán",
+        "en": "Fishing boats by the Guzmán Tower",
+        "de": "Fischerboote am Torre de Guzmán",
+        "fr": "Barques de pêcheurs près de la Torre de Guzmán"
+      }
     ]
   },
   {
@@ -28,19 +57,48 @@
     "lng": -6.1499,
     "tagline": {
       "es": "Resorts, golf y playas infinitas",
-      "en": "Resorts, golf and endless beaches"
+      "en": "Resorts, golf and endless beaches",
+      "de": "Resorts, Golf und endlose Strände",
+      "fr": "Resorts, golf et plages infinies"
     },
     "welcome": {
       "es": "Entre pinares y una de las playas más largas de la provincia, Chiclana y Novo Sancti Petri son sinónimo de resorts, golf y vida nocturna junto al mar.",
-      "en": "Between pine groves and one of the province's longest beaches, Chiclana and Novo Sancti Petri mean resorts, golf and seafront nightlife."
+      "en": "Between pine groves and one of the province's longest beaches, Chiclana and Novo Sancti Petri mean resorts, golf and seafront nightlife.",
+      "de": "Zwischen Pinienwäldern und einem der längsten Strände der Provinz stehen Chiclana und Novo Sancti Petri für Resorts, Golf und Nachtleben direkt am Meer.",
+      "fr": "Entre pinèdes et l'une des plus longues plages de la province, Chiclana et Novo Sancti Petri riment avec resorts, golf et vie nocturne au bord de la mer."
     },
-    "zones": ["Novo Sancti Petri", "La Barrosa", "Sancti Petri", "Centro"],
+    "zones": [
+      "Novo Sancti Petri",
+      "La Barrosa",
+      "Sancti Petri",
+      "Centro"
+    ],
     "gallerySeed": "chiclana",
     "gallery": [
-      { "es": "Playa de La Barrosa al mediodía", "en": "La Barrosa beach at midday" },
-      { "es": "Torre y castillo de Sancti Petri", "en": "Sancti Petri tower and castle" },
-      { "es": "Paseo marítimo de Novo Sancti Petri", "en": "Novo Sancti Petri seafront promenade" },
-      { "es": "Pinares junto a la playa", "en": "Pine groves next to the beach" }
+      {
+        "es": "Playa de La Barrosa al mediodía",
+        "en": "La Barrosa beach at midday",
+        "de": "Strand La Barrosa am Mittag",
+        "fr": "La plage de La Barrosa à midi"
+      },
+      {
+        "es": "Torre y castillo de Sancti Petri",
+        "en": "Sancti Petri tower and castle",
+        "de": "Turm und Burg von Sancti Petri",
+        "fr": "Tour et château de Sancti Petri"
+      },
+      {
+        "es": "Paseo marítimo de Novo Sancti Petri",
+        "en": "Novo Sancti Petri seafront promenade",
+        "de": "Strandpromenade von Novo Sancti Petri",
+        "fr": "Promenade en bord de mer de Novo Sancti Petri"
+      },
+      {
+        "es": "Pinares junto a la playa",
+        "en": "Pine groves next to the beach",
+        "de": "Pinienwälder am Strand",
+        "fr": "Pinèdes en bord de plage"
+      }
     ]
   },
   {
@@ -50,19 +108,48 @@
     "lng": -5.9207,
     "tagline": {
       "es": "Almadraba, acantilados y sabor auténtico",
-      "en": "Almadraba tuna, cliffs and raw flavour"
+      "en": "Almadraba tuna, cliffs and raw flavour",
+      "de": "Thunfischfang, Klippen und authentischer Geschmack",
+      "fr": "Almadraba, falaises et saveurs authentiques"
     },
     "welcome": {
       "es": "Capital del atún de almadraba y puerta al Parque Natural de La Breña. Barbate es sabor auténtico, acantilados y atardeceres sin filtro.",
-      "en": "Home of almadraba tuna and gateway to La Breña Natural Park. Barbate is raw flavour, cliffs and unfiltered sunsets."
+      "en": "Home of almadraba tuna and gateway to La Breña Natural Park. Barbate is raw flavour, cliffs and unfiltered sunsets.",
+      "de": "Hauptstadt des Almadraba-Thunfischs und Tor zum Naturpark La Breña. Barbate steht für authentischen Geschmack, Klippen und ungefilterte Sonnenuntergänge.",
+      "fr": "Capitale du thon de l'almadraba et porte d'entrée du parc naturel de La Breña. Barbate, c'est une saveur authentique, des falaises et des couchers de soleil sans filtre."
     },
-    "zones": ["Caños de Meca", "Zahora", "Puerto pesquero", "Centro"],
+    "zones": [
+      "Caños de Meca",
+      "Zahora",
+      "Puerto pesquero",
+      "Centro"
+    ],
     "gallerySeed": "barbate",
     "gallery": [
-      { "es": "Acantilados del Parque Natural de La Breña", "en": "Cliffs of La Breña Natural Park" },
-      { "es": "Puerto pesquero de Barbate al amanecer", "en": "Barbate's fishing port at dawn" },
-      { "es": "Playa de Caños de Meca", "en": "Caños de Meca beach" },
-      { "es": "Faro de Trafalgar desde la costa", "en": "Trafalgar lighthouse from the coast" }
+      {
+        "es": "Acantilados del Parque Natural de La Breña",
+        "en": "Cliffs of La Breña Natural Park",
+        "de": "Klippen des Naturparks La Breña",
+        "fr": "Falaises du parc naturel de La Breña"
+      },
+      {
+        "es": "Puerto pesquero de Barbate al amanecer",
+        "en": "Barbate's fishing port at dawn",
+        "de": "Fischereihafen von Barbate bei Sonnenaufgang",
+        "fr": "Port de pêche de Barbate à l'aube"
+      },
+      {
+        "es": "Playa de Caños de Meca",
+        "en": "Caños de Meca beach",
+        "de": "Strand von Caños de Meca",
+        "fr": "Plage de Caños de Meca"
+      },
+      {
+        "es": "Faro de Trafalgar desde la costa",
+        "en": "Trafalgar lighthouse from the coast",
+        "de": "Leuchtturm von Trafalgar von der Küste aus",
+        "fr": "Le phare de Trafalgar depuis la côte"
+      }
     ]
   },
   {
@@ -72,19 +159,47 @@
     "lng": -5.9649,
     "tagline": {
       "es": "El pueblo blanco sobre el Atlántico",
-      "en": "The white village above the Atlantic"
+      "en": "The white village above the Atlantic",
+      "de": "Das weiße Dorf über dem Atlantik",
+      "fr": "Le village blanc au-dessus de l'Atlantique"
     },
     "welcome": {
       "es": "Uno de los pueblos blancos más bellos de España, encaramado sobre un cerro con vistas al Atlántico. Vejer es arte, gastronomía de autor y calma andalusí.",
-      "en": "One of Spain's most beautiful white villages, perched on a hilltop with Atlantic views. Vejer means art, refined gastronomy and Andalusi calm."
+      "en": "One of Spain's most beautiful white villages, perched on a hilltop with Atlantic views. Vejer means art, refined gastronomy and Andalusi calm.",
+      "de": "Eines der schönsten weißen Dörfer Spaniens, hoch auf einem Hügel mit Blick auf den Atlantik. Vejer steht für Kunst, gehobene Gastronomie und andalusische Ruhe.",
+      "fr": "L'un des plus beaux villages blancs d'Espagne, perché sur une colline avec vue sur l'Atlantique. Vejer, c'est de l'art, une gastronomie raffinée et le calme andalou."
     },
-    "zones": ["Casco Histórico", "La Muela", "El Palmar (zona Vejer)"],
+    "zones": [
+      "Casco Histórico",
+      "La Muela",
+      "El Palmar (zona Vejer)"
+    ],
     "gallerySeed": "vejer",
     "gallery": [
-      { "es": "Callejones empedrados del casco histórico", "en": "Cobbled lanes of the historic centre" },
-      { "es": "Vistas al Atlántico desde el castillo", "en": "Atlantic views from the castle" },
-      { "es": "Terrazas y arte urbano en Vejer", "en": "Terraces and street art in Vejer" },
-      { "es": "Puesta de sol sobre los tejados blancos", "en": "Sunset over the white rooftops" }
+      {
+        "es": "Callejones empedrados del casco histórico",
+        "en": "Cobbled lanes of the historic centre",
+        "de": "Gepflasterte Gassen der Altstadt",
+        "fr": "Ruelles pavées du centre historique"
+      },
+      {
+        "es": "Vistas al Atlántico desde el castillo",
+        "en": "Atlantic views from the castle",
+        "de": "Atlantikblick von der Burg aus",
+        "fr": "Vue sur l'Atlantique depuis le château"
+      },
+      {
+        "es": "Terrazas y arte urbano en Vejer",
+        "en": "Terraces and street art in Vejer",
+        "de": "Terrassen und Straßenkunst in Vejer",
+        "fr": "Terrasses et art urbain à Vejer"
+      },
+      {
+        "es": "Puesta de sol sobre los tejados blancos",
+        "en": "Sunset over the white rooftops",
+        "de": "Sonnenuntergang über den weißen Dächern",
+        "fr": "Coucher de soleil sur les toits blancs"
+      }
     ]
   },
   {
@@ -94,19 +209,47 @@
     "lng": -5.8422,
     "tagline": {
       "es": "Cuna del atún rojo, playas vírgenes",
-      "en": "Birthplace of bluefin tuna, wild beaches"
+      "en": "Birthplace of bluefin tuna, wild beaches",
+      "de": "Wiege des Roten Thunfischs, unberührte Strände",
+      "fr": "Berceau du thon rouge, plages sauvages"
     },
     "welcome": {
       "es": "Pueblo marinero elegante y salvaje a partes iguales, cuna del atún rojo y de algunas de las playas vírgenes más fotografiadas de la Costa de la Luz.",
-      "en": "A fishing village equal parts elegant and wild, birthplace of bluefin tuna culture and some of the Costa de la Luz's most photographed wild beaches."
+      "en": "A fishing village equal parts elegant and wild, birthplace of bluefin tuna culture and some of the Costa de la Luz's most photographed wild beaches.",
+      "de": "Ein Fischerdorf, das ebenso elegant wie wild ist – die Wiege des Roten Thunfischs und einiger der meistfotografierten, unberührten Strände der Costa de la Luz.",
+      "fr": "Un village de pêcheurs à la fois élégant et sauvage, berceau du thon rouge et de certaines des plages vierges les plus photographiées de la Costa de la Luz."
     },
-    "zones": ["Playa de los Alemanes", "Atlanterra", "Centro"],
+    "zones": [
+      "Playa de los Alemanes",
+      "Atlanterra",
+      "Centro"
+    ],
     "gallerySeed": "zahara",
     "gallery": [
-      { "es": "Playa de los Alemanes entre dunas", "en": "Los Alemanes beach between dunes" },
-      { "es": "Almadraba y tradición atunera", "en": "Almadraba tuna trap tradition" },
-      { "es": "Atlanterra al atardecer", "en": "Atlanterra at sunset" },
-      { "es": "Calles marineras del centro de Zahara", "en": "Seafaring streets of Zahara's centre" }
+      {
+        "es": "Playa de los Alemanes entre dunas",
+        "en": "Los Alemanes beach between dunes",
+        "de": "Strand Playa de los Alemanes zwischen Dünen",
+        "fr": "La plage de los Alemanes entre les dunes"
+      },
+      {
+        "es": "Almadraba y tradición atunera",
+        "en": "Almadraba tuna trap tradition",
+        "de": "Almadraba und Thunfischtradition",
+        "fr": "Almadraba et tradition thonière"
+      },
+      {
+        "es": "Atlanterra al atardecer",
+        "en": "Atlanterra at sunset",
+        "de": "Atlanterra bei Sonnenuntergang",
+        "fr": "Atlanterra au coucher du soleil"
+      },
+      {
+        "es": "Calles marineras del centro de Zahara",
+        "en": "Seafaring streets of Zahara's centre",
+        "de": "Maritime Gassen im Zentrum von Zahara",
+        "fr": "Ruelles marines du centre de Zahara"
+      }
     ]
   }
 ]

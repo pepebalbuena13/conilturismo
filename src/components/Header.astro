@@ -8,11 +8,11 @@ import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 interface Props {
   locale: Locale;
-  altHref: string;
+  hrefs: Record<Locale, string>;
   currentTownSlug?: string;
 }
 
-const { locale, altHref, currentTownSlug } = Astro.props;
+const { locale, hrefs, currentTownSlug } = Astro.props;
 ---
 
 <header class="sticky top-0 z-50 border-b border-tinta/10 bg-arena/90 backdrop-blur-md">
@@ -46,7 +46,7 @@ const { locale, altHref, currentTownSlug } = Astro.props;
         <Icon name="search" class="h-4 w-4" />
         {t(locale, "nav.search")}
       </a>
-      <LanguageSwitcher locale={locale} altHref={altHref} />
+      <LanguageSwitcher locale={locale} hrefs={hrefs} />
     </div>
 
     <div class="flex items-center gap-2 lg:hidden">
@@ -100,7 +100,7 @@ const { locale, altHref, currentTownSlug } = Astro.props;
   </nav>
 
   <div class="mt-auto pt-8">
-    <LanguageSwitcher locale={locale} altHref={altHref} variant="dark" />
+    <LanguageSwitcher locale={locale} hrefs={hrefs} variant="dark" />
   </div>
 </div>
 

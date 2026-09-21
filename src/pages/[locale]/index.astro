@@ -1,0 +1,13 @@
+---
+import HomeView from "../../views/HomeView.astro";
+import type { Locale } from "../../data/categories";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.map((locale) => ({ params: { locale }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<HomeView locale={locale} />

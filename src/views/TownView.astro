@@ -1,40 +1,33 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Carousel from "../../../components/Carousel.astro";
-import CategoryChips from "../../../components/CategoryChips.astro";
-import BusinessGrid from "../../../components/BusinessGrid.astro";
-import Icon from "../../../components/Icon.astro";
-import { CATEGORIES, getCategoryById } from "../../../data/categories";
-import { TOWNS, getTown, filterBusinesses } from "../../../lib/business";
-import { t } from "../../../lib/i18n";
-import { townPath, homePath } from "../../../lib/paths";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Carousel from "../components/Carousel.astro";
+import CategoryChips from "../components/CategoryChips.astro";
+import BusinessGrid from "../components/BusinessGrid.astro";
+import Icon from "../components/Icon.astro";
+import { getCategoryById, type Locale } from "../data/categories";
+import { getTown, filterBusinesses } from "../lib/business";
+import { t } from "../lib/i18n";
+import { homePath, localizedTownHrefs } from "../lib/paths";
 
-const locale = "en" as const;
-
-export function getStaticPaths() {
-  return TOWNS.flatMap((town) => [
-    { params: { town: town.slug, category: undefined }, props: { townSlug: town.slug, categoryId: undefined } },
-    ...CATEGORIES.map((cat) => ({
-      params: { town: town.slug, category: cat.slug.en },
-      props: { townSlug: town.slug, categoryId: cat.id },
-    })),
-  ]);
+interface Props {
+  locale: Locale;
+  townSlug: string;
+  categoryId?: string;
 }
 
-const { townSlug, categoryId } = Astro.props as { townSlug: string; categoryId?: string };
+const { locale, townSlug, categoryId } = Astro.props;
 const town = getTown(townSlug)!;
 const category = categoryId ? getCategoryById(categoryId) : undefined;
 const businesses = filterBusinesses({ townSlug, category: categoryId, locale });
 
 const title = category
-  ? `${category.label[locale]} in ${town.name.split(" / ")[0]}`
+  ? `${category.label[locale]} — ${town.name.split(" / ")[0]}`
   : `${town.name.split(" / ")[0]} — ${t(locale, "site.name")}`;
 const description = category
-  ? `Recommended ${category.label[locale].toLowerCase()} in ${town.name}: ${town.welcome[locale]}`
+  ? `${category.label[locale]}: ${town.welcome[locale]}`
   : town.welcome[locale];
 
-const altHref = townPath("es", townSlug, category?.slug.es);
-const canonicalPath = townPath(locale, townSlug, category?.slug.en);
+const hrefs = localizedTownHrefs(townSlug, categoryId);
 
 const gallerySlides = town.gallery.map((caption, i) => ({
   relPath: `${town.slug}/hero/${i + 1}`,
@@ -50,8 +43,7 @@ const gallerySlides = town.gallery.map((caption, i) => ({
   locale={locale}
   title={title}
   description={description}
-  altHref={altHref}
-  canonicalPath={canonicalPath}
+  hrefs={hrefs}
   currentTownSlug={townSlug}
 >
   <div class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">

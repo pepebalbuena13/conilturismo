@@ -1,11 +1,16 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { CATEGORIES, getCategoryById } from "../../../data/categories";
-import { BUSINESSES, TOWNS, getTown, formatPrice } from "../../../lib/business";
-import { t } from "../../../lib/i18n";
-import { businessPath, searchPath } from "../../../lib/paths";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { CATEGORIES, getCategoryById, type Locale } from "../data/categories";
+import { BUSINESSES, TOWNS, getTown, formatPrice } from "../lib/business";
+import { t } from "../lib/i18n";
+import { businessPath, localizedSearchHrefs } from "../lib/paths";
 
-const locale = "en" as const;
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const hrefs = localizedSearchHrefs();
 
 const searchData = BUSINESSES.map((b) => {
   const town = getTown(b.townSlug)!;
@@ -33,8 +38,7 @@ const searchData = BUSINESSES.map((b) => {
   locale={locale}
   title={t(locale, "search.title")}
   description={t(locale, "search.subtitle")}
-  altHref={searchPath("es")}
-  canonicalPath={searchPath(locale)}
+  hrefs={hrefs}
 >
   <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
     <header class="max-w-2xl">
@@ -166,6 +170,28 @@ const searchData = BUSINESSES.map((b) => {
     };
   }
 
+  function cardHtml(b) {
+    return `
+      <a href="${b.href}" class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
+            <img src="/images/${b.townSlug}/${b.id}/1.jpg" alt="${b.name} — ${b.townName}" loading="lazy" class="h-full w-full object-cover" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'h-full w-full',innerHTML:placeholderSvg('${b.id}','${b.name.replace(/'/g, "\\'")}')}))" />
+          </div>
+          ${b.featured ? `<span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-dorado px-3 py-1 text-xs font-semibold text-tinta shadow-soft">${iconSvg("star", "h-3 w-3")}${labels.featured}</span>` : ""}
+          <span class="absolute right-3 top-3 rounded-full bg-tinta/70 px-2.5 py-1 text-xs font-semibold text-arena-soft backdrop-blur-sm">${b.priceLabel}</span>
+        </div>
+        <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+          <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-terracota">${iconSvg(b.categoryIcon, "h-3.5 w-3.5")}${b.categoryLabel}</div>
+          <h3 class="font-display text-lg font-semibold leading-snug text-tinta group-hover:text-atlantico">${b.name}</h3>
+          <p class="text-sm text-tinta/60">${b.zone} · ${b.townName}</p>
+          <div class="mt-auto flex items-center justify-between pt-2">
+            <span class="flex items-center gap-1 text-dorado">${starsSvg(b.rating)}<span class="ml-1 text-sm font-semibold text-tinta/80">${b.rating.toFixed(1)}</span></span>
+            <span class="text-xs text-tinta/50">${b.reviewCount} ${labels.reviews}</span>
+          </div>
+        </div>
+      </a>`;
+  }
+
   function render() {
     const { q, town, category } = currentFilters();
     const filtered = data.filter((b) => {
@@ -189,28 +215,6 @@ const searchData = BUSINESSES.map((b) => {
     if (category) params.set("cat", category);
     const newUrl = `${location.pathname}${params.toString() ? "?" + params.toString() : ""}`;
     history.replaceState(null, "", newUrl);
-  }
-
-  function cardHtml(b) {
-    return `
-      <a href="${b.href}" class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-        <div class="relative aspect-[4/3] overflow-hidden">
-          <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
-            <img src="/images/${b.townSlug}/${b.id}/1.jpg" alt="${b.name} — ${b.townName}" loading="lazy" class="h-full w-full object-cover" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'h-full w-full',innerHTML:placeholderSvg('${b.id}','${b.name.replace(/'/g, "\\'")}')}))" />
-          </div>
-          ${b.featured ? `<span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-dorado px-3 py-1 text-xs font-semibold text-tinta shadow-soft">${iconSvg("star", "h-3 w-3")}${labels.featured}</span>` : ""}
-          <span class="absolute right-3 top-3 rounded-full bg-tinta/70 px-2.5 py-1 text-xs font-semibold text-arena-soft backdrop-blur-sm">${b.priceLabel}</span>
-        </div>
-        <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
-          <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-terracota">${iconSvg(b.categoryIcon, "h-3.5 w-3.5")}${b.categoryLabel}</div>
-          <h3 class="font-display text-lg font-semibold leading-snug text-tinta group-hover:text-atlantico">${b.name}</h3>
-          <p class="text-sm text-tinta/60">${b.zone} · ${b.townName}</p>
-          <div class="mt-auto flex items-center justify-between pt-2">
-            <span class="flex items-center gap-1 text-dorado">${starsSvg(b.rating)}<span class="ml-1 text-sm font-semibold text-tinta/80">${b.rating.toFixed(1)}</span></span>
-            <span class="text-xs text-tinta/50">${b.reviewCount} ${labels.reviews}</span>
-          </div>
-        </div>
-      </a>`;
   }
 
   const initial = new URLSearchParams(location.search);

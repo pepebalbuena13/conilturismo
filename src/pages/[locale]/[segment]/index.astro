@@ -1,0 +1,17 @@
+---
+import SearchView from "../../../views/SearchView.astro";
+import type { Locale } from "../../../data/categories";
+import { SEARCH_SEGMENT } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.map((locale) => ({
+    params: { locale, segment: SEARCH_SEGMENT[locale] },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<SearchView locale={locale} />

@@ -1,0 +1,20 @@
+---
+import BusinessView from "../../../views/BusinessView.astro";
+import type { Locale } from "../../../data/categories";
+import { BUSINESSES } from "../../../lib/business";
+import { BUSINESS_SEGMENT } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.flatMap((locale) =>
+    BUSINESSES.map((b) => ({
+      params: { locale, segment: BUSINESS_SEGMENT[locale], slug: b.id },
+      props: { locale, slug: b.id },
+    }))
+  );
+}
+
+const { locale, slug } = Astro.props as { locale: Locale; slug: string };
+---
+
+<BusinessView locale={locale} slug={slug} />

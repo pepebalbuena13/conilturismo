@@ -1,0 +1,29 @@
+---
+import TownView from "../../../views/TownView.astro";
+import { CATEGORIES, type Locale } from "../../../data/categories";
+import { TOWNS } from "../../../lib/business";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.flatMap((locale) =>
+    TOWNS.flatMap((town) => [
+      {
+        params: { locale, town: town.slug, category: undefined },
+        props: { locale, townSlug: town.slug, categoryId: undefined },
+      },
+      ...CATEGORIES.map((cat) => ({
+        params: { locale, town: town.slug, category: cat.slug[locale] },
+        props: { locale, townSlug: town.slug, categoryId: cat.id },
+      })),
+    ])
+  );
+}
+
+const { locale, townSlug, categoryId } = Astro.props as {
+  locale: Locale;
+  townSlug: string;
+  categoryId?: string;
+};
+---
+
+<TownView locale={locale} townSlug={townSlug} categoryId={categoryId} />

@@ -1,5 +1,7 @@
 ---
 import type { Locale } from "../data/categories";
+import { CATEGORIES } from "../data/categories";
+import { TOWNS } from "../lib/business";
 import { t } from "../lib/i18n";
 import { searchPath } from "../lib/paths";
 import Icon from "./Icon.astro";
@@ -30,6 +32,35 @@ const { locale, class: className = "" } = Astro.props;
       autocomplete="off"
     />
   </div>
+
+  <div class="grid grid-cols-2 gap-2 sm:contents">
+    <div class="relative">
+      <label for="hero-town" class="sr-only">{t(locale, "search.townLabel")}</label>
+      <select
+        id="hero-town"
+        name="town"
+        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white px-3 py-2.5 pr-8 text-sm text-tinta focus:border-atlantico focus:outline-none sm:w-40"
+      >
+        <option value="">{t(locale, "search.allTowns")}</option>
+        {TOWNS.map((town) => <option value={town.slug}>{town.name.split(" / ")[0]}</option>)}
+      </select>
+      <Icon name="chevron-right" class="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
+    </div>
+
+    <div class="relative">
+      <label for="hero-category" class="sr-only">{t(locale, "search.categoryLabel")}</label>
+      <select
+        id="hero-category"
+        name="cat"
+        class="tap-target w-full appearance-none rounded-xl border border-tinta/10 bg-white px-3 py-2.5 pr-8 text-sm text-tinta focus:border-atlantico focus:outline-none sm:w-44"
+      >
+        <option value="">{t(locale, "search.allCategories")}</option>
+        {CATEGORIES.map((cat) => <option value={cat.id}>{cat.label[locale]}</option>)}
+      </select>
+      <Icon name="chevron-right" class="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 rotate-90 text-tinta/40" />
+    </div>
+  </div>
+
   <button
     type="submit"
     class="tap-target flex items-center justify-center gap-2 rounded-xl bg-terracota px-6 py-3 text-sm font-semibold text-arena-soft transition-colors hover:bg-terracota-light"

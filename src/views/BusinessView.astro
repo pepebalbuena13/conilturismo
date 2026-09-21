@@ -1,30 +1,28 @@
 ---
-import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Carousel from "../../../components/Carousel.astro";
-import RatingStars from "../../../components/RatingStars.astro";
-import ReviewsList from "../../../components/ReviewsList.astro";
-import MapEmbed from "../../../components/MapEmbed.astro";
-import Icon from "../../../components/Icon.astro";
-import { ACTIVITY_TAGS, getCategoryById } from "../../../data/categories";
-import { BUSINESSES, getBusiness, getTown, formatPrice } from "../../../lib/business";
-import { t } from "../../../lib/i18n";
-import { businessPath, townPath } from "../../../lib/paths";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Carousel from "../components/Carousel.astro";
+import RatingStars from "../components/RatingStars.astro";
+import ReviewsList from "../components/ReviewsList.astro";
+import MapEmbed from "../components/MapEmbed.astro";
+import Icon from "../components/Icon.astro";
+import { ACTIVITY_TAGS, getCategoryById, type Locale } from "../data/categories";
+import { getBusiness, getTown, formatPrice } from "../lib/business";
+import { t } from "../lib/i18n";
+import { townPath, localizedBusinessHrefs } from "../lib/paths";
 
-const locale = "en" as const;
-
-export function getStaticPaths() {
-  return BUSINESSES.map((b) => ({ params: { slug: b.id } }));
+interface Props {
+  locale: Locale;
+  slug: string;
 }
 
-const { slug } = Astro.params;
-const business = getBusiness(slug!)!;
+const { locale, slug } = Astro.props;
+const business = getBusiness(slug)!;
 const town = getTown(business.townSlug)!;
 const category = getCategoryById(business.category)!;
 
-const title = `${business.name} — ${category.labelSingular[locale]} in ${town.name.split(" / ")[0]}`;
+const title = `${business.name} — ${category.labelSingular[locale]}, ${town.name.split(" / ")[0]}`;
 const description = business.description[locale].slice(0, 155);
-const altHref = businessPath("es", business.id);
-const canonicalPath = businessPath(locale, business.id);
+const hrefs = localizedBusinessHrefs(business.id);
 
 const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
   relPath: `${business.townSlug}/${business.id}/${i + 1}`,
@@ -38,8 +36,7 @@ const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
   locale={locale}
   title={title}
   description={description}
-  altHref={altHref}
-  canonicalPath={canonicalPath}
+  hrefs={hrefs}
   currentTownSlug={business.townSlug}
 >
   <div class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">

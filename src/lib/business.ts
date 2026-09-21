@@ -2,10 +2,7 @@ import businessesData from "../data/businesses.json";
 import townsData from "../data/towns.json";
 import type { Locale } from "../data/categories";
 
-export interface LocalizedText {
-  es: string;
-  en: string;
-}
+export type LocalizedText = Record<Locale, string>;
 
 export interface Review {
   author: string;
@@ -81,7 +78,7 @@ export function sortBusinesses(businesses: Business[]): Business[] {
 export function normalizeSearchText(value: string): string {
   return value
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 }
 

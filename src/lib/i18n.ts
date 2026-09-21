@@ -1,10 +1,13 @@
 import es from "../i18n/es.json";
 import en from "../i18n/en.json";
+import de from "../i18n/de.json";
+import fr from "../i18n/fr.json";
 import type { Locale } from "../data/categories";
+import { LOCALES } from "../data/categories";
 
-const DICTS: Record<Locale, Record<string, unknown>> = { es, en };
+const DICTS: Record<Locale, Record<string, unknown>> = { es, en, de, fr };
 
-export const LOCALES: Locale[] = ["es", "en"];
+export { LOCALES };
 export const DEFAULT_LOCALE: Locale = "es";
 
 function getByPath(obj: Record<string, unknown>, path: string): unknown {
@@ -33,9 +36,11 @@ export function t(locale: Locale, key: string, vars?: Record<string, string | nu
 }
 
 export function localeFromUrl(pathname: string): Locale {
-  return pathname.startsWith("/en/") || pathname === "/en" ? "en" : "es";
-}
-
-export function otherLocale(locale: Locale): Locale {
-  return locale === "es" ? "en" : "es";
+  for (const locale of LOCALES) {
+    if (locale === DEFAULT_LOCALE) continue;
+    if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+      return locale;
+    }
+  }
+  return DEFAULT_LOCALE;
 }

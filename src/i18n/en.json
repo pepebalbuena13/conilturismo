@@ -14,7 +14,9 @@
   "lang": {
     "es": "Español",
     "en": "English",
-    "switchTo": "Ver en español"
+    "de": "Deutsch",
+    "fr": "Français",
+    "selectLabel": "Language"
   },
   "home": {
     "heroEyebrow": "Costa de la Luz, Cádiz",
