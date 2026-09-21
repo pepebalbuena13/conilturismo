@@ -1,7 +1,7 @@
 [
   {
     "slug": "conil-de-la-frontera",
-    "name": "Conil de la Frontera",
+    "name": "Conil",
     "lat": 36.2778,
     "lng": -6.0928,
     "tagline": {
@@ -52,7 +52,7 @@
   },
   {
     "slug": "chiclana-de-la-frontera",
-    "name": "Chiclana de la Frontera / Novo Sancti Petri",
+    "name": "Chiclana / Novo Sancti Petri",
     "lat": 36.4198,
     "lng": -6.1499,
     "tagline": {
@@ -154,7 +154,7 @@
   },
   {
     "slug": "vejer-de-la-frontera",
-    "name": "Vejer de la Frontera",
+    "name": "Vejer",
     "lat": 36.2517,
     "lng": -5.9649,
     "tagline": {
