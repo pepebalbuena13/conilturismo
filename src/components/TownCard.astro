@@ -16,7 +16,7 @@ const hasNameCard = Boolean(town.nameCardPhoto);
 const photoIndex = town.nameCardPhoto ?? 1;
 const relPath = `${town.slug}/hero/${photoIndex}`;
 const photoAlt = town.gallery[photoIndex - 1]?.[locale] ?? town.name;
-const zoom = town.nameCardZoom ?? 1;
+const focusY = town.nameCardFocusY ?? 50;
 ---
 
 <a
@@ -34,16 +34,20 @@ const zoom = town.nameCardZoom ?? 1;
           showInitials={false}
           loading="eager"
         />
-        <SmartImage
-          relPath={relPath}
-          seed={town.gallerySeed}
-          label={town.name}
-          alt={photoAlt}
-          class="absolute inset-0 h-full w-full object-contain"
-          style={zoom !== 1 ? `transform: scale(${zoom});` : undefined}
-          showInitials={false}
-          loading="eager"
-        />
+        <div class="absolute inset-0 flex items-center overflow-hidden">
+          <div class="h-[31%] w-full overflow-hidden">
+            <SmartImage
+              relPath={relPath}
+              seed={town.gallerySeed}
+              label={town.name}
+              alt={photoAlt}
+              class="h-full w-full object-cover"
+              style={focusY !== 50 ? `object-position: 50% ${focusY}%;` : undefined}
+              showInitials={false}
+              loading="eager"
+            />
+          </div>
+        </div>
       </>
     ) : (
       <SmartImage
