@@ -1,0 +1,58 @@
+---
+import type { Locale } from "../data/categories";
+
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+
+const { locale, class: className = "" } = Astro.props;
+---
+
+<svg
+  class={`block ${className}`}
+  viewBox="0 0 30 20"
+  role="img"
+  aria-hidden="true"
+>
+  <defs>
+    <clipPath id={`flag-clip-${locale}`}>
+      <rect width="30" height="20" rx="3" />
+    </clipPath>
+  </defs>
+  <g clip-path={`url(#flag-clip-${locale})`}>
+    {locale === "es" && (
+      <>
+        <rect width="30" height="20" fill="#AA151B" />
+        <rect y="5" width="30" height="10" fill="#F1BF00" />
+      </>
+    )}
+    {locale === "en" && (
+      <>
+        <rect width="30" height="20" fill="#00247D" />
+        <line x1="0" y1="0" x2="30" y2="20" stroke="#FFFFFF" stroke-width="4.4" />
+        <line x1="30" y1="0" x2="0" y2="20" stroke="#FFFFFF" stroke-width="4.4" />
+        <line x1="0" y1="0" x2="30" y2="20" stroke="#CF142B" stroke-width="1.6" />
+        <line x1="30" y1="0" x2="0" y2="20" stroke="#CF142B" stroke-width="1.6" />
+        <rect y="7.5" width="30" height="5" fill="#FFFFFF" />
+        <rect x="11.5" width="7" height="20" fill="#FFFFFF" />
+        <rect y="8.5" width="30" height="3" fill="#CF142B" />
+        <rect x="12.9" width="4.2" height="20" fill="#CF142B" />
+      </>
+    )}
+    {locale === "de" && (
+      <>
+        <rect width="30" height="20" fill="#FFCE00" />
+        <rect width="30" height="13.33" fill="#DD0000" />
+        <rect width="30" height="6.67" fill="#000000" />
+      </>
+    )}
+    {locale === "fr" && (
+      <>
+        <rect width="30" height="20" fill="#EF4135" />
+        <rect width="20" height="20" fill="#FFFFFF" />
+        <rect width="10" height="20" fill="#0055A4" />
+      </>
+    )}
+  </g>
+</svg>
