@@ -1,0 +1,22 @@
+---
+import { ratingStars } from "../lib/business";
+import Icon from "./Icon.astro";
+
+interface Props {
+  rating: number;
+  class?: string;
+  showValue?: boolean;
+}
+
+const { rating, class: className = "", showValue = true } = Astro.props;
+const { full, half, empty } = ratingStars(rating);
+---
+
+<div class={`inline-flex items-center gap-1 ${className}`} aria-label={`${rating.toFixed(1)} / 5`}>
+  <span class="flex items-center gap-0.5 text-dorado">
+    {Array.from({ length: full }).map(() => <Icon name="star" class="h-4 w-4" />)}
+    {half && <Icon name="star-half" class="h-4 w-4" />}
+    {Array.from({ length: empty }).map(() => <Icon name="star-empty" class="h-4 w-4 text-dorado/35" />)}
+  </span>
+  {showValue && <span class="text-sm font-semibold text-tinta/80">{rating.toFixed(1)}</span>}
+</div>

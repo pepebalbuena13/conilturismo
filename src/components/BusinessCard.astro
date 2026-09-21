@@ -1,0 +1,64 @@
+---
+import type { Locale } from "../data/categories";
+import { getCategoryById } from "../data/categories";
+import type { Business } from "../lib/business";
+import { getTown, formatPrice } from "../lib/business";
+import { t } from "../lib/i18n";
+import { businessPath } from "../lib/paths";
+import SmartImage from "./SmartImage.astro";
+import RatingStars from "./RatingStars.astro";
+import Icon from "./Icon.astro";
+
+interface Props {
+  business: Business;
+  locale: Locale;
+}
+
+const { business, locale } = Astro.props;
+const category = getCategoryById(business.category);
+const town = getTown(business.townSlug);
+---
+
+<a
+  href={businessPath(locale, business.id)}
+  class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
+>
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
+      <SmartImage
+        relPath={`${business.townSlug}/${business.id}/1`}
+        seed={business.id}
+        label={business.name}
+        alt={`${business.name} — ${town?.name ?? ""}`}
+        class="h-full w-full object-cover"
+      />
+    </div>
+    {business.featured && (
+      <span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-dorado px-3 py-1 text-xs font-semibold text-tinta shadow-soft">
+        <Icon name="star" class="h-3 w-3" />
+        {t(locale, "business.featuredBadge")}
+      </span>
+    )}
+    <span class="absolute right-3 top-3 rounded-full bg-tinta/70 px-2.5 py-1 text-xs font-semibold text-arena-soft backdrop-blur-sm">
+      {formatPrice(business.priceRange)}
+    </span>
+  </div>
+
+  <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+    <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-terracota">
+      {category && <Icon name={category.icon} class="h-3.5 w-3.5" />}
+      {category?.labelSingular[locale]}
+    </div>
+    <h3 class="font-display text-lg font-semibold leading-snug text-tinta text-balance group-hover:text-atlantico">
+      {business.name}
+    </h3>
+    <p class="flex items-center gap-1 text-sm text-tinta/60">
+      <Icon name="map-pin" class="h-3.5 w-3.5" />
+      {business.zone[locale]}
+    </p>
+    <div class="mt-auto flex items-center justify-between pt-2">
+      <RatingStars rating={business.rating} />
+      <span class="text-xs text-tinta/50">{business.reviewCount} {t(locale, "business.reviews")}</span>
+    </div>
+  </div>
+</a>

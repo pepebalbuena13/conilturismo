@@ -1,0 +1,44 @@
+---
+import type { Locale } from "../data/categories";
+import { CATEGORIES } from "../data/categories";
+import { t } from "../lib/i18n";
+import { townPath } from "../lib/paths";
+import Icon from "./Icon.astro";
+
+interface Props {
+  locale: Locale;
+  townSlug: string;
+  activeCategory?: string;
+}
+
+const { locale, townSlug, activeCategory } = Astro.props;
+---
+
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1" role="tablist" aria-label={t(locale, "home.categoriesTitle")}>
+  <a
+    href={townPath(locale, townSlug)}
+    role="tab"
+    aria-selected={!activeCategory}
+    class={`tap-target flex flex-none items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-medium transition-colors ${
+      !activeCategory
+        ? "border-atlantico bg-atlantico text-arena-soft"
+        : "border-tinta/15 bg-white/60 text-tinta/80 hover:border-atlantico hover:text-atlantico"
+    }`}
+  >{t(locale, "categoryChips.all")}</a>
+
+  {CATEGORIES.map((cat) => (
+    <a
+      href={townPath(locale, townSlug, cat.slug[locale])}
+      role="tab"
+      aria-selected={activeCategory === cat.id}
+      class={`tap-target flex flex-none items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-medium transition-colors ${
+        activeCategory === cat.id
+          ? "border-atlantico bg-atlantico text-arena-soft"
+          : "border-tinta/15 bg-white/60 text-tinta/80 hover:border-atlantico hover:text-atlantico"
+      }`}
+    >
+      <Icon name={cat.icon} class="h-4 w-4" />
+      {cat.label[locale]}
+    </a>
+  ))}
+</div>

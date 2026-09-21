@@ -1,0 +1,34 @@
+---
+import type { Locale } from "../data/categories";
+import { t } from "../lib/i18n";
+import HeroIllustration from "./HeroIllustration.astro";
+import SearchBar from "./SearchBar.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="relative flex min-h-[92svh] items-end overflow-hidden sm:min-h-screen">
+  <HeroIllustration class="absolute inset-0 h-full w-full" />
+  <div class="absolute inset-0 bg-gradient-to-t from-tinta/40 via-transparent to-transparent"></div>
+
+  <div class="relative mx-auto w-full max-w-5xl px-4 pb-14 pt-32 text-center sm:px-6 sm:pb-20 lg:px-8">
+    <p class="fade-in text-sm font-semibold uppercase tracking-[0.3em] text-arena-soft/90">
+      {t(locale, "home.heroEyebrow")}
+    </p>
+    <h1 class="fade-in mt-4 text-balance font-display text-4xl font-semibold leading-[1.05] text-arena-soft sm:text-5xl lg:text-6xl">
+      {t(locale, "home.heroTitle")}
+    </h1>
+    <p class="fade-in mx-auto mt-5 max-w-2xl text-balance text-base text-arena-soft/85 sm:text-lg">
+      {t(locale, "home.heroSubtitle")}
+    </p>
+
+    <div class="mx-auto mt-8 max-w-xl fade-in">
+      <p class="mb-2 text-left text-sm font-medium text-arena-soft/90 sm:text-center">{t(locale, "home.searchLabel")}</p>
+      <SearchBar locale={locale} />
+    </div>
+  </div>
+</section>

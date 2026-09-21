@@ -1,0 +1,98 @@
+{
+  "site": {
+    "name": "Costa de la Luz Guide",
+    "description": "Directorio de alojamiento, restaurantes, bares, discotecas y actividades en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes."
+  },
+  "nav": {
+    "home": "Inicio",
+    "towns": "Pueblos",
+    "search": "Buscar",
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "switchTo": "Ver en inglés"
+  },
+  "home": {
+    "heroEyebrow": "Costa de la Luz, Cádiz",
+    "heroTitle": "Luz atlántica, arena fina y vida de pueblo",
+    "heroSubtitle": "El directorio para descubrir alojamiento, mesa, copas y planes en los cinco pueblos de la Costa de la Luz.",
+    "searchLabel": "¿Qué buscas y en qué pueblo?",
+    "searchPlaceholder": "Ej. restaurante en Conil, surf en El Palmar…",
+    "searchCta": "Buscar",
+    "townsTitle": "Elige tu pueblo",
+    "townsSubtitle": "Cinco caras de la misma costa, cada una con su propio ritmo.",
+    "featuredTitle": "Destacados de la temporada",
+    "featuredSubtitle": "Una selección de negocios que no te puedes perder.",
+    "categoriesTitle": "Explora por categoría",
+    "exploreTown": "Explorar"
+  },
+  "categoryChips": {
+    "all": "Todos"
+  },
+  "town": {
+    "backToTowns": "Todos los pueblos",
+    "resultsCount": "{count} resultados",
+    "noResults": "No hemos encontrado negocios con esos filtros. Prueba con otra categoría.",
+    "welcomeLabel": "Bienvenida"
+  },
+  "business": {
+    "featuredBadge": "Destacado",
+    "from": "Desde",
+    "priceRange": "Precio",
+    "rating": "Valoración",
+    "reviews": "reseñas",
+    "review": "reseña",
+    "hours": "Horario",
+    "phone": "Teléfono",
+    "website": "Página web",
+    "social": "Redes sociales",
+    "location": "Ubicación",
+    "gallery": "Galería",
+    "about": "Ambiente y estilo",
+    "reviewsTitle": "Opiniones de viajeros",
+    "call": "Llamar",
+    "visitWebsite": "Visitar web",
+    "viewOnMap": "Ver en el mapa",
+    "shareLabel": "Compartir",
+    "backToTown": "Volver a",
+    "category": "Categoría",
+    "zone": "Zona",
+    "openInMaps": "Abrir mapa completo",
+    "noReviews": "Este negocio aún no tiene reseñas."
+  },
+  "search": {
+    "title": "Buscar en la Costa de la Luz",
+    "subtitle": "Combina pueblo, categoría y texto libre para encontrar tu próximo plan.",
+    "townLabel": "Pueblo",
+    "categoryLabel": "Categoría",
+    "queryLabel": "Palabra clave",
+    "allTowns": "Todos los pueblos",
+    "allCategories": "Todas las categorías",
+    "resultsCount": "{count} resultados encontrados",
+    "noResults": "No hay resultados para esta búsqueda. Prueba a cambiar los filtros.",
+    "clearFilters": "Limpiar filtros"
+  },
+  "carousel": {
+    "previous": "Foto anterior",
+    "next": "Foto siguiente",
+    "goTo": "Ir a la foto {n}",
+    "photoOf": "Foto {n} de {total}"
+  },
+  "footer": {
+    "tagline": "Un directorio hecho con cariño por y para la Costa de la Luz.",
+    "towns": "Pueblos",
+    "categories": "Categorías",
+    "about": "Sobre el proyecto",
+    "aboutText": "Costa de la Luz Guide es un directorio independiente de turismo local. Los datos de este sitio son de ejemplo y están listos para sustituirse por negocios reales.",
+    "rights": "Todos los derechos reservados."
+  },
+  "priceLabels": {
+    "1": "€",
+    "2": "€€",
+    "3": "€€€"
+  }
+}

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Costa de la Luz palette */
+  --color-arena: #f2e8d8;
+  --color-arena-soft: #f8f2e6;
+  --color-atlantico: #1b3a4b;
+  --color-atlantico-light: #2c5268;
+  --color-terracota: #b5542c;
+  --color-terracota-light: #cc7048;
+  --color-tinta: #2a2420;
+  --color-dorado: #dda24b;
+  --color-dorado-soft: #f0c98a;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 12px 32px -12px rgb(42 36 32 / 0.18);
+  --shadow-card: 0 8px 24px -10px rgb(42 36 32 / 0.16);
+  --shadow-lift: 0 20px 45px -18px rgb(27 58 75 / 0.35);
+
+  --radius-xl2: 1.75rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-arena);
+    color: var(--color-tinta);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-dorado);
+    color: var(--color-tinta);
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* visible focus ring for keyboard users, accessible on both light/dark cards */
+  :focus-visible {
+    outline: 3px solid var(--color-dorado);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

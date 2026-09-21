@@ -1,0 +1,26 @@
+---
+import type { Locale } from "../data/categories";
+import type { Business } from "../lib/business";
+import { t } from "../lib/i18n";
+import BusinessCard from "./BusinessCard.astro";
+
+interface Props {
+  businesses: Business[];
+  locale: Locale;
+  emptyMessageKey?: string;
+}
+
+const { businesses, locale, emptyMessageKey = "town.noResults" } = Astro.props;
+---
+
+{businesses.length > 0 ? (
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {businesses.map((business) => (
+      <BusinessCard business={business} locale={locale} />
+    ))}
+  </div>
+) : (
+  <p class="rounded-3xl border border-dashed border-tinta/20 bg-white/50 p-10 text-center text-tinta/60">
+    {t(locale, emptyMessageKey)}
+  </p>
+)}

@@ -1,0 +1,229 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { CATEGORIES, getCategoryById } from "../../../data/categories";
+import { BUSINESSES, TOWNS, getTown, formatPrice } from "../../../lib/business";
+import { t } from "../../../lib/i18n";
+import { businessPath, searchPath } from "../../../lib/paths";
+
+const locale = "en" as const;
+
+const searchData = BUSINESSES.map((b) => {
+  const town = getTown(b.townSlug)!;
+  const category = getCategoryById(b.category)!;
+  return {
+    id: b.id,
+    href: businessPath(locale, b.id),
+    name: b.name,
+    description: b.description[locale],
+    zone: b.zone[locale],
+    townSlug: b.townSlug,
+    townName: town.name.split(" / ")[0],
+    category: b.category,
+    categoryLabel: category.labelSingular[locale],
+    categoryIcon: category.icon,
+    priceLabel: formatPrice(b.priceRange),
+    rating: b.rating,
+    reviewCount: b.reviewCount,
+    featured: b.featured,
+  };
+});
+---
+
+<BaseLayout
+  locale={locale}
+  title={t(locale, "search.title")}
+  description={t(locale, "search.subtitle")}
+  altHref={searchPath("es")}
+  canonicalPath={searchPath(locale)}
+>
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <header class="max-w-2xl">
+      <h1 class="font-display text-4xl font-semibold text-atlantico">{t(locale, "search.title")}</h1>
+      <p class="mt-3 text-tinta/70">{t(locale, "search.subtitle")}</p>
+    </header>
+
+    <form id="search-form" class="mt-8 grid grid-cols-1 gap-3 rounded-3xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5 sm:grid-cols-4">
+      <div class="sm:col-span-2">
+        <label for="q" class="mb-1 block text-xs font-semibold uppercase tracking-wide text-tinta/50">{t(locale, "search.queryLabel")}</label>
+        <input id="q" name="q" type="text" class="tap-target w-full rounded-xl border border-tinta/15 bg-arena-soft px-3 py-2.5 text-sm focus:border-atlantico focus:outline-none" placeholder={t(locale, "home.searchPlaceholder")} />
+      </div>
+      <div>
+        <label for="town" class="mb-1 block text-xs font-semibold uppercase tracking-wide text-tinta/50">{t(locale, "search.townLabel")}</label>
+        <select id="town" name="town" class="tap-target w-full rounded-xl border border-tinta/15 bg-arena-soft px-3 py-2.5 text-sm focus:border-atlantico focus:outline-none">
+          <option value="">{t(locale, "search.allTowns")}</option>
+          {TOWNS.map((town) => <option value={town.slug}>{town.name}</option>)}
+        </select>
+      </div>
+      <div>
+        <label for="category" class="mb-1 block text-xs font-semibold uppercase tracking-wide text-tinta/50">{t(locale, "search.categoryLabel")}</label>
+        <select id="category" name="category" class="tap-target w-full rounded-xl border border-tinta/15 bg-arena-soft px-3 py-2.5 text-sm focus:border-atlantico focus:outline-none">
+          <option value="">{t(locale, "search.allCategories")}</option>
+          {CATEGORIES.map((cat) => <option value={cat.id}>{cat.label[locale]}</option>)}
+        </select>
+      </div>
+    </form>
+
+    <div class="mt-6 flex items-center justify-between">
+      <p class="text-sm font-medium text-tinta/60" id="results-count" role="status" aria-live="polite"></p>
+      <button id="clear-filters" type="button" class="text-sm font-medium text-terracota hover:text-terracota-light">{t(locale, "search.clearFilters")}</button>
+    </div>
+
+    <div id="results" class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <p id="no-results" class="mt-6 hidden rounded-3xl border border-dashed border-tinta/20 bg-white/50 p-10 text-center text-tinta/60">
+      {t(locale, "search.noResults")}
+    </p>
+  </div>
+</BaseLayout>
+
+<script type="application/json" id="search-data" set:html={JSON.stringify(searchData)} />
+
+<script define:vars={{
+  labels: {
+    reviews: t(locale, "business.reviews"),
+    featured: t(locale, "business.featuredBadge"),
+    resultsCount: t(locale, "search.resultsCount"),
+  },
+}}>
+  const data = JSON.parse(document.getElementById("search-data").textContent);
+  const form = document.getElementById("search-form");
+  const qInput = document.getElementById("q");
+  const townSelect = document.getElementById("town");
+  const categorySelect = document.getElementById("category");
+  const resultsEl = document.getElementById("results");
+  const noResultsEl = document.getElementById("no-results");
+  const countEl = document.getElementById("results-count");
+  const clearBtn = document.getElementById("clear-filters");
+
+  const ICONS = {
+    bed: '<path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7" /><path d="M3 18v2M21 18v2" /><path d="M3 13h18" /><path d="M7 13V9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v4" />',
+    fork: '<path d="M7 3v7a2 2 0 0 0 4 0V3" /><path d="M9 10v11" /><path d="M17 3c-1.5 1.5-1.5 6 0 8c0.6 0.6 1 1 1 2v8" />',
+    glass: '<path d="M6 3h12l-1.2 10.5a4.8 4.8 0 0 1-9.6 0L6 3Z" /><path d="M12 15.5V21M8 21h8" />',
+    music: '<path d="M9 18V5l11-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="17" cy="16" r="3" />',
+    compass: '<circle cx="12" cy="12" r="9" /><path d="M15 9l-2 6-6 2 2-6 6-2Z" />',
+  };
+
+  function iconSvg(name, cls) {
+    return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] ?? ""}</svg>`;
+  }
+
+  function starsSvg(rating) {
+    const full = Math.floor(rating);
+    const half = rating - full >= 0.5;
+    let out = "";
+    for (let i = 0; i < full; i++) out += '<svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6-5.9-3.4-5.9 3.4 1.3-6.6L2.5 9.4l6.6-.7L12 2.5Z"/></svg>';
+    if (half) out += '<svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" opacity="0.5"><path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.6 1.3 6.6-5.9-3.4-5.9 3.4 1.3-6.6L2.5 9.4l6.6-.7L12 2.5Z"/></svg>';
+    return out;
+  }
+
+  const PALETTES = [
+    { from: "#1B3A4B", to: "#2C5268", sun: "#DDA24B" },
+    { from: "#B5542C", to: "#DDA24B", sun: "#F2E8D8" },
+    { from: "#2A2420", to: "#1B3A4B", sun: "#CC7048" },
+    { from: "#0F2A38", to: "#B5542C", sun: "#F0C98A" },
+    { from: "#1B3A4B", to: "#B5542C", sun: "#DDA24B" },
+  ];
+
+  function hashSeed(seed) {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = (hash << 5) - hash + seed.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  function getInitials(name) {
+    const words = name.replace(/[^\p{L}\p{N}\s]/gu, "").trim().split(/\s+/).filter(Boolean);
+    if (words.length === 0) return "?";
+    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+
+  function placeholderSvg(seed, label) {
+    const p = PALETTES[hashSeed(seed) % PALETTES.length];
+    const initials = getInitials(label);
+    return `<svg class="h-full w-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${label}">
+      <defs><linearGradient id="g-${seed}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${p.from}"/><stop offset="100%" stop-color="${p.to}"/></linearGradient></defs>
+      <rect width="400" height="300" fill="url(#g-${seed})"/>
+      <circle cx="220" cy="90" r="34" fill="${p.sun}" opacity="0.9"/>
+      <path d="M0 200 Q 100 170 200 200 T 400 200 V300 H0 Z" fill="${p.to}" opacity="0.6"/>
+      <circle cx="200" cy="230" r="34" fill="${p.from}" opacity="0.55" stroke="#F2E8D8" stroke-width="2"/>
+      <text x="200" y="230" text-anchor="middle" dominant-baseline="central" font-family="Fraunces, serif" font-size="26" fill="#F2E8D8">${initials}</text>
+    </svg>`;
+  }
+
+  window.placeholderSvg = placeholderSvg;
+
+  function normalize(str) {
+    return str.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
+
+  function currentFilters() {
+    return {
+      q: normalize(qInput.value.trim()),
+      town: townSelect.value,
+      category: categorySelect.value,
+    };
+  }
+
+  function render() {
+    const { q, town, category } = currentFilters();
+    const filtered = data.filter((b) => {
+      if (town && b.townSlug !== town) return false;
+      if (category && b.category !== category) return false;
+      if (q) {
+        const haystack = normalize(`${b.name} ${b.description} ${b.zone} ${b.townName}`);
+        if (!haystack.includes(q)) return false;
+      }
+      return true;
+    });
+    filtered.sort((a, b) => (a.featured === b.featured ? b.rating - a.rating : a.featured ? -1 : 1));
+
+    resultsEl.innerHTML = filtered.map(cardHtml).join("");
+    noResultsEl.classList.toggle("hidden", filtered.length > 0);
+    countEl.textContent = labels.resultsCount.replace("{count}", String(filtered.length));
+
+    const params = new URLSearchParams();
+    if (q) params.set("q", q);
+    if (town) params.set("town", town);
+    if (category) params.set("cat", category);
+    const newUrl = `${location.pathname}${params.toString() ? "?" + params.toString() : ""}`;
+    history.replaceState(null, "", newUrl);
+  }
+
+  function cardHtml(b) {
+    return `
+      <a href="${b.href}" class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
+            <img src="/images/${b.townSlug}/${b.id}/1.jpg" alt="${b.name} — ${b.townName}" loading="lazy" class="h-full w-full object-cover" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'h-full w-full',innerHTML:placeholderSvg('${b.id}','${b.name.replace(/'/g, "\\'")}')}))" />
+          </div>
+          ${b.featured ? `<span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-dorado px-3 py-1 text-xs font-semibold text-tinta shadow-soft">${iconSvg("star", "h-3 w-3")}${labels.featured}</span>` : ""}
+          <span class="absolute right-3 top-3 rounded-full bg-tinta/70 px-2.5 py-1 text-xs font-semibold text-arena-soft backdrop-blur-sm">${b.priceLabel}</span>
+        </div>
+        <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+          <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-terracota">${iconSvg(b.categoryIcon, "h-3.5 w-3.5")}${b.categoryLabel}</div>
+          <h3 class="font-display text-lg font-semibold leading-snug text-tinta group-hover:text-atlantico">${b.name}</h3>
+          <p class="text-sm text-tinta/60">${b.zone} · ${b.townName}</p>
+          <div class="mt-auto flex items-center justify-between pt-2">
+            <span class="flex items-center gap-1 text-dorado">${starsSvg(b.rating)}<span class="ml-1 text-sm font-semibold text-tinta/80">${b.rating.toFixed(1)}</span></span>
+            <span class="text-xs text-tinta/50">${b.reviewCount} ${labels.reviews}</span>
+          </div>
+        </div>
+      </a>`;
+  }
+
+  const initial = new URLSearchParams(location.search);
+  if (initial.get("q")) qInput.value = initial.get("q");
+  if (initial.get("town")) townSelect.value = initial.get("town");
+  if (initial.get("cat")) categorySelect.value = initial.get("cat");
+
+  form.addEventListener("input", render);
+  form.addEventListener("submit", (e) => e.preventDefault());
+  clearBtn.addEventListener("click", () => {
+    form.reset();
+    render();
+  });
+
+  render();
+</script>

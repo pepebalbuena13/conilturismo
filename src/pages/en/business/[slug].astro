@@ -1,0 +1,149 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Carousel from "../../../components/Carousel.astro";
+import RatingStars from "../../../components/RatingStars.astro";
+import ReviewsList from "../../../components/ReviewsList.astro";
+import MapEmbed from "../../../components/MapEmbed.astro";
+import Icon from "../../../components/Icon.astro";
+import { ACTIVITY_TAGS, getCategoryById } from "../../../data/categories";
+import { BUSINESSES, getBusiness, getTown, formatPrice } from "../../../lib/business";
+import { t } from "../../../lib/i18n";
+import { businessPath, townPath } from "../../../lib/paths";
+
+const locale = "en" as const;
+
+export function getStaticPaths() {
+  return BUSINESSES.map((b) => ({ params: { slug: b.id } }));
+}
+
+const { slug } = Astro.params;
+const business = getBusiness(slug!)!;
+const town = getTown(business.townSlug)!;
+const category = getCategoryById(business.category)!;
+
+const title = `${business.name} — ${category.labelSingular[locale]} in ${town.name.split(" / ")[0]}`;
+const description = business.description[locale].slice(0, 155);
+const altHref = businessPath("es", business.id);
+const canonicalPath = businessPath(locale, business.id);
+
+const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
+  relPath: `${business.townSlug}/${business.id}/${i + 1}`,
+  seed: `${business.id}-${i}`,
+  label: business.name,
+  alt: `${business.name} — ${t(locale, "business.gallery")} ${i + 1}`,
+}));
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  altHref={altHref}
+  canonicalPath={canonicalPath}
+  currentTownSlug={business.townSlug}
+>
+  <div class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
+    <a href={townPath(locale, town.slug, category.slug[locale])} class="inline-flex items-center gap-1 text-sm font-medium text-atlantico/70 hover:text-atlantico">
+      <Icon name="chevron-left" class="h-4 w-4" />
+      {t(locale, "business.backToTown")} {town.name.split(" / ")[0]}
+    </a>
+
+    <header class="mt-4 flex flex-wrap items-start justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-terracota">
+          <Icon name={category.icon} class="h-4 w-4" />
+          {category.labelSingular[locale]}
+          {business.featured && (
+            <span class="ml-2 inline-flex items-center gap-1 rounded-full bg-dorado px-2.5 py-0.5 text-tinta">
+              <Icon name="star" class="h-3 w-3" />
+              {t(locale, "business.featuredBadge")}
+            </span>
+          )}
+        </div>
+        <h1 class="mt-2 font-display text-3xl font-semibold text-atlantico sm:text-4xl text-balance">{business.name}</h1>
+        <p class="mt-2 flex items-center gap-1.5 text-tinta/70">
+          <Icon name="map-pin" class="h-4 w-4" />
+          {business.zone[locale]}, {town.name}
+        </p>
+      </div>
+      <div class="flex flex-col items-end gap-1">
+        <RatingStars rating={business.rating} />
+        <span class="text-sm text-tinta/50">{business.reviewCount} {t(locale, "business.reviews")}</span>
+      </div>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <div class="order-2 lg:order-1">
+        <section>
+          <h2 class="font-display text-xl font-semibold text-atlantico">{t(locale, "business.about")}</h2>
+          <p class="mt-3 leading-relaxed text-tinta/80">{business.description[locale]}</p>
+
+          {business.tags.length > 0 && (
+            <div class="mt-4 flex flex-wrap gap-2">
+              {business.tags.map((tag) => (
+                <span class="rounded-full bg-terracota/10 px-3 py-1 text-xs font-semibold text-terracota">
+                  {ACTIVITY_TAGS[tag]?.[locale] ?? tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <dl class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
+            <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
+              <Icon name="clock" class="h-4 w-4" /> {t(locale, "business.hours")}
+            </dt>
+            <dd class="mt-1 font-medium text-tinta">{business.hours[locale]}</dd>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
+            <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
+              {t(locale, "business.priceRange")}
+            </dt>
+            <dd class="mt-1 font-medium text-tinta">{formatPrice(business.priceRange)}</dd>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
+            <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
+              <Icon name="phone" class="h-4 w-4" /> {t(locale, "business.phone")}
+            </dt>
+            <dd class="mt-1"><a href={`tel:${business.phone.replace(/\s+/g, "")}`} class="font-medium text-atlantico hover:text-terracota">{business.phone}</a></dd>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
+            <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
+              <Icon name="globe" class="h-4 w-4" /> {t(locale, "business.website")}
+            </dt>
+            <dd class="mt-1 truncate"><a href={business.website} target="_blank" rel="noopener noreferrer" class="font-medium text-atlantico hover:text-terracota">{t(locale, "business.visitWebsite")}</a></dd>
+          </div>
+        </dl>
+
+        {business.instagram && (
+          <a
+            href={`https://instagram.com/${business.instagram.replace("@", "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-atlantico hover:text-terracota"
+          >
+            <Icon name="instagram" class="h-4 w-4" />
+            {business.instagram}
+          </a>
+        )}
+
+        <div class="mt-8">
+          <h2 class="font-display text-xl font-semibold text-atlantico">{t(locale, "business.location")}</h2>
+          <div class="mt-3">
+            <MapEmbed lat={business.lat} lng={business.lng} label={business.name} locale={locale} />
+          </div>
+          <p class="mt-2 text-sm text-tinta/60">{business.address[locale]}</p>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <Carousel id={`biz-${business.id}`} locale={locale} slides={gallerySlides} aspectClass="aspect-square sm:aspect-[4/5]" />
+      </div>
+    </div>
+
+    <div class="mt-14 pb-20">
+      <ReviewsList reviews={business.reviews} locale={locale} />
+    </div>
+  </div>
+</BaseLayout>

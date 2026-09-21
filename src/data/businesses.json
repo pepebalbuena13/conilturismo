@@ -1,0 +1,1126 @@
+[
+  {
+    "id": "hotel-boutique-fontanilla",
+    "townSlug": "conil-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Playa de los Bateles", "en": "Los Bateles Beach" },
+    "name": "Hotel Boutique Fontanilla",
+    "description": {
+      "es": "Frente al mar en primera línea de Los Bateles, este hotel de habitaciones blancas y maderas claras respira Atlántico desde el desayuno hasta la última luz del día. Terraza con vistas, piscina de agua salada y un servicio cercano que recuerda tu nombre al segundo día.",
+      "en": "Right on Los Bateles seafront, this hotel of white rooms and pale wood breathes Atlantic air from breakfast to the last light of day. A view-filled terrace, a saltwater pool, and a warmth of service that remembers your name by day two."
+    },
+    "priceRange": 3,
+    "rating": 4.8,
+    "reviewCount": 214,
+    "featured": true,
+    "hours": { "es": "Recepción 24 horas", "en": "24-hour reception" },
+    "phone": "+34 956 440 112",
+    "website": "https://www.hotelfontanilla-conil.com",
+    "instagram": "@fontanilla.conil",
+    "address": { "es": "Av. de la Fontanilla 8, Conil de la Frontera", "en": "Av. de la Fontanilla 8, Conil de la Frontera" },
+    "lat": 36.2751,
+    "lng": -6.0952,
+    "photos": 5,
+    "reviews": [
+      { "author": "Marta G.", "rating": 5, "date": "2025-08-02", "text": { "es": "Las vistas desde la habitación valen cada euro. Desayuno con producto local espectacular.", "en": "The room views are worth every euro. The breakfast with local produce was outstanding." } },
+      { "author": "Tom H.", "rating": 5, "date": "2025-07-18", "text": { "es": "Trato exquisito y a dos minutos andando de la playa. Volveremos seguro.", "en": "Wonderful staff and a two-minute walk to the beach. We'll be back." } },
+      { "author": "Elena R.", "rating": 4, "date": "2025-06-25", "text": { "es": "Precioso y muy tranquilo, aunque en agosto conviene reservar con meses de antelación.", "en": "Beautiful and very peaceful, though in August you should book months ahead." } }
+    ]
+  },
+  {
+    "id": "hostal-casa-blanca-conil",
+    "townSlug": "conil-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Casco Antiguo", "en": "Old Town" },
+    "name": "Hostal Casa Blanca",
+    "description": {
+      "es": "Una casa encalada de toda la vida reconvertida en hostal familiar, con patio interior lleno de macetas y habitaciones sencillas que huelen a jazmín. La opción perfecta para quien busca dormir barato y despertar a cinco minutos del mercado y de la playa.",
+      "en": "A lifelong whitewashed house turned family-run guesthouse, with a plant-filled inner patio and simple rooms that smell of jasmine. The perfect base for travellers who want an affordable bed and a five-minute walk to the market and the beach."
+    },
+    "priceRange": 1,
+    "rating": 4.4,
+    "reviewCount": 96,
+    "featured": false,
+    "hours": { "es": "Recepción 08:00–22:00", "en": "Reception 8am–10pm" },
+    "phone": "+34 956 442 087",
+    "website": "https://www.casablanca-conil.es",
+    "instagram": "@casablanca.conil",
+    "address": { "es": "Calle Cádiz 14, Conil de la Frontera", "en": "Calle Cádiz 14, Conil de la Frontera" },
+    "lat": 36.2789,
+    "lng": -6.0899,
+    "photos": 4,
+    "reviews": [
+      { "author": "Sara P.", "rating": 4, "date": "2025-07-05", "text": { "es": "Muy limpio y los dueños encantadores, te dan mil consejos del pueblo.", "en": "Very clean and the owners are lovely, full of tips about the village." } },
+      { "author": "Jonas B.", "rating": 5, "date": "2025-05-14", "text": { "es": "Relación calidad-precio insuperable para dormir en el centro.", "en": "Unbeatable value for staying right in the centre." } }
+    ]
+  },
+  {
+    "id": "chiringuito-la-fontanilla",
+    "townSlug": "conil-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Playa de los Bateles", "en": "Los Bateles Beach" },
+    "name": "Chiringuito La Fontanilla",
+    "description": {
+      "es": "Con los pies casi en la arena, este chiringuito lleva tres generaciones sirviendo pescado frito y arroces caldosos mientras el sol cae sobre el Atlántico. Mesas de madera desgastada, servilletas que vuelan con la brisa y una tortillita de camarones que da nombre propio al lugar.",
+      "en": "With your feet almost in the sand, this beach shack has served fried fish and brothy rice dishes for three generations while the sun drops into the Atlantic. Weathered wooden tables, napkins fluttering in the breeze, and a shrimp fritter that made this place's name."
+    },
+    "priceRange": 2,
+    "rating": 4.7,
+    "reviewCount": 342,
+    "featured": true,
+    "hours": { "es": "Todos los días, 12:00–23:30", "en": "Daily, noon–11:30pm" },
+    "phone": "+34 956 440 233",
+    "website": "https://www.lafontanilla-conil.com",
+    "instagram": "@lafontanilla.conil",
+    "address": { "es": "Playa de la Fontanilla s/n, Conil de la Frontera", "en": "Playa de la Fontanilla s/n, Conil de la Frontera" },
+    "lat": 36.2760,
+    "lng": -6.0945,
+    "photos": 6,
+    "reviews": [
+      { "author": "Diego M.", "rating": 5, "date": "2025-08-10", "text": { "es": "La tortillita de camarones y la puesta de sol, combo perfecto.", "en": "Shrimp fritters and the sunset — the perfect combo." } },
+      { "author": "Claire V.", "rating": 4, "date": "2025-07-22", "text": { "es": "Muy concurrido en verano, pero el pescado merece la espera.", "en": "Very busy in summer, but the fish is worth the wait." } },
+      { "author": "Rafa S.", "rating": 5, "date": "2025-06-30", "text": { "es": "El arroz de bogavante es de otro nivel. Reservar es obligatorio.", "en": "The lobster rice is next level. Booking ahead is a must." } }
+    ]
+  },
+  {
+    "id": "meson-el-roqueo",
+    "townSlug": "conil-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Casco Antiguo", "en": "Old Town" },
+    "name": "Mesón El Roqueo",
+    "description": {
+      "es": "Cocina de cuchara y producto de mercado en un rincón del casco antiguo con vigas de madera y azulejos vintage. La carta cambia según lo que traiga la lonja, pero la retinta a la brasa y el arroz de choco nunca faltan.",
+      "en": "Hearty home cooking and market produce in a corner of the old town with wooden beams and vintage tiles. The menu shifts with what the fish market brings, but grilled retinta beef and cuttlefish rice are always on it."
+    },
+    "priceRange": 2,
+    "rating": 4.6,
+    "reviewCount": 187,
+    "featured": false,
+    "hours": { "es": "Ma–Do 13:00–16:30 y 20:00–23:30", "en": "Tue–Sun 1–4:30pm and 8–11:30pm" },
+    "phone": "+34 956 441 998",
+    "website": "https://www.elroqueo-conil.com",
+    "instagram": "@elroqueo.conil",
+    "address": { "es": "Calle Rosa 21, Conil de la Frontera", "en": "Calle Rosa 21, Conil de la Frontera" },
+    "lat": 36.2795,
+    "lng": -6.0917,
+    "photos": 4,
+    "reviews": [
+      { "author": "Beatriz L.", "rating": 5, "date": "2025-06-11", "text": { "es": "El arroz de choco, de los mejores que he probado en la costa.", "en": "The cuttlefish rice is some of the best I've had on the coast." } },
+      { "author": "Marco T.", "rating": 4, "date": "2025-05-02", "text": { "es": "Ambiente familiar y precios muy honestos.", "en": "Family atmosphere and very honest prices." } }
+    ]
+  },
+  {
+    "id": "bar-casa-paco-conil",
+    "townSlug": "conil-de-la-frontera",
+    "category": "bares",
+    "tags": [],
+    "zone": { "es": "Casco Antiguo", "en": "Old Town" },
+    "name": "Bar Casa Paco",
+    "description": {
+      "es": "Barra de mármol gastado, jamones colgando y una clientela que lleva viniendo desde los años ochenta. El sitio para un fino bien frío y una tapa de urta antes de perderse por las calles blancas.",
+      "en": "A worn marble bar, hams hanging from the ceiling, and regulars who've been coming since the eighties. The spot for an ice-cold sherry and a tapa of local urta fish before losing yourself in the whitewashed streets."
+    },
+    "priceRange": 1,
+    "rating": 4.5,
+    "reviewCount": 133,
+    "featured": false,
+    "hours": { "es": "Todos los días, 10:00–00:30", "en": "Daily, 10am–12:30am" },
+    "phone": "+34 956 440 561",
+    "website": "https://www.casapaco-conil.es",
+    "instagram": "@casapaco.conil",
+    "address": { "es": "Plaza de España 3, Conil de la Frontera", "en": "Plaza de España 3, Conil de la Frontera" },
+    "lat": 36.2782,
+    "lng": -6.0908,
+    "photos": 3,
+    "reviews": [
+      { "author": "Iris N.", "rating": 5, "date": "2025-08-01", "text": { "es": "Tapeo auténtico, nada de postureo, así es Conil de verdad.", "en": "Authentic tapas, no pretence — this is real Conil." } },
+      { "author": "Pau F.", "rating": 4, "date": "2025-04-20", "text": { "es": "Buen ambiente local, precios de otra época.", "en": "Great local vibe, prices from another era." } }
+    ]
+  },
+  {
+    "id": "sala-oceano-club",
+    "townSlug": "conil-de-la-frontera",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Fuente del Gallo", "en": "Fuente del Gallo" },
+    "name": "Sala Océano Club",
+    "description": {
+      "es": "Sesiones de house y sonidos latinos al aire libre, a pie de acantilado, con una terraza que mira directamente al mar. En temporada alta trae a DJs de toda Andalucía y llena hasta el amanecer.",
+      "en": "Open-air house and Latin sets right on the cliff edge, with a terrace that looks straight out to sea. In high season it brings in DJs from across Andalusia and fills up until dawn."
+    },
+    "priceRange": 2,
+    "rating": 4.3,
+    "reviewCount": 251,
+    "featured": false,
+    "hours": { "es": "Vi–Do 23:00–06:00 (temporada alta)", "en": "Fri–Sun 11pm–6am (high season)" },
+    "phone": "+34 956 445 320",
+    "website": "https://www.oceanoclub-conil.com",
+    "instagram": "@oceanoclub.conil",
+    "address": { "es": "Urb. Fuente del Gallo s/n, Conil de la Frontera", "en": "Urb. Fuente del Gallo s/n, Conil de la Frontera" },
+    "lat": 36.2622,
+    "lng": -6.1049,
+    "photos": 4,
+    "reviews": [
+      { "author": "Nico A.", "rating": 4, "date": "2025-08-15", "text": { "es": "La terraza con vistas al mar es una pasada de madrugada.", "en": "The sea-view terrace is incredible in the small hours." } },
+      { "author": "Lea D.", "rating": 4, "date": "2025-07-30", "text": { "es": "Buena música, aunque las copas son caras en agosto.", "en": "Good music, though drinks get pricey in August." } }
+    ]
+  },
+  {
+    "id": "conil-surf-school",
+    "townSlug": "conil-de-la-frontera",
+    "category": "actividades",
+    "tags": ["surf"],
+    "zone": { "es": "El Palmar", "en": "El Palmar" },
+    "name": "Conil Surf School",
+    "description": {
+      "es": "Escuela de surf con más de veinte años en El Palmar, una de las mejores olas de la Costa de la Luz. Clases para todos los niveles, alquiler de material y un equipo que conoce la marea como la palma de su mano.",
+      "en": "A surf school with over twenty years on El Palmar, one of the Costa de la Luz's best breaks. Lessons for every level, board and wetsuit rental, and a crew that reads the tide like an open book."
+    },
+    "priceRange": 2,
+    "rating": 4.9,
+    "reviewCount": 178,
+    "featured": true,
+    "hours": { "es": "Todos los días, 09:00–19:00 (según marea)", "en": "Daily, 9am–7pm (tide-dependent)" },
+    "phone": "+34 956 447 210",
+    "website": "https://www.conilsurfschool.com",
+    "instagram": "@conilsurfschool",
+    "address": { "es": "Playa de El Palmar s/n, Conil de la Frontera", "en": "Playa de El Palmar s/n, Conil de la Frontera" },
+    "lat": 36.2277,
+    "lng": -6.1234,
+    "photos": 5,
+    "reviews": [
+      { "author": "Hugo M.", "rating": 5, "date": "2025-08-05", "text": { "es": "Los monitores son un diez, mi hija cogió su primera ola el primer día.", "en": "The instructors are fantastic, my daughter caught her first wave on day one." } },
+      { "author": "Anna S.", "rating": 5, "date": "2025-06-19", "text": { "es": "El Palmar es mágico y la escuela lo cuida como se merece.", "en": "El Palmar is magical and the school treats it with real care." } }
+    ]
+  },
+  {
+    "id": "atlantic-quads-jet",
+    "townSlug": "conil-de-la-frontera",
+    "category": "actividades",
+    "tags": ["motos-agua", "quads"],
+    "zone": { "es": "Fuente del Gallo", "en": "Fuente del Gallo" },
+    "name": "Atlantic Quads & Jet",
+    "description": {
+      "es": "Rutas en moto de agua bordeando los acantilados de Conil y excursiones en quad por caminos de pinar hacia El Palmar. Salidas guiadas en grupos reducidos, con equipo incluido y paradas para fotos en los miradores más espectaculares.",
+      "en": "Jet-ski routes along Conil's cliffs and quad-bike excursions through pine trails toward El Palmar. Small guided groups, gear included, with photo stops at the most spectacular viewpoints."
+    },
+    "priceRange": 3,
+    "rating": 4.6,
+    "reviewCount": 92,
+    "featured": false,
+    "hours": { "es": "Todos los días, 09:00–18:00", "en": "Daily, 9am–6pm" },
+    "phone": "+34 956 448 077",
+    "website": "https://www.atlanticquadsjet.com",
+    "instagram": "@atlanticquadsjet",
+    "address": { "es": "Urb. Fuente del Gallo s/n, Conil de la Frontera", "en": "Urb. Fuente del Gallo s/n, Conil de la Frontera" },
+    "lat": 36.2605,
+    "lng": -6.1072,
+    "photos": 4,
+    "reviews": [
+      { "author": "Ben O.", "rating": 5, "date": "2025-07-27", "text": { "es": "La ruta en moto de agua bordeando los acantilados es espectacular.", "en": "The jet-ski route along the cliffs is spectacular." } },
+      { "author": "Carmen I.", "rating": 4, "date": "2025-06-08", "text": { "es": "Los guías muy profesionales, se nota que priorizan la seguridad.", "en": "Very professional guides, safety clearly comes first." } }
+    ]
+  },
+  {
+    "id": "gran-hotel-sancti-petri",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Novo Sancti Petri", "en": "Novo Sancti Petri" },
+    "name": "Gran Hotel Sancti Petri",
+    "description": {
+      "es": "Un resort de gran formato entre pinares y la playa de la Barrosa, con spa, varias piscinas y jardines diseñados para perderse. Ideal para familias y para quien busca todo incluido sin renunciar al diseño.",
+      "en": "A large-format resort between pine groves and La Barrosa beach, with a spa, several pools and gardens made for getting lost in. Ideal for families and anyone who wants all-inclusive without giving up on design."
+    },
+    "priceRange": 3,
+    "rating": 4.5,
+    "reviewCount": 512,
+    "featured": true,
+    "hours": { "es": "Recepción 24 horas", "en": "24-hour reception" },
+    "phone": "+34 956 494 100",
+    "website": "https://www.granhotelsanctipetri.com",
+    "instagram": "@granhotelsanctipetri",
+    "address": { "es": "Urb. Novo Sancti Petri s/n, Chiclana de la Frontera", "en": "Urb. Novo Sancti Petri s/n, Chiclana de la Frontera" },
+    "lat": 36.3705,
+    "lng": -6.1610,
+    "photos": 6,
+    "reviews": [
+      { "author": "Familia Ortiz", "rating": 5, "date": "2025-08-09", "text": { "es": "Los niños no querían salir de la piscina infantil. Servicio impecable.", "en": "The kids didn't want to leave the kids' pool. Impeccable service." } },
+      { "author": "Werner K.", "rating": 4, "date": "2025-07-12", "text": { "es": "Instalaciones enormes y muy cuidadas, el spa merece la pena.", "en": "Huge, well-kept facilities, the spa is worth it." } },
+      { "author": "Lucía B.", "rating": 4, "date": "2025-05-30", "text": { "es": "Playa de la Barrosa a dos pasos, perfecta para desconectar.", "en": "La Barrosa beach right on the doorstep, perfect to switch off." } }
+    ]
+  },
+  {
+    "id": "apartamentos-la-barrosa-beach",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "La Barrosa", "en": "La Barrosa" },
+    "name": "Apartamentos La Barrosa Beach",
+    "description": {
+      "es": "Apartamentos luminosos a cien metros de la arena, pensados para estancias largas con cocina completa y terraza propia. Sin lujos innecesarios, pero con todo lo que hace falta para instalarse un par de semanas.",
+      "en": "Bright apartments a hundred metres from the sand, built for longer stays with a full kitchen and private terrace. No unnecessary frills, just everything you need to settle in for a couple of weeks."
+    },
+    "priceRange": 2,
+    "rating": 4.3,
+    "reviewCount": 164,
+    "featured": false,
+    "hours": { "es": "Check-in 16:00–21:00", "en": "Check-in 4pm–9pm" },
+    "phone": "+34 956 495 233",
+    "website": "https://www.barrosabeach-apartamentos.com",
+    "instagram": "@barrosabeach.apts",
+    "address": { "es": "Av. de las Piletas 45, Chiclana de la Frontera", "en": "Av. de las Piletas 45, Chiclana de la Frontera" },
+    "lat": 36.3822,
+    "lng": -6.1701,
+    "photos": 4,
+    "reviews": [
+      { "author": "Ines M.", "rating": 4, "date": "2025-06-14", "text": { "es": "Muy bien equipados y cerca de todo, repetiremos.", "en": "Very well equipped and close to everything, we'll be back." } },
+      { "author": "Greg P.", "rating": 4, "date": "2025-05-19", "text": { "es": "Buena opción para ir con niños, hay supermercado al lado.", "en": "Good option with kids, there's a supermarket right next door." } }
+    ]
+  },
+  {
+    "id": "restaurante-bahia-alta",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Novo Sancti Petri", "en": "Novo Sancti Petri" },
+    "name": "Restaurante Bahía Alta",
+    "description": {
+      "es": "Cocina de autor con guiños a la tradición gaditana: pescado a la brasa, mariscos de la bahía y una bodega que prioriza vinos de Jerez y Cádiz. Sala elegante con vistas al golf y a los pinares.",
+      "en": "Signature cooking rooted in Cádiz tradition: charcoal-grilled fish, bay shellfish and a wine list built around Jerez and Cádiz labels. An elegant dining room overlooking the golf course and pine woods."
+    },
+    "priceRange": 3,
+    "rating": 4.7,
+    "reviewCount": 203,
+    "featured": true,
+    "hours": { "es": "Ma–Do 13:30–16:00 y 20:30–23:00", "en": "Tue–Sun 1:30–4pm and 8:30–11pm" },
+    "phone": "+34 956 496 410",
+    "website": "https://www.bahiaalta-restaurante.com",
+    "instagram": "@bahiaalta.restaurante",
+    "address": { "es": "Paseo del Pintor Barón 2, Chiclana de la Frontera", "en": "Paseo del Pintor Barón 2, Chiclana de la Frontera" },
+    "lat": 36.3689,
+    "lng": -6.1583,
+    "photos": 5,
+    "reviews": [
+      { "author": "Fernando C.", "rating": 5, "date": "2025-08-03", "text": { "es": "El pescado a la brasa, de lo mejor que he comido en la zona.", "en": "The charcoal-grilled fish is some of the best I've had around here." } },
+      { "author": "Julia W.", "rating": 4, "date": "2025-06-22", "text": { "es": "Servicio atento y carta de vinos muy bien pensada.", "en": "Attentive service and a very thoughtful wine list." } }
+    ]
+  },
+  {
+    "id": "la-terraza-del-pinar",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "La Barrosa", "en": "La Barrosa" },
+    "name": "La Terraza del Pinar",
+    "description": {
+      "es": "Arroces al fuego de leña bajo los pinos, a pocos metros de la playa de la Barrosa. Ambiente relajado, buena música de fondo y raciones pensadas para compartir en grupo tras un día entero de playa.",
+      "en": "Wood-fired rice dishes under the pines, steps from La Barrosa beach. A relaxed setting, easy background music and portions built for sharing after a full day at the beach."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 158,
+    "featured": false,
+    "hours": { "es": "Todos los días, 13:00–23:00", "en": "Daily, 1pm–11pm" },
+    "phone": "+34 956 497 650",
+    "website": "https://www.laterrazadelpinar.com",
+    "instagram": "@laterrazadelpinar",
+    "address": { "es": "Calle Pinar Alto 9, Chiclana de la Frontera", "en": "Calle Pinar Alto 9, Chiclana de la Frontera" },
+    "lat": 36.3841,
+    "lng": -6.1678,
+    "photos": 4,
+    "reviews": [
+      { "author": "Noelia T.", "rating": 5, "date": "2025-07-16", "text": { "es": "El arroz de marisco para compartir es una locura de bueno.", "en": "The seafood rice for sharing is ridiculously good." } },
+      { "author": "Stefan L.", "rating": 4, "date": "2025-05-27", "text": { "es": "Ambiente muy agradable bajo los pinos, ideal para cenar en verano.", "en": "Lovely atmosphere under the pines, great for a summer dinner." } }
+    ]
+  },
+  {
+    "id": "beach-club-arena-dorada",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "bares",
+    "tags": [],
+    "zone": { "es": "La Barrosa", "en": "La Barrosa" },
+    "name": "Beach Club Arena Dorada",
+    "description": {
+      "es": "Camas balinesas, cócteles con nombre propio y música chill desde mediodía hasta que se pone el sol. El punto de encuentro de la Barrosa para quienes quieren playa con un extra de diseño.",
+      "en": "Balinese daybeds, signature cocktails and chill music from noon until sundown. La Barrosa's meeting point for beachgoers who want an extra dose of design."
+    },
+    "priceRange": 2,
+    "rating": 4.4,
+    "reviewCount": 276,
+    "featured": false,
+    "hours": { "es": "Todos los días, 11:00–20:00", "en": "Daily, 11am–8pm" },
+    "phone": "+34 956 498 812",
+    "website": "https://www.arenadorada-beachclub.com",
+    "instagram": "@arenadorada.beachclub",
+    "address": { "es": "Playa de La Barrosa s/n, Chiclana de la Frontera", "en": "Playa de La Barrosa s/n, Chiclana de la Frontera" },
+    "lat": 36.3798,
+    "lng": -6.1735,
+    "photos": 4,
+    "reviews": [
+      { "author": "Mia F.", "rating": 4, "date": "2025-08-06", "text": { "es": "Las camas balinesas se llenan rápido, conviene reservar.", "en": "The daybeds fill up fast, worth booking ahead." } },
+      { "author": "Alex D.", "rating": 5, "date": "2025-07-01", "text": { "es": "Los cócteles de frutas de la zona están increíbles.", "en": "The local fruit cocktails are incredible." } }
+    ]
+  },
+  {
+    "id": "club-sancti-nights",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Novo Sancti Petri", "en": "Novo Sancti Petri" },
+    "name": "Club Sancti Nights",
+    "description": {
+      "es": "La discoteca de referencia de Novo Sancti Petri, con dos pistas, terraza exterior y un cartel de sesiones que combina comercial y música electrónica. Noches largas que suelen terminar viendo amanecer en la playa.",
+      "en": "Novo Sancti Petri's go-to nightclub, with two dance floors, an outdoor terrace, and a line-up mixing chart hits with electronic sets. Long nights that often end watching the sunrise on the beach."
+    },
+    "priceRange": 2,
+    "rating": 4.2,
+    "reviewCount": 388,
+    "featured": true,
+    "hours": { "es": "Vi–Sá 00:00–07:00", "en": "Fri–Sat midnight–7am" },
+    "phone": "+34 956 499 044",
+    "website": "https://www.sanctinights.com",
+    "instagram": "@sanctinights",
+    "address": { "es": "Centro Comercial Novo Sancti Petri, Chiclana de la Frontera", "en": "Centro Comercial Novo Sancti Petri, Chiclana de la Frontera" },
+    "lat": 36.3714,
+    "lng": -6.1622,
+    "photos": 4,
+    "reviews": [
+      { "author": "Kevin R.", "rating": 4, "date": "2025-08-11", "text": { "es": "Buen ambientazo en agosto, la terraza se agradece para respirar.", "en": "Great atmosphere in August, the terrace is a nice place to breathe." } },
+      { "author": "Sofia N.", "rating": 4, "date": "2025-07-08", "text": { "es": "DJs muy buenos los fines de semana de temporada alta.", "en": "Really good DJs on high-season weekends." } }
+    ]
+  },
+  {
+    "id": "sancti-petri-boat-trips",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "actividades",
+    "tags": ["barco", "kayak"],
+    "zone": { "es": "Sancti Petri", "en": "Sancti Petri" },
+    "name": "Sancti Petri Boat Trips",
+    "description": {
+      "es": "Salidas en barco hasta el castillo de Sancti Petri y rutas en kayak por los caños entre marismas. Una forma tranquila de descubrir la naturaleza que rodea Chiclana, con guías que conocen cada canal de memoria.",
+      "en": "Boat trips out to Sancti Petri castle and kayak routes through the marsh channels. A calm way to discover the nature around Chiclana, with guides who know every channel by heart."
+    },
+    "priceRange": 2,
+    "rating": 4.7,
+    "reviewCount": 141,
+    "featured": false,
+    "hours": { "es": "Todos los días, 09:00–19:00", "en": "Daily, 9am–7pm" },
+    "phone": "+34 956 500 221",
+    "website": "https://www.sanctipetriboattrips.com",
+    "instagram": "@sanctipetriboattrips",
+    "address": { "es": "Poblado de Sancti Petri s/n, Chiclana de la Frontera", "en": "Poblado de Sancti Petri s/n, Chiclana de la Frontera" },
+    "lat": 36.3628,
+    "lng": -6.2051,
+    "photos": 4,
+    "reviews": [
+      { "author": "Helena P.", "rating": 5, "date": "2025-06-29", "text": { "es": "El castillo desde el agua es una imagen que no se olvida.", "en": "The castle seen from the water is an image you don't forget." } },
+      { "author": "Marc J.", "rating": 4, "date": "2025-05-15", "text": { "es": "Ruta de kayak muy relajante, perfecta para ir con niños grandes.", "en": "Very relaxing kayak route, great with older kids." } }
+    ]
+  },
+  {
+    "id": "barrosa-adventure",
+    "townSlug": "chiclana-de-la-frontera",
+    "category": "actividades",
+    "tags": ["quads", "rutas-guiadas"],
+    "zone": { "es": "La Barrosa", "en": "La Barrosa" },
+    "name": "Barrosa Adventure",
+    "description": {
+      "es": "Rutas guiadas en quad por los pinares de la Barrosa y el entorno del Parque Natural de la Bahía de Cádiz, con paradas en miradores y explicaciones sobre la flora local. Grupos pequeños y salidas al atardecer muy solicitadas.",
+      "en": "Guided quad routes through La Barrosa's pine forests and the Bahía de Cádiz Natural Park, with viewpoint stops and notes on local flora. Small groups, and the sunset departures are always in demand."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 87,
+    "featured": false,
+    "hours": { "es": "Todos los días, 10:00–20:00", "en": "Daily, 10am–8pm" },
+    "phone": "+34 956 501 398",
+    "website": "https://www.barrosaadventure.com",
+    "instagram": "@barrosa.adventure",
+    "address": { "es": "Carretera de la Barrosa km 3, Chiclana de la Frontera", "en": "Carretera de la Barrosa km 3, Chiclana de la Frontera" },
+    "lat": 36.3901,
+    "lng": -6.1592,
+    "photos": 3,
+    "reviews": [
+      { "author": "Dario V.", "rating": 5, "date": "2025-07-20", "text": { "es": "La ruta al atardecer es una pasada, muy bien organizada.", "en": "The sunset route is amazing, really well organised." } },
+      { "author": "Priya S.", "rating": 4, "date": "2025-06-02", "text": { "es": "Guías simpáticos y quads en buen estado.", "en": "Friendly guides and the quads were in great shape." } }
+    ]
+  },
+  {
+    "id": "hostal-puerto-viejo-barbate",
+    "townSlug": "barbate",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Puerto pesquero", "en": "Fishing port" },
+    "name": "Hostal Puerto Viejo",
+    "description": {
+      "es": "Habitaciones sin pretensiones a un paso de la lonja, donde el olor a mar entra por la ventana desde que amanece. Los dueños son familia de pescadores y no hay mejor fuente para saber qué pescado comer esa noche.",
+      "en": "No-frills rooms a step from the fish auction house, where the smell of the sea drifts in from dawn. The owners come from a fishing family, and there's no better source for what fish to eat that night."
+    },
+    "priceRange": 1,
+    "rating": 4.2,
+    "reviewCount": 74,
+    "featured": false,
+    "hours": { "es": "Recepción 08:00–23:00", "en": "Reception 8am–11pm" },
+    "phone": "+34 956 430 155",
+    "website": "https://www.puertoviejo-barbate.com",
+    "instagram": "@puertoviejo.barbate",
+    "address": { "es": "Calle Ancha 22, Barbate", "en": "Calle Ancha 22, Barbate" },
+    "lat": 36.1902,
+    "lng": -5.9215,
+    "photos": 3,
+    "reviews": [
+      { "author": "Youssef A.", "rating": 4, "date": "2025-06-17", "text": { "es": "Sencillo pero muy limpio, y los dueños son un amor.", "en": "Simple but very clean, and the owners are lovely." } },
+      { "author": "Petra M.", "rating": 4, "date": "2025-05-09", "text": { "es": "Cerca de todo y muy tranquilo por la noche.", "en": "Close to everything and very quiet at night." } }
+    ]
+  },
+  {
+    "id": "casas-rurales-brena-natural",
+    "townSlug": "barbate",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Caños de Meca", "en": "Caños de Meca" },
+    "name": "Casas Rurales Breña Natural",
+    "description": {
+      "es": "Casitas de piedra dispersas entre pinos, a diez minutos a pie de los acantilados de Caños de Meca. Sin televisión ni prisa, con noches de cielo estrellado y el sonido del mar de fondo constante.",
+      "en": "Stone cottages scattered among pines, a ten-minute walk from the Caños de Meca cliffs. No television, no rush — just starlit nights and the constant sound of the sea in the background."
+    },
+    "priceRange": 2,
+    "rating": 4.8,
+    "reviewCount": 112,
+    "featured": false,
+    "hours": { "es": "Check-in 17:00–20:00", "en": "Check-in 5pm–8pm" },
+    "phone": "+34 956 431 470",
+    "website": "https://www.brenanatural.com",
+    "instagram": "@brenanatural.canos",
+    "address": { "es": "Camino de la Breña s/n, Barbate", "en": "Camino de la Breña s/n, Barbate" },
+    "lat": 36.1783,
+    "lng": -6.0221,
+    "photos": 4,
+    "reviews": [
+      { "author": "Delphine R.", "rating": 5, "date": "2025-08-08", "text": { "es": "El sitio perfecto para desconectar de verdad, sin cobertura ni ruido.", "en": "The perfect place to truly disconnect, no signal, no noise." } },
+      { "author": "Manuel Q.", "rating": 5, "date": "2025-06-04", "text": { "es": "Las casitas tienen mucho encanto y el entorno natural es único.", "en": "The cottages are full of charm and the natural setting is unique." } }
+    ]
+  },
+  {
+    "id": "restaurante-almadraba-del-estrecho",
+    "townSlug": "barbate",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Puerto pesquero", "en": "Fishing port" },
+    "name": "Restaurante Almadraba del Estrecho",
+    "description": {
+      "es": "Templo del atún rojo de almadraba en todas sus variantes: tataki, mojama, tarantelo a la brasa. Sala sobria con vistas al puerto y una carta que se explica sola gracias al conocimiento de la casa sobre cada corte.",
+      "en": "A temple to almadraba bluefin tuna in every cut: tataki, cured mojama, grilled tarantelo. A sober dining room overlooking the port, with a menu that speaks for itself thanks to the house's deep knowledge of every cut."
+    },
+    "priceRange": 3,
+    "rating": 4.8,
+    "reviewCount": 298,
+    "featured": true,
+    "hours": { "es": "Ma–Do 13:00–16:30 y 20:00–23:30", "en": "Tue–Sun 1–4:30pm and 8–11:30pm" },
+    "phone": "+34 956 432 690",
+    "website": "https://www.almadrabadelestrecho.com",
+    "instagram": "@almadrabadelestrecho",
+    "address": { "es": "Paseo Marítimo 5, Barbate", "en": "Paseo Marítimo 5, Barbate" },
+    "lat": 36.1889,
+    "lng": -5.9187,
+    "photos": 5,
+    "reviews": [
+      { "author": "Ricardo F.", "rating": 5, "date": "2025-07-14", "text": { "es": "El tarantelo a la brasa es de los mejores platos que he comido nunca.", "en": "The grilled tarantelo is one of the best dishes I've ever had." } },
+      { "author": "Emma L.", "rating": 5, "date": "2025-06-26", "text": { "es": "Servicio muy profesional, te explican cada corte de atún con pasión.", "en": "Very professional service, they explain every tuna cut with real passion." } }
+    ]
+  },
+  {
+    "id": "taberna-zahora",
+    "townSlug": "barbate",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Zahora", "en": "Zahora" },
+    "name": "Taberna Zahora",
+    "description": {
+      "es": "Taberna sencilla de pueblo con guisos caseros, migas de pastor y un patio trasero con parra que da sombra en las horas de más calor. Precios de barrio y raciones generosas.",
+      "en": "A simple village tavern with homemade stews, shepherd's migas and a vine-shaded backyard patio for the hottest hours. Neighbourhood prices and generous portions."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 89,
+    "featured": false,
+    "hours": { "es": "Mi–Lu 13:00–17:00 y 20:00–23:00", "en": "Wed–Mon 1–5pm and 8–11pm" },
+    "phone": "+34 956 433 812",
+    "website": "https://www.tabernazahora.com",
+    "instagram": "@taberna.zahora",
+    "address": { "es": "Calle Real 12, Zahora, Barbate", "en": "Calle Real 12, Zahora, Barbate" },
+    "lat": 36.1978,
+    "lng": -6.0389,
+    "photos": 3,
+    "reviews": [
+      { "author": "Angel D.", "rating": 5, "date": "2025-05-24", "text": { "es": "Las migas son las mejores que he probado en la zona.", "en": "The best migas I've tried in the area." } },
+      { "author": "Fiona C.", "rating": 4, "date": "2025-04-30", "text": { "es": "Sitio con mucho carácter y precios muy justos.", "en": "A place full of character and very fair prices." } }
+    ]
+  },
+  {
+    "id": "chiringuito-trafalgar",
+    "townSlug": "barbate",
+    "category": "bares",
+    "tags": [],
+    "zone": { "es": "Caños de Meca", "en": "Caños de Meca" },
+    "name": "Chiringuito Trafalgar",
+    "description": {
+      "es": "Bar de playa frente al faro de Trafalgar, con hamacas de madera, música suave y las mejores vistas para ver el sol hundirse en el Atlántico. Ambiente hippy-chic que define Caños de Meca desde los setenta.",
+      "en": "A beach bar facing the Trafalgar lighthouse, with wooden loungers, soft music, and the best seat for watching the sun sink into the Atlantic. The hippy-chic spirit that has defined Caños de Meca since the seventies."
+    },
+    "priceRange": 1,
+    "rating": 4.6,
+    "reviewCount": 205,
+    "featured": false,
+    "hours": { "es": "Todos los días, 11:00–21:00", "en": "Daily, 11am–9pm" },
+    "phone": "+34 956 434 077",
+    "website": "https://www.chiringuitotrafalgar.com",
+    "instagram": "@chiringuito.trafalgar",
+    "address": { "es": "Playa de Caños de Meca s/n, Barbate", "en": "Playa de Caños de Meca s/n, Barbate" },
+    "lat": 36.1839,
+    "lng": -6.0459,
+    "photos": 4,
+    "reviews": [
+      { "author": "Olga P.", "rating": 5, "date": "2025-08-13", "text": { "es": "El mejor atardecer de toda la Costa de la Luz, sin duda.", "en": "The best sunset on the whole Costa de la Luz, no question." } },
+      { "author": "Liam K.", "rating": 4, "date": "2025-07-03", "text": { "es": "Ambiente muy relajado, ideal para ir con la tabla de surf.", "en": "Very laid-back vibe, great to stop by with your surfboard." } }
+    ]
+  },
+  {
+    "id": "la-cueva-del-brena",
+    "townSlug": "barbate",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Centro", "en": "Centre" },
+    "name": "La Cueva del Breña",
+    "description": {
+      "es": "Discoteca pequeña y sin pretensiones en pleno centro de Barbate, con sesiones que van del flamenco fusión a los éxitos del verano. El sitio donde termina la noche cuando ya han cerrado los bares.",
+      "en": "A small, unpretentious nightclub right in the centre of Barbate, with sets ranging from flamenco fusion to summer hits. Where the night ends once the bars have closed."
+    },
+    "priceRange": 1,
+    "rating": 4.0,
+    "reviewCount": 61,
+    "featured": false,
+    "hours": { "es": "Vi–Sá 00:30–05:30", "en": "Fri–Sat 12:30am–5:30am" },
+    "phone": "+34 956 435 590",
+    "website": "https://www.lacuevadelbrena.com",
+    "instagram": "@lacuevadelbrena",
+    "address": { "es": "Calle Vázquez Mella 9, Barbate", "en": "Calle Vázquez Mella 9, Barbate" },
+    "lat": 36.1921,
+    "lng": -5.9224,
+    "photos": 3,
+    "reviews": [
+      { "author": "Sergio B.", "rating": 4, "date": "2025-08-16", "text": { "es": "Auténtico y sin postureo, se agradece en la zona.", "en": "Authentic and unpretentious, a nice change for the area." } },
+      { "author": "Nadia H.", "rating": 4, "date": "2025-07-06", "text": { "es": "Buen sitio para acabar la noche con amigos.", "en": "Good spot to end the night with friends." } }
+    ]
+  },
+  {
+    "id": "brena-hiking-horses",
+    "townSlug": "barbate",
+    "category": "actividades",
+    "tags": ["senderismo", "caballos"],
+    "zone": { "es": "Caños de Meca", "en": "Caños de Meca" },
+    "name": "Breña Hiking & Horses",
+    "description": {
+      "es": "Rutas a caballo y senderismo guiado por el Parque Natural de La Breña y Marismas del Barbate, entre pinares de piñoneros y acantilados con vistas a Trafalgar. Salidas para todos los niveles, también al atardecer.",
+      "en": "Horseback riding and guided hiking through La Breña and Marismas del Barbate Natural Park, past stone pine forests and cliffs overlooking Trafalgar. Routes for every level, including sunset departures."
+    },
+    "priceRange": 2,
+    "rating": 4.7,
+    "reviewCount": 103,
+    "featured": false,
+    "hours": { "es": "Todos los días, 08:00–19:00", "en": "Daily, 8am–7pm" },
+    "phone": "+34 956 436 244",
+    "website": "https://www.brenahikinghorses.com",
+    "instagram": "@brena.hikinghorses",
+    "address": { "es": "Camino Parque Natural s/n, Barbate", "en": "Camino Parque Natural s/n, Barbate" },
+    "lat": 36.1811,
+    "lng": -6.0155,
+    "photos": 4,
+    "reviews": [
+      { "author": "Valeria O.", "rating": 5, "date": "2025-06-21", "text": { "es": "La ruta a caballo al atardecer es una experiencia inolvidable.", "en": "The sunset horseback route is an unforgettable experience." } },
+      { "author": "Tom B.", "rating": 4, "date": "2025-05-11", "text": { "es": "Guías muy atentos con los principiantes en el caballo.", "en": "Very attentive guides for beginner riders." } }
+    ]
+  },
+  {
+    "id": "estrecho-diving-center",
+    "townSlug": "barbate",
+    "category": "actividades",
+    "tags": ["buceo", "barco"],
+    "zone": { "es": "Puerto pesquero", "en": "Fishing port" },
+    "name": "Estrecho Diving Center",
+    "description": {
+      "es": "Centro de buceo especializado en los pecios y arrecifes del Estrecho, con salidas en barco para todos los niveles, desde bautismos hasta inmersiones avanzadas en la corriente que une el Atlántico y el Mediterráneo.",
+      "en": "A dive centre specialising in the wrecks and reefs of the Strait, with boat trips for every level, from first-timers to advanced dives in the current where the Atlantic meets the Mediterranean."
+    },
+    "priceRange": 3,
+    "rating": 4.8,
+    "reviewCount": 118,
+    "featured": true,
+    "hours": { "es": "Todos los días, 08:00–18:00", "en": "Daily, 8am–6pm" },
+    "phone": "+34 956 437 361",
+    "website": "https://www.estrechodiving.com",
+    "instagram": "@estrechodiving",
+    "address": { "es": "Puerto Pesquero s/n, Barbate", "en": "Puerto Pesquero s/n, Barbate" },
+    "lat": 36.1897,
+    "lng": -5.9201,
+    "photos": 4,
+    "reviews": [
+      { "author": "Nils G.", "rating": 5, "date": "2025-08-19", "text": { "es": "Inmersión inolvidable con corriente incluida, para nivel avanzado.", "en": "An unforgettable dive with real current — for advanced divers." } },
+      { "author": "Carla V.", "rating": 5, "date": "2025-07-09", "text": { "es": "Mi primer bautismo de buceo y no pudo salir mejor.", "en": "My first ever dive and it couldn't have gone better." } }
+    ]
+  },
+  {
+    "id": "casa-palacio-la-muela",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Casa Palacio La Muela",
+    "description": {
+      "es": "Antiguo palacete del siglo XVIII reconvertido en hotel con encanto, patio andalusí con fuente central y azotea con vistas a los tejados blancos y al Atlántico al fondo. Habitaciones con suelos hidráulicos originales.",
+      "en": "An 18th-century mansion turned boutique hotel, with an Andalusi patio around a central fountain and a rooftop looking over white roofs to the Atlantic beyond. Rooms keep their original hydraulic-tile floors."
+    },
+    "priceRange": 3,
+    "rating": 4.9,
+    "reviewCount": 231,
+    "featured": true,
+    "hours": { "es": "Recepción 24 horas", "en": "24-hour reception" },
+    "phone": "+34 956 450 118",
+    "website": "https://www.casapalaciolamuela.com",
+    "instagram": "@casapalaciolamuela",
+    "address": { "es": "Calle Judería 6, Vejer de la Frontera", "en": "Calle Judería 6, Vejer de la Frontera" },
+    "lat": 36.2510,
+    "lng": -5.9631,
+    "photos": 6,
+    "reviews": [
+      { "author": "Charlotte E.", "rating": 5, "date": "2025-08-04", "text": { "es": "Un hotel con alma, cada rincón cuenta una historia.", "en": "A hotel with soul, every corner tells a story." } },
+      { "author": "Ramón A.", "rating": 5, "date": "2025-06-13", "text": { "es": "La azotea al atardecer es de las mejores vistas que he visto.", "en": "The rooftop at sunset offers one of the best views I've seen." } },
+      { "author": "Ines D.", "rating": 5, "date": "2025-05-06", "text": { "es": "Atención personalizada de principio a fin, se nota el mimo.", "en": "Personalised care from start to finish, the attention to detail shows." } }
+    ]
+  },
+  {
+    "id": "hostal-puerta-cerrada",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Hostal Puerta Cerrada",
+    "description": {
+      "es": "Hostal familiar junto a una de las antiguas puertas de la muralla, con habitaciones básicas pero impecables y una terraza compartida donde se sirve un desayuno casero. Base perfecta para explorar el pueblo a pie.",
+      "en": "A family-run guesthouse by one of the old city-wall gates, with basic but spotless rooms and a shared terrace serving homemade breakfast. A perfect base for exploring the village on foot."
+    },
+    "priceRange": 1,
+    "rating": 4.5,
+    "reviewCount": 108,
+    "featured": false,
+    "hours": { "es": "Recepción 08:00–22:00", "en": "Reception 8am–10pm" },
+    "phone": "+34 956 451 290",
+    "website": "https://www.puertacerrada-vejer.com",
+    "instagram": "@puertacerrada.vejer",
+    "address": { "es": "Calle Sancho IV El Bravo 15, Vejer de la Frontera", "en": "Calle Sancho IV El Bravo 15, Vejer de la Frontera" },
+    "lat": 36.2523,
+    "lng": -5.9662,
+    "photos": 3,
+    "reviews": [
+      { "author": "Giulia F.", "rating": 5, "date": "2025-07-11", "text": { "es": "Desayuno casero riquísimo y trato familiar de verdad.", "en": "Delicious homemade breakfast and genuinely warm hospitality." } },
+      { "author": "Karl S.", "rating": 4, "date": "2025-06-01", "text": { "es": "Sencillo pero muy bien ubicado para callejear.", "en": "Simple, but very well located for wandering the streets." } }
+    ]
+  },
+  {
+    "id": "mesa-de-vejer",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Mesa de Vejer",
+    "description": {
+      "es": "Cocina de mercado con toques de vanguardia en un patio con parra centenaria. Menú degustación corto que cambia cada semana según lo que encuentran en la lonja de Barbate y las huertas cercanas.",
+      "en": "Market-driven cooking with a modern edge, served in a patio under a century-old vine. A short tasting menu that changes weekly with whatever the Barbate market and nearby gardens bring in."
+    },
+    "priceRange": 3,
+    "rating": 4.8,
+    "reviewCount": 176,
+    "featured": false,
+    "hours": { "es": "Ju–Lu 13:30–16:00 y 20:30–23:00", "en": "Thu–Mon 1:30–4pm and 8:30–11pm" },
+    "phone": "+34 956 452 405",
+    "website": "https://www.mesadevejer.com",
+    "instagram": "@mesadevejer",
+    "address": { "es": "Calle Marqués de Tamarón 10, Vejer de la Frontera", "en": "Calle Marqués de Tamarón 10, Vejer de la Frontera" },
+    "lat": 36.2503,
+    "lng": -5.9645,
+    "photos": 5,
+    "reviews": [
+      { "author": "Paloma R.", "rating": 5, "date": "2025-08-17", "text": { "es": "Cada plato una sorpresa, el patio con la parra es precioso.", "en": "Every dish a surprise, the vine-covered patio is beautiful." } },
+      { "author": "Simon T.", "rating": 5, "date": "2025-07-25", "text": { "es": "Producto local tratado con muchísimo mimo y creatividad.", "en": "Local produce treated with real care and creativity." } }
+    ]
+  },
+  {
+    "id": "freiduria-la-muela",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "La Muela", "en": "La Muela" },
+    "name": "Freiduría La Muela",
+    "description": {
+      "es": "Cucurucho de pescaíto frito para llevar o para comer en las mesas altas de la calle, con vistas al valle. Rápido, barato y con ese punto de fritura andaluza que sabe a vacaciones.",
+      "en": "A paper cone of fried fish to go or to eat at the high street tables overlooking the valley. Fast, cheap, and with that Andalusian-fry flavour that tastes like summer holidays."
+    },
+    "priceRange": 1,
+    "rating": 4.4,
+    "reviewCount": 143,
+    "featured": false,
+    "hours": { "es": "Ma–Do 12:00–16:00 y 19:30–22:30", "en": "Tue–Sun noon–4pm and 7:30–10:30pm" },
+    "phone": "+34 956 453 519",
+    "website": "https://www.freidurialamuela.com",
+    "instagram": "@freiduria.lamuela",
+    "address": { "es": "Calle La Muela 3, Vejer de la Frontera", "en": "Calle La Muela 3, Vejer de la Frontera" },
+    "lat": 36.2489,
+    "lng": -5.9678,
+    "photos": 3,
+    "reviews": [
+      { "author": "Adrian M.", "rating": 4, "date": "2025-06-09", "text": { "es": "Rapidísimo y muy rico, buena parada a media tarde.", "en": "Super quick and tasty, a nice mid-afternoon stop." } },
+      { "author": "Freya N.", "rating": 5, "date": "2025-05-03", "text": { "es": "Las vistas desde las mesas altas son un regalo.", "en": "The views from the high tables are a real treat." } }
+    ]
+  },
+  {
+    "id": "bar-califa-vejer",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "bares",
+    "tags": [],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Bar Califa",
+    "description": {
+      "es": "Bar de siempre en una placita escondida, con toldos de rayas y una carta corta de tapas que nunca falla: berenjenas con miel, croquetas de puchero, alboronía. Sitio de paso obligado al caer la tarde.",
+      "en": "A longstanding bar on a hidden little square, with striped awnings and a short tapas menu that never fails: honey-drizzled aubergines, stew croquettes, alboronía. An obligatory stop as the afternoon fades."
+    },
+    "priceRange": 1,
+    "rating": 4.6,
+    "reviewCount": 197,
+    "featured": false,
+    "hours": { "es": "Todos los días, 12:00–00:00", "en": "Daily, noon–midnight" },
+    "phone": "+34 956 454 623",
+    "website": "https://www.barcalifa-vejer.com",
+    "instagram": "@barcalifa.vejer",
+    "address": { "es": "Plazuela Eduardo Shelly 2, Vejer de la Frontera", "en": "Plazuela Eduardo Shelly 2, Vejer de la Frontera" },
+    "lat": 36.2515,
+    "lng": -5.9653,
+    "photos": 4,
+    "reviews": [
+      { "author": "Cristina L.", "rating": 5, "date": "2025-07-02", "text": { "es": "Las berenjenas con miel son adictivas, volví tres días seguidos.", "en": "The honey aubergines are addictive, I went back three days running." } },
+      { "author": "Owen P.", "rating": 4, "date": "2025-05-21", "text": { "es": "Terraza pequeña y con mucho encanto, buen ambiente local.", "en": "A small terrace with lots of charm, great local vibe." } }
+    ]
+  },
+  {
+    "id": "terraza-almenara-club",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Terraza Almenara Club",
+    "description": {
+      "es": "Terraza-lounge sobre la muralla con música electrónica suave, cócteles de autor y una de las mejores panorámicas de la Costa de la Luz al anochecer. Ambiente más selecto que las discotecas de la costa.",
+      "en": "A lounge terrace on the old city wall with soft electronic music, craft cocktails and one of the best Costa de la Luz panoramas at dusk. A more refined vibe than the coastal nightclubs."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 129,
+    "featured": false,
+    "hours": { "es": "Ju–Sá 21:00–02:30", "en": "Thu–Sat 9pm–2:30am" },
+    "phone": "+34 956 455 737",
+    "website": "https://www.almenaraclub-vejer.com",
+    "instagram": "@almenaraclub",
+    "address": { "es": "Calle Peñuela 1, Vejer de la Frontera", "en": "Calle Peñuela 1, Vejer de la Frontera" },
+    "lat": 36.2530,
+    "lng": -5.9640,
+    "photos": 4,
+    "reviews": [
+      { "author": "Victor H.", "rating": 5, "date": "2025-08-12", "text": { "es": "Las vistas de noche son impresionantes, cócteles muy cuidados.", "en": "The night views are stunning, and the cocktails are very well made." } },
+      { "author": "Amelie J.", "rating": 4, "date": "2025-07-19", "text": { "es": "Ambiente relajado y elegante, ideal para empezar la noche.", "en": "Relaxed, elegant vibe, a great way to start the night." } }
+    ]
+  },
+  {
+    "id": "vejer-kite-wind",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "actividades",
+    "tags": ["kitesurf", "surf"],
+    "zone": { "es": "El Palmar (zona Vejer)", "en": "El Palmar (Vejer area)" },
+    "name": "Vejer Kite & Wind",
+    "description": {
+      "es": "Escuela de kitesurf y surf en la costa entre Vejer y El Palmar, aprovechando el viento de levante que hace de esta zona un punto de referencia internacional. Clases privadas y en grupo, material homologado incluido.",
+      "en": "A kitesurf and surf school on the coast between Vejer and El Palmar, riding the levante wind that makes this stretch an international reference point. Private and group lessons, certified gear included."
+    },
+    "priceRange": 2,
+    "rating": 4.7,
+    "reviewCount": 122,
+    "featured": false,
+    "hours": { "es": "Todos los días, 09:00–18:00 (según viento)", "en": "Daily, 9am–6pm (wind-dependent)" },
+    "phone": "+34 956 456 842",
+    "website": "https://www.vejerkitewind.com",
+    "instagram": "@vejerkitewind",
+    "address": { "es": "Playa de El Palmar s/n, Vejer de la Frontera", "en": "Playa de El Palmar s/n, Vejer de la Frontera" },
+    "lat": 36.2198,
+    "lng": -6.1187,
+    "photos": 4,
+    "reviews": [
+      { "author": "Lasse F.", "rating": 5, "date": "2025-06-27", "text": { "es": "Condiciones de viento espectaculares y profesores muy pacientes.", "en": "Spectacular wind conditions and very patient instructors." } },
+      { "author": "Bea M.", "rating": 4, "date": "2025-05-17", "text": { "es": "Mi primera clase de kitesurf y salí enganchada.", "en": "My first kitesurf lesson and I was instantly hooked." } }
+    ]
+  },
+  {
+    "id": "rutas-blancas-vejer",
+    "townSlug": "vejer-de-la-frontera",
+    "category": "actividades",
+    "tags": ["rutas-guiadas", "senderismo"],
+    "zone": { "es": "Casco Histórico", "en": "Historic Centre" },
+    "name": "Rutas Blancas Vejer",
+    "description": {
+      "es": "Visitas guiadas a pie por el laberinto de callejones de Vejer, con historias árabes, judías y cristianas que se entrelazan en cada esquina. También organizan rutas de senderismo por el Parque Natural de La Breña.",
+      "en": "Guided walking tours through Vejer's maze of alleys, weaving together Arab, Jewish and Christian stories on every corner. They also run hiking routes through La Breña Natural Park."
+    },
+    "priceRange": 1,
+    "rating": 4.8,
+    "reviewCount": 156,
+    "featured": false,
+    "hours": { "es": "Ma–Do 10:00–13:00 y 17:00–19:30", "en": "Tue–Sun 10am–1pm and 5–7:30pm" },
+    "phone": "+34 956 457 966",
+    "website": "https://www.rutasblancasvejer.com",
+    "instagram": "@rutasblancasvejer",
+    "address": { "es": "Plaza de España 1, Vejer de la Frontera", "en": "Plaza de España 1, Vejer de la Frontera" },
+    "lat": 36.2519,
+    "lng": -5.9651,
+    "photos": 3,
+    "reviews": [
+      { "author": "Hannah W.", "rating": 5, "date": "2025-07-30", "text": { "es": "La guía conocía cada rincón y cada historia, una pasada.", "en": "The guide knew every corner and every story, it was fantastic." } },
+      { "author": "Julio C.", "rating": 5, "date": "2025-06-15", "text": { "es": "Muy recomendable para entender de verdad el pueblo.", "en": "Highly recommended to truly understand the village." } }
+    ]
+  },
+  {
+    "id": "hotel-almadraba-zahara",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Playa de los Alemanes", "en": "Los Alemanes Beach" },
+    "name": "Hotel Almadraba Zahara",
+    "description": {
+      "es": "Hotel de líneas mediterráneas frente a una de las playas más fotografiadas del sur de España, con piscina infinita, restaurante propio de producto local y habitaciones que juegan con la luz de la mañana.",
+      "en": "A Mediterranean-style hotel facing one of southern Spain's most photographed beaches, with an infinity pool, its own local-produce restaurant, and rooms designed to play with the morning light."
+    },
+    "priceRange": 3,
+    "rating": 4.7,
+    "reviewCount": 267,
+    "featured": true,
+    "hours": { "es": "Recepción 24 horas", "en": "24-hour reception" },
+    "phone": "+34 956 460 230",
+    "website": "https://www.hotelalmadrabazahara.com",
+    "instagram": "@hotelalmadrabazahara",
+    "address": { "es": "Carretera de Atlanterra km 1, Zahara de los Atunes", "en": "Carretera de Atlanterra km 1, Zahara de los Atunes" },
+    "lat": 36.1289,
+    "lng": -5.8461,
+    "photos": 6,
+    "reviews": [
+      { "author": "Isabelle T.", "rating": 5, "date": "2025-08-07", "text": { "es": "La piscina infinita con vistas a la playa es alucinante.", "en": "The infinity pool with beach views is stunning." } },
+      { "author": "Rodrigo N.", "rating": 5, "date": "2025-07-15", "text": { "es": "Todo cuidado al detalle, el restaurante del hotel sorprende.", "en": "Every detail carefully considered, the hotel restaurant is a pleasant surprise." } }
+    ]
+  },
+  {
+    "id": "apartamentos-atlanterra-sur",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "alojamiento",
+    "tags": [],
+    "zone": { "es": "Atlanterra", "en": "Atlanterra" },
+    "name": "Apartamentos Atlanterra Sur",
+    "description": {
+      "es": "Apartamentos frente al mar en la zona más tranquila de Atlanterra, con terrazas amplias orientadas al atardecer y acceso directo a calas casi vacías fuera de agosto. Ideales para estancias en familia.",
+      "en": "Seafront apartments in Atlanterra's quietest stretch, with wide terraces facing the sunset and direct access to coves that stay near-empty outside of August. Ideal for family stays."
+    },
+    "priceRange": 2,
+    "rating": 4.5,
+    "reviewCount": 134,
+    "featured": false,
+    "hours": { "es": "Check-in 16:00–20:00", "en": "Check-in 4pm–8pm" },
+    "phone": "+34 956 461 355",
+    "website": "https://www.atlanterrasur.com",
+    "instagram": "@atlanterrasur",
+    "address": { "es": "Urb. Atlanterra Bajo s/n, Zahara de los Atunes", "en": "Urb. Atlanterra Bajo s/n, Zahara de los Atunes" },
+    "lat": 36.1102,
+    "lng": -5.8623,
+    "photos": 4,
+    "reviews": [
+      { "author": "Miriam K.", "rating": 4, "date": "2025-06-20", "text": { "es": "Calas casi para nosotros solos en junio, un lujo.", "en": "Coves almost to ourselves in June, a real luxury." } },
+      { "author": "Bastian W.", "rating": 5, "date": "2025-05-08", "text": { "es": "Terraza enorme y el atardecer desde allí es un espectáculo.", "en": "Huge terrace and the sunset from there is a show in itself." } }
+    ]
+  },
+  {
+    "id": "restaurante-el-atun-rojo",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Centro", "en": "Centre" },
+    "name": "Restaurante El Atún Rojo",
+    "description": {
+      "es": "Referencia absoluta del atún rojo en Zahara, con una parrilla que borda el punto justo de cada pieza. Sala luminosa a pocos metros de la playa y una carta de vinos que acompaña sin robar protagonismo.",
+      "en": "The absolute reference for bluefin tuna in Zahara, with a grill that nails the perfect point on every cut. A bright dining room steps from the beach, and a wine list that supports without stealing the show."
+    },
+    "priceRange": 3,
+    "rating": 4.9,
+    "reviewCount": 356,
+    "featured": true,
+    "hours": { "es": "Ma–Do 13:00–16:30 y 20:00–23:30", "en": "Tue–Sun 1–4:30pm and 8–11:30pm" },
+    "phone": "+34 956 462 481",
+    "website": "https://www.elatunrojo-zahara.com",
+    "instagram": "@elatunrojo.zahara",
+    "address": { "es": "Calle María Luisa 8, Zahara de los Atunes", "en": "Calle María Luisa 8, Zahara de los Atunes" },
+    "lat": 36.1349,
+    "lng": -5.8443,
+    "photos": 5,
+    "reviews": [
+      { "author": "Paula V.", "rating": 5, "date": "2025-08-18", "text": { "es": "El mejor atún que he comido en mi vida, sin exagerar.", "en": "The best tuna I've had in my life, no exaggeration." } },
+      { "author": "James D.", "rating": 5, "date": "2025-07-23", "text": { "es": "Reservamos con dos semanas y aun así hubo que esperar, vale la pena.", "en": "We booked two weeks ahead and still waited, but it's worth it." } }
+    ]
+  },
+  {
+    "id": "chiringuito-los-alemanes",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "restaurantes",
+    "tags": [],
+    "zone": { "es": "Playa de los Alemanes", "en": "Los Alemanes Beach" },
+    "name": "Chiringuito Los Alemanes",
+    "description": {
+      "es": "Chiringuito descalzo entre dunas, con ensaladas de tomate del terreno, pescado del día a la plancha y sombrillas de palma. Música suave y ambiente relajado para no moverse de la arena en todo el día.",
+      "en": "A barefoot beach shack among the dunes, with local tomato salads, grilled catch of the day, and palm-leaf umbrellas. Easy music and a relaxed vibe for not moving from the sand all day."
+    },
+    "priceRange": 2,
+    "rating": 4.6,
+    "reviewCount": 189,
+    "featured": false,
+    "hours": { "es": "Todos los días, 11:00–20:00", "en": "Daily, 11am–8pm" },
+    "phone": "+34 956 463 592",
+    "website": "https://www.losalemanes-chiringuito.com",
+    "instagram": "@losalemanes.chiringuito",
+    "address": { "es": "Playa de los Alemanes s/n, Zahara de los Atunes", "en": "Playa de los Alemanes s/n, Zahara de los Atunes" },
+    "lat": 36.1271,
+    "lng": -5.8497,
+    "photos": 4,
+    "reviews": [
+      { "author": "Sonia E.", "rating": 5, "date": "2025-07-27", "text": { "es": "El pescado a la plancha estaba en su punto exacto.", "en": "The grilled fish was cooked exactly right." } },
+      { "author": "Erik L.", "rating": 4, "date": "2025-06-05", "text": { "es": "Sitio muy tranquilo entre las dunas, perfecto para desconectar.", "en": "A very peaceful spot among the dunes, perfect for switching off." } }
+    ]
+  },
+  {
+    "id": "bar-casa-juanito-zahara",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "bares",
+    "tags": [],
+    "zone": { "es": "Centro", "en": "Centre" },
+    "name": "Bar Casa Juanito",
+    "description": {
+      "es": "Bar de esquina donde paran los pescadores al terminar la faena, con cañas heladas y tapas de casquería marinera que no aparecen en ninguna guía. Auténtico Zahara sin filtro de Instagram.",
+      "en": "A corner bar where fishermen stop after their shift, with ice-cold beers and offal-based seafood tapas you won't find in any guidebook. Authentic Zahara with no Instagram filter."
+    },
+    "priceRange": 1,
+    "rating": 4.4,
+    "reviewCount": 77,
+    "featured": false,
+    "hours": { "es": "Todos los días, 09:00–23:00", "en": "Daily, 9am–11pm" },
+    "phone": "+34 956 464 603",
+    "website": "https://www.casajuanito-zahara.com",
+    "instagram": "@casajuanito.zahara",
+    "address": { "es": "Calle Sagasta 4, Zahara de los Atunes", "en": "Calle Sagasta 4, Zahara de los Atunes" },
+    "lat": 36.1361,
+    "lng": -5.8409,
+    "photos": 3,
+    "reviews": [
+      { "author": "Manolo R.", "rating": 5, "date": "2025-06-30", "text": { "es": "Tapas que no encuentras en ningún otro sitio, muy auténtico.", "en": "Tapas you won't find anywhere else, very authentic." } },
+      { "author": "Ellie S.", "rating": 4, "date": "2025-05-25", "text": { "es": "Ambiente muy local, se siente el pueblo de verdad.", "en": "Very local atmosphere, you feel the real village here." } }
+    ]
+  },
+  {
+    "id": "atlanterra-beach-club",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "discotecas",
+    "tags": [],
+    "zone": { "es": "Atlanterra", "en": "Atlanterra" },
+    "name": "Atlanterra Beach Club",
+    "description": {
+      "es": "Sesiones de música electrónica al atardecer que se alargan hasta la madrugada, en una plataforma de madera sobre la arena de Atlanterra. El sitio de moda entre quienes buscan la fiesta más cool de la zona.",
+      "en": "Sunset-to-sunrise electronic music sessions on a wooden deck over the Atlanterra sand. The go-to spot for anyone chasing the coolest party in the area."
+    },
+    "priceRange": 2,
+    "rating": 4.3,
+    "reviewCount": 214,
+    "featured": false,
+    "hours": { "es": "Vi–Sá 20:00–04:00 (temporada alta)", "en": "Fri–Sat 8pm–4am (high season)" },
+    "phone": "+34 956 465 714",
+    "website": "https://www.atlanterrabeachclub.com",
+    "instagram": "@atlanterrabeachclub",
+    "address": { "es": "Playa de Atlanterra s/n, Zahara de los Atunes", "en": "Playa de Atlanterra s/n, Zahara de los Atunes" },
+    "lat": 36.1054,
+    "lng": -5.8688,
+    "photos": 4,
+    "reviews": [
+      { "author": "Chloe R.", "rating": 4, "date": "2025-08-14", "text": { "es": "El atardecer con la música en directo es una pasada.", "en": "The sunset with live music is amazing." } },
+      { "author": "Diego P.", "rating": 4, "date": "2025-07-28", "text": { "es": "Ambiente selecto, ideal para una noche especial.", "en": "A refined crowd, great for a special night out." } }
+    ]
+  },
+  {
+    "id": "zahara-watersports",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "actividades",
+    "tags": ["motos-agua", "kayak"],
+    "zone": { "es": "Playa de los Alemanes", "en": "Los Alemanes Beach" },
+    "name": "Zahara Watersports",
+    "description": {
+      "es": "Alquiler y rutas guiadas en moto de agua y kayak por la costa entre Zahara y Atlanterra, con paradas en calas solo accesibles desde el mar. Equipo de seguridad incluido y monitores bilingües.",
+      "en": "Jet-ski and kayak rentals with guided routes along the coast between Zahara and Atlanterra, with stops at coves only reachable from the sea. Safety gear included and bilingual instructors."
+    },
+    "priceRange": 2,
+    "rating": 4.6,
+    "reviewCount": 98,
+    "featured": false,
+    "hours": { "es": "Todos los días, 09:00–19:00", "en": "Daily, 9am–7pm" },
+    "phone": "+34 956 466 825",
+    "website": "https://www.zaharawatersports.com",
+    "instagram": "@zaharawatersports",
+    "address": { "es": "Playa de los Alemanes s/n, Zahara de los Atunes", "en": "Playa de los Alemanes s/n, Zahara de los Atunes" },
+    "lat": 36.1258,
+    "lng": -5.8511,
+    "photos": 4,
+    "reviews": [
+      { "author": "Frida A.", "rating": 5, "date": "2025-07-06", "text": { "es": "Las calas a las que llegamos en kayak eran de otro mundo.", "en": "The coves we reached by kayak were out of this world." } },
+      { "author": "Tobias M.", "rating": 4, "date": "2025-06-16", "text": { "es": "Material en muy buen estado y monitores atentos.", "en": "Gear in great condition and attentive instructors." } }
+    ]
+  },
+  {
+    "id": "almadraba-boat-experience",
+    "townSlug": "zahara-de-los-atunes",
+    "category": "actividades",
+    "tags": ["barco", "rutas-guiadas"],
+    "zone": { "es": "Centro", "en": "Centre" },
+    "name": "Almadraba Boat Experience",
+    "description": {
+      "es": "Salida en barco para conocer de cerca el arte de la almadraba, con explicación de pescadores locales sobre esta técnica milenaria de captura del atún rojo. Termina con degustación de producto directamente a bordo.",
+      "en": "A boat trip to see the almadraba tuna trap up close, with local fishermen explaining this centuries-old technique for catching bluefin tuna. It ends with a tasting of the catch right on board."
+    },
+    "priceRange": 3,
+    "rating": 4.8,
+    "reviewCount": 145,
+    "featured": false,
+    "hours": { "es": "Ma–Do 10:00–13:00 (temporada de almadraba)", "en": "Tue–Sun 10am–1pm (tuna season)" },
+    "phone": "+34 956 467 936",
+    "website": "https://www.almadrababoatexperience.com",
+    "instagram": "@almadrababoatexperience",
+    "address": { "es": "Puerto de Zahara s/n, Zahara de los Atunes", "en": "Puerto de Zahara s/n, Zahara de los Atunes" },
+    "lat": 36.1342,
+    "lng": -5.8451,
+    "photos": 4,
+    "reviews": [
+      { "author": "Louis F.", "rating": 5, "date": "2025-06-08", "text": { "es": "Una experiencia cultural y gastronómica única, muy recomendable.", "en": "A unique cultural and culinary experience, highly recommended." } },
+      { "author": "Andrea Z.", "rating": 5, "date": "2025-05-12", "text": { "es": "Aprendimos muchísimo sobre la tradición del atún y la degustación fue espectacular.", "en": "We learned so much about the tuna tradition and the tasting was fantastic." } }
+    ]
+  }
+]

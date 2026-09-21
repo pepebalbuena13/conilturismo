@@ -1,0 +1,58 @@
+---
+import { paletteFor, sceneVariantFor, getInitials } from "../lib/placeholder";
+
+interface Props {
+  seed: string;
+  label?: string;
+  alt: string;
+  class?: string;
+  showInitials?: boolean;
+}
+
+const { seed, label, alt, class: className = "", showInitials = true } = Astro.props;
+const palette = paletteFor(seed);
+const variant = sceneVariantFor(seed);
+const initials = label ? getInitials(label) : undefined;
+const gradientId = `grad-${seed.replace(/[^a-zA-Z0-9]/g, "")}`;
+---
+
+<svg
+  class={`h-full w-full ${className}`}
+  viewBox="0 0 400 300"
+  preserveAspectRatio="xMidYMid slice"
+  role="img"
+  aria-label={alt}
+>
+  <defs>
+    <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color={palette.from} />
+      <stop offset="100%" stop-color={palette.to} />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill={`url(#${gradientId})`} />
+  <circle cx={variant.sunX * 4} cy="90" r="34" fill={palette.sun} opacity="0.9" />
+  <path
+    d={`M0 ${190 + (variant.waveOffset % 20)} Q 50 ${160 + (variant.waveOffset % 30)} 100 ${190 + (variant.waveOffset % 20)} T 200 ${190 + (variant.waveOffset % 20)} T 300 ${190 + (variant.waveOffset % 20)} T 400 ${190 + (variant.waveOffset % 20)} V300 H0 Z`}
+    fill={palette.to}
+    opacity="0.55"
+  />
+  <path
+    d={`M0 ${220 + (variant.waveOffset % 15)} Q 60 ${200 + (variant.waveOffset % 25)} 120 ${220 + (variant.waveOffset % 15)} T 240 ${220 + (variant.waveOffset % 15)} T 400 ${220 + (variant.waveOffset % 15)} V300 H0 Z`}
+    fill={palette.from}
+    opacity="0.75"
+  />
+  {showInitials && initials && (
+    <>
+      <circle cx="200" cy="200" r="30" fill={palette.from} opacity="0.55" stroke="#F2E8D8" stroke-width="2" />
+      <text
+        x="200"
+        y="200"
+        text-anchor="middle"
+        dominant-baseline="central"
+        font-family="Fraunces, serif"
+        font-size="26"
+        fill="#F2E8D8"
+      >{initials}</text>
+    </>
+  )}
+</svg>

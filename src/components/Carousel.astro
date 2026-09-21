@@ -1,0 +1,131 @@
+---
+import type { Locale } from "../data/categories";
+import { t } from "../lib/i18n";
+import Icon from "./Icon.astro";
+import SmartImage from "./SmartImage.astro";
+
+interface Slide {
+  relPath: string;
+  seed: string;
+  alt: string;
+  caption?: string;
+  label?: string;
+  showInitials?: boolean;
+}
+
+interface Props {
+  id: string;
+  locale: Locale;
+  slides: Slide[];
+  aspectClass?: string;
+  roundedClass?: string;
+}
+
+const { id, locale, slides, aspectClass = "aspect-[4/3]", roundedClass = "rounded-3xl" } = Astro.props;
+const total = slides.length;
+---
+
+<div class="relative" data-carousel-wrapper={id}>
+  <div
+    id={`${id}-track`}
+    class={`flex w-full snap-x snap-mandatory overflow-x-auto no-scrollbar scroll-smooth ${aspectClass} ${roundedClass} shadow-card`}
+    role="region"
+    aria-roledescription="carousel"
+    aria-label={t(locale, "business.gallery")}
+    tabindex="0"
+  >
+    {slides.map((slide, i) => (
+      <div class="relative h-full w-full flex-none snap-center overflow-hidden" data-slide-index={i}>
+        <SmartImage
+          relPath={slide.relPath}
+          seed={slide.seed}
+          label={slide.label}
+          alt={slide.alt}
+          class="h-full w-full object-cover"
+          loading={i === 0 ? "eager" : "lazy"}
+          showInitials={slide.showInitials ?? true}
+        />
+        {slide.caption && (
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-tinta/80 via-tinta/10 to-transparent p-5 pt-14">
+            <p class="font-display text-lg text-arena-soft text-balance">{slide.caption}</p>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {total > 1 && (
+    <>
+      <button
+        type="button"
+        data-carousel-prev
+        aria-label={t(locale, "carousel.previous")}
+        class="tap-target absolute left-3 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full bg-arena-soft/90 text-atlantico shadow-soft transition hover:bg-arena-soft"
+      >
+        <Icon name="chevron-left" class="h-5 w-5" />
+      </button>
+      <button
+        type="button"
+        data-carousel-next
+        aria-label={t(locale, "carousel.next")}
+        class="tap-target absolute right-3 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full bg-arena-soft/90 text-atlantico shadow-soft transition hover:bg-arena-soft"
+      >
+        <Icon name="chevron-right" class="h-5 w-5" />
+      </button>
+
+      <div class="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5" data-carousel-dots>
+        {slides.map((_, i) => (
+          <button
+            type="button"
+            data-carousel-dot={i}
+            aria-label={t(locale, "carousel.goTo", { n: i + 1 })}
+            class="h-2 w-2 rounded-full bg-arena-soft/50 transition-all data-[active=true]:w-5 data-[active=true]:bg-dorado"
+          ></button>
+        ))}
+      </div>
+
+      <p class="sr-only" role="status" data-carousel-status></p>
+    </>
+  )}
+</div>
+
+<script define:vars={{ id, total }}>
+  const wrapper = document.querySelector(`[data-carousel-wrapper="${id}"]`);
+  if (wrapper) {
+    const track = wrapper.querySelector(`#${id}-track`);
+    const dots = [...wrapper.querySelectorAll("[data-carousel-dot]")];
+    const status = wrapper.querySelector("[data-carousel-status]");
+    let current = 0;
+
+    function setActive(index) {
+      current = index;
+      dots.forEach((dot, i) => dot.setAttribute("data-active", String(i === index)));
+      if (status) status.textContent = `${index + 1} / ${total}`;
+    }
+
+    function goTo(index) {
+      const clamped = Math.max(0, Math.min(total - 1, index));
+      const slide = track.querySelector(`[data-slide-index="${clamped}"]`);
+      slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    }
+
+    wrapper.querySelector("[data-carousel-prev]")?.addEventListener("click", () => goTo(current - 1));
+    wrapper.querySelector("[data-carousel-next]")?.addEventListener("click", () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener("click", () => goTo(i)));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number(entry.target.getAttribute("data-slide-index"));
+            setActive(idx);
+          }
+        });
+      },
+      { root: track, threshold: 0.6 }
+    );
+
+    track.querySelectorAll("[data-slide-index]").forEach((slide) => observer.observe(slide));
+    setActive(0);
+  }
+</script>

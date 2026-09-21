@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import TownCard from "../../components/TownCard.astro";
+import BusinessCard from "../../components/BusinessCard.astro";
+import Icon from "../../components/Icon.astro";
+import { CATEGORIES } from "../../data/categories";
+import { TOWNS, getFeaturedBusinesses } from "../../lib/business";
+import { t } from "../../lib/i18n";
+import { searchPath } from "../../lib/paths";
+
+const locale = "en" as const;
+const featured = getFeaturedBusinesses(6);
+---
+
+<BaseLayout
+  locale={locale}
+  title={t(locale, "home.heroTitle")}
+  description={t(locale, "site.description")}
+  altHref="/"
+  canonicalPath="/en/"
+>
+  <Hero locale={locale} />
+
+  <section id="towns" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.townsTitle")}</h2>
+      <p class="mt-3 text-tinta/70">{t(locale, "home.townsSubtitle")}</p>
+    </div>
+    <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      {TOWNS.map((town) => (
+        <TownCard town={town} locale={locale} />
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-atlantico/5 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.featuredTitle")}</h2>
+        <p class="mt-3 text-tinta/70">{t(locale, "home.featuredSubtitle")}</p>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {featured.map((business) => (
+          <BusinessCard business={business} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.categoriesTitle")}</h2>
+    </div>
+    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      {CATEGORIES.map((cat) => (
+        <a
+          href={`${searchPath(locale)}?cat=${cat.id}`}
+          class="group flex flex-col items-center gap-3 rounded-2xl bg-white/70 px-4 py-8 text-center shadow-card ring-1 ring-tinta/5 transition-all hover:-translate-y-1 hover:shadow-lift"
+        >
+          <span class="flex h-12 w-12 items-center justify-center rounded-full bg-terracota/10 text-terracota transition-colors group-hover:bg-terracota group-hover:text-arena-soft">
+            <Icon name={cat.icon} class="h-6 w-6" />
+          </span>
+          <span class="font-display text-base font-semibold text-tinta">{cat.label[locale]}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

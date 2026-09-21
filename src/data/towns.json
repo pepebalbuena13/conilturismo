@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "conil-de-la-frontera",
+    "name": "Conil de la Frontera",
+    "lat": 36.2778,
+    "lng": -6.0928,
+    "tagline": {
+      "es": "Pueblo blanco, playas salvajes",
+      "en": "Whitewashed village, wild beaches"
+    },
+    "welcome": {
+      "es": "Pueblo blanco de pescadores con algunas de las playas más salvajes de Cádiz. Conil combina cocina de mar, surf y noches tranquilas frente al Atlántico.",
+      "en": "A whitewashed fishing village with some of Cádiz's wildest beaches. Conil blends seafood, surf culture and calm Atlantic nights."
+    },
+    "zones": ["Playa de los Bateles", "Casco Antiguo", "El Palmar", "Fuente del Gallo"],
+    "gallerySeed": "conil",
+    "gallery": [
+      { "es": "Playa de Los Bateles al atardecer", "en": "Los Bateles beach at sunset" },
+      { "es": "Calles blancas del casco antiguo de Conil", "en": "Whitewashed streets of Conil's old town" },
+      { "es": "El Palmar, playa infinita para el surf", "en": "El Palmar, an endless beach for surfing" },
+      { "es": "Barcas de pesca en la Torre de Guzmán", "en": "Fishing boats by the Guzmán Tower" }
+    ]
+  },
+  {
+    "slug": "chiclana-de-la-frontera",
+    "name": "Chiclana de la Frontera / Novo Sancti Petri",
+    "lat": 36.4198,
+    "lng": -6.1499,
+    "tagline": {
+      "es": "Resorts, golf y playas infinitas",
+      "en": "Resorts, golf and endless beaches"
+    },
+    "welcome": {
+      "es": "Entre pinares y una de las playas más largas de la provincia, Chiclana y Novo Sancti Petri son sinónimo de resorts, golf y vida nocturna junto al mar.",
+      "en": "Between pine groves and one of the province's longest beaches, Chiclana and Novo Sancti Petri mean resorts, golf and seafront nightlife."
+    },
+    "zones": ["Novo Sancti Petri", "La Barrosa", "Sancti Petri", "Centro"],
+    "gallerySeed": "chiclana",
+    "gallery": [
+      { "es": "Playa de La Barrosa al mediodía", "en": "La Barrosa beach at midday" },
+      { "es": "Torre y castillo de Sancti Petri", "en": "Sancti Petri tower and castle" },
+      { "es": "Paseo marítimo de Novo Sancti Petri", "en": "Novo Sancti Petri seafront promenade" },
+      { "es": "Pinares junto a la playa", "en": "Pine groves next to the beach" }
+    ]
+  },
+  {
+    "slug": "barbate",
+    "name": "Barbate",
+    "lat": 36.1913,
+    "lng": -5.9207,
+    "tagline": {
+      "es": "Almadraba, acantilados y sabor auténtico",
+      "en": "Almadraba tuna, cliffs and raw flavour"
+    },
+    "welcome": {
+      "es": "Capital del atún de almadraba y puerta al Parque Natural de La Breña. Barbate es sabor auténtico, acantilados y atardeceres sin filtro.",
+      "en": "Home of almadraba tuna and gateway to La Breña Natural Park. Barbate is raw flavour, cliffs and unfiltered sunsets."
+    },
+    "zones": ["Caños de Meca", "Zahora", "Puerto pesquero", "Centro"],
+    "gallerySeed": "barbate",
+    "gallery": [
+      { "es": "Acantilados del Parque Natural de La Breña", "en": "Cliffs of La Breña Natural Park" },
+      { "es": "Puerto pesquero de Barbate al amanecer", "en": "Barbate's fishing port at dawn" },
+      { "es": "Playa de Caños de Meca", "en": "Caños de Meca beach" },
+      { "es": "Faro de Trafalgar desde la costa", "en": "Trafalgar lighthouse from the coast" }
+    ]
+  },
+  {
+    "slug": "vejer-de-la-frontera",
+    "name": "Vejer de la Frontera",
+    "lat": 36.2517,
+    "lng": -5.9649,
+    "tagline": {
+      "es": "El pueblo blanco sobre el Atlántico",
+      "en": "The white village above the Atlantic"
+    },
+    "welcome": {
+      "es": "Uno de los pueblos blancos más bellos de España, encaramado sobre un cerro con vistas al Atlántico. Vejer es arte, gastronomía de autor y calma andalusí.",
+      "en": "One of Spain's most beautiful white villages, perched on a hilltop with Atlantic views. Vejer means art, refined gastronomy and Andalusi calm."
+    },
+    "zones": ["Casco Histórico", "La Muela", "El Palmar (zona Vejer)"],
+    "gallerySeed": "vejer",
+    "gallery": [
+      { "es": "Callejones empedrados del casco histórico", "en": "Cobbled lanes of the historic centre" },
+      { "es": "Vistas al Atlántico desde el castillo", "en": "Atlantic views from the castle" },
+      { "es": "Terrazas y arte urbano en Vejer", "en": "Terraces and street art in Vejer" },
+      { "es": "Puesta de sol sobre los tejados blancos", "en": "Sunset over the white rooftops" }
+    ]
+  },
+  {
+    "slug": "zahara-de-los-atunes",
+    "name": "Zahara de los Atunes",
+    "lat": 36.1333,
+    "lng": -5.8422,
+    "tagline": {
+      "es": "Cuna del atún rojo, playas vírgenes",
+      "en": "Birthplace of bluefin tuna, wild beaches"
+    },
+    "welcome": {
+      "es": "Pueblo marinero elegante y salvaje a partes iguales, cuna del atún rojo y de algunas de las playas vírgenes más fotografiadas de la Costa de la Luz.",
+      "en": "A fishing village equal parts elegant and wild, birthplace of bluefin tuna culture and some of the Costa de la Luz's most photographed wild beaches."
+    },
+    "zones": ["Playa de los Alemanes", "Atlanterra", "Centro"],
+    "gallerySeed": "zahara",
+    "gallery": [
+      { "es": "Playa de los Alemanes entre dunas", "en": "Los Alemanes beach between dunes" },
+      { "es": "Almadraba y tradición atunera", "en": "Almadraba tuna trap tradition" },
+      { "es": "Atlanterra al atardecer", "en": "Atlanterra at sunset" },
+      { "es": "Calles marineras del centro de Zahara", "en": "Seafaring streets of Zahara's centre" }
+    ]
+  }
+]
