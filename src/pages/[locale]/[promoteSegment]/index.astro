@@ -1,0 +1,17 @@
+---
+import PromoteView from "../../../views/PromoteView.astro";
+import type { Locale } from "../../../data/categories";
+import { PROMOTE_SEGMENT } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.map((locale) => ({
+    params: { locale, promoteSegment: PROMOTE_SEGMENT[locale] },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<PromoteView locale={locale} />
