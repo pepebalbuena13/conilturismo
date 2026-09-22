@@ -40,6 +40,8 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
             {t(locale, "promote.planAnnual")}
           </span>
           <h3 class="mt-3 font-display text-xl font-semibold text-tinta">{t(locale, "promote.planAnnualTitle")}</h3>
+          <p class="mt-2 font-display text-2xl font-semibold text-atlantico">{t(locale, "promote.planAnnualPrice")}</p>
+          <p class="text-xs text-tinta/60">{t(locale, "promote.planAnnualPriceNote")}</p>
           <p class="mt-2 text-sm text-tinta/70">{t(locale, "promote.planAnnualDescription")}</p>
           <ul class="mt-4 space-y-2 text-sm text-tinta/80">
             <li class="flex gap-2"><Icon name="chevron-right" class="mt-0.5 h-4 w-4 shrink-0 text-terracota" />{t(locale, "promote.planAnnualBullet1")}</li>
@@ -54,6 +56,8 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
             {t(locale, "promote.planSummer")}
           </span>
           <h3 class="mt-3 font-display text-xl font-semibold text-tinta">{t(locale, "promote.planSummerTitle")}</h3>
+          <p class="mt-2 font-display text-2xl font-semibold text-atlantico">{t(locale, "promote.planSummerPrice")}</p>
+          <p class="text-xs text-tinta/60">{t(locale, "promote.planSummerPriceNote")}</p>
           <p class="mt-2 text-sm text-tinta/70">{t(locale, "promote.planSummerDescription")}</p>
           <ul class="mt-4 space-y-2 text-sm text-tinta/80">
             <li class="flex gap-2"><Icon name="chevron-right" class="mt-0.5 h-4 w-4 shrink-0 text-terracota" />{t(locale, "promote.planSummerBullet1")}</li>
@@ -161,12 +165,12 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
           <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">{t(locale, "promote.paymentType")}</p>
           <div class="flex flex-col gap-2 sm:flex-row sm:gap-6">
             <label class="flex items-center gap-2 text-sm text-tinta/80">
-              <input type="radio" name="Forma de pago" value={t(locale, "promote.paymentMonthly")} checked class="h-4 w-4 accent-atlantico" />
-              {t(locale, "promote.paymentMonthly")}
+              <input type="radio" name="Forma de pago" id="payment-monthly" checked class="h-4 w-4 accent-atlantico" />
+              <span id="payment-monthly-label"></span>
             </label>
             <label class="flex items-center gap-2 text-sm text-tinta/80">
-              <input type="radio" name="Forma de pago" value={t(locale, "promote.paymentFull")} class="h-4 w-4 accent-atlantico" />
-              {t(locale, "promote.paymentFull")}
+              <input type="radio" name="Forma de pago" id="payment-full" class="h-4 w-4 accent-atlantico" />
+              <span id="payment-full-label"></span>
             </label>
           </div>
         </div>
@@ -196,21 +200,42 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
   </div>
 </BaseLayout>
 
-<script define:vars={{ maxTotalBytes: 10 * 1024 * 1024 }}>
+<script
+  define:vars={{
+    maxTotalBytes: 10 * 1024 * 1024,
+    planPrices: {
+      annual: { monthly: 50, full: 500, savings: 100 },
+      summer: { monthly: 100, full: 350, savings: 50 },
+    },
+    paymentTemplates: {
+      monthly: t(locale, "promote.paymentMonthlyLabel"),
+      full: t(locale, "promote.paymentFullLabel"),
+    },
+  }}
+>
   const form = document.getElementById("promote-form");
   const successEl = document.getElementById("promote-success");
   const sizeErrorEl = document.getElementById("photo-size-error");
   const planAnnual = document.getElementById("plan-annual");
   const planSummer = document.getElementById("plan-summer");
-  const paymentWrap = document.getElementById("payment-type-wrap");
+  const paymentMonthlyInput = document.getElementById("payment-monthly");
+  const paymentFullInput = document.getElementById("payment-full");
+  const paymentMonthlyLabel = document.getElementById("payment-monthly-label");
+  const paymentFullLabel = document.getElementById("payment-full-label");
   const photoInputs = ["photo1", "photo2", "photo3"].map((id) => document.getElementById(id));
 
-  function togglePayment() {
-    paymentWrap.classList.toggle("hidden", !planAnnual.checked);
+  function updatePaymentOptions() {
+    const prices = planAnnual.checked ? planPrices.annual : planPrices.summer;
+    const monthlyText = paymentTemplates.monthly.replace("{price}", prices.monthly);
+    const fullText = paymentTemplates.full.replace("{price}", prices.full).replace("{savings}", prices.savings);
+    paymentMonthlyLabel.textContent = monthlyText;
+    paymentFullLabel.textContent = fullText;
+    paymentMonthlyInput.value = monthlyText;
+    paymentFullInput.value = fullText;
   }
-  planAnnual?.addEventListener("change", togglePayment);
-  planSummer?.addEventListener("change", togglePayment);
-  togglePayment();
+  planAnnual?.addEventListener("change", updatePaymentOptions);
+  planSummer?.addEventListener("change", updatePaymentOptions);
+  updatePaymentOptions();
 
   function totalPhotoBytes() {
     return photoInputs.reduce((sum, input) => sum + Array.from(input?.files ?? []).reduce((s, f) => s + f.size, 0), 0);
