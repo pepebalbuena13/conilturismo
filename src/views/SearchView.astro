@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { CATEGORIES, getCategoryById, type Locale } from "../data/categories";
-import { BUSINESSES, TOWNS, getTown, formatPrice, type Business } from "../lib/business";
+import { BUSINESSES, TOWNS, getTown, type Business } from "../lib/business";
 import { t } from "../lib/i18n";
 import { businessPath, localizedSearchHrefs } from "../lib/paths";
 
@@ -43,7 +43,6 @@ const searchData = BUSINESSES.map((b) => {
     category: b.category,
     categoryLabel: category.labelSingular[locale],
     categoryIcon: category.icon,
-    priceLabel: formatPrice(b.priceRange),
     rating: b.rating,
     reviewCount: b.reviewCount,
     featured: b.featured,
@@ -102,7 +101,6 @@ const searchData = BUSINESSES.map((b) => {
 <script define:vars={{
   labels: {
     reviews: t(locale, "business.reviews"),
-    featured: t(locale, "business.featuredBadge"),
     resultsCount: t(locale, "search.resultsCount"),
   },
 }}>
@@ -208,8 +206,6 @@ const searchData = BUSINESSES.map((b) => {
           <div class="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-110">
             ${photosHtml(b)}
           </div>
-          ${b.featured ? `<span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-dorado px-3 py-1 text-xs font-semibold text-tinta shadow-soft">${iconSvg("star", "h-3 w-3")}${labels.featured}</span>` : ""}
-          <span class="absolute right-3 top-3 rounded-full bg-tinta/70 px-2.5 py-1 text-xs font-semibold text-arena-soft backdrop-blur-sm">${b.priceLabel}</span>
         </div>
         <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
           <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-terracota">${iconSvg(b.categoryIcon, "h-3.5 w-3.5")}${b.categoryLabel}</div>
