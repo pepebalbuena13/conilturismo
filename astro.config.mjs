@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://costadelaluz.guide',
+  site: 'https://costadelaluzturismo.com',
   integrations: [
     sitemap({
       i18n: {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://costadelaluz.guide/sitemap-index.xml
+Sitemap: https://costadelaluzturismo.com/sitemap-index.xml
