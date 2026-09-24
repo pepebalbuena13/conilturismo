@@ -48,13 +48,13 @@ const { locale, hrefs, currentTownSlug } = Astro.props;
         <Icon name="search" class="h-4 w-4" />
         {t(locale, "nav.search")}
       </a>
+      <LanguageSwitcher locale={locale} hrefs={hrefs} />
       <a
         href={promotePath(locale)}
-        class="tap-target flex items-center gap-2 rounded-full bg-terracota px-4 py-2 text-sm font-semibold text-arena-soft transition-colors hover:bg-terracota-light"
+        class="tap-target flex w-20 flex-col items-center justify-center rounded-full bg-terracota px-2 py-1.5 text-center text-[11px] font-semibold leading-tight text-arena-soft transition-colors hover:bg-terracota-light"
       >
         {t(locale, "promote.metaTitle")}
       </a>
-      <LanguageSwitcher locale={locale} hrefs={hrefs} />
     </div>
 
     <div class="flex items-center gap-2 lg:hidden">
