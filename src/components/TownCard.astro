@@ -12,65 +12,79 @@ interface Props {
 }
 
 const { town, locale } = Astro.props;
-const hasNameCard = Boolean(town.nameCardPhoto);
-const photoIndex = town.nameCardPhoto ?? 1;
-const relPath = `${town.slug}/hero/${photoIndex}`;
-const photoAlt = town.gallery[photoIndex - 1]?.[locale] ?? town.name;
-const focusY = town.nameCardFocusY ?? 50;
+const photos = town.gallery.map((caption, i) => ({
+  relPath: `${town.slug}/hero/${i + 1}`,
+  alt: caption[locale] ?? town.name,
+}));
 ---
 
 <a
   href={townPath(locale, town.slug)}
+  data-fade-carousel
   class="group relative flex aspect-[3/4] w-full flex-col justify-end overflow-hidden rounded-3xl shadow-card transition-transform duration-500 hover:-translate-y-1"
 >
   <div class="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
-    {hasNameCard ? (
-      <>
+    {photos.map((photo, i) => (
+      <div
+        data-fade-slide
+        class={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${i === 0 ? "opacity-100" : "opacity-0"}`}
+      >
         <SmartImage
-          relPath={relPath}
-          seed={town.gallerySeed}
-          alt=""
-          class="h-full w-full scale-125 object-cover brightness-75 blur-2xl"
+          relPath={photo.relPath}
+          seed={`${town.gallerySeed}-${i}`}
+          label={town.name}
+          alt={photo.alt}
+          class="h-full w-full object-cover"
           showInitials={false}
-          loading="eager"
+          loading={i === 0 ? "eager" : "lazy"}
         />
-        <div class="absolute inset-0 flex items-center overflow-hidden">
-          <div class="h-[31%] w-full overflow-hidden">
-            <SmartImage
-              relPath={relPath}
-              seed={town.gallerySeed}
-              label={town.name}
-              alt={photoAlt}
-              class="h-full w-full object-cover"
-              style={focusY !== 50 ? `object-position: 50% ${focusY}%;` : undefined}
-              showInitials={false}
-              loading="eager"
-            />
-          </div>
-        </div>
-      </>
-    ) : (
-      <SmartImage
-        relPath={relPath}
-        seed={town.gallerySeed}
-        label={town.name}
-        alt={photoAlt}
-        class="h-full w-full object-cover"
-        showInitials={false}
-      />
-    )}
+      </div>
+    ))}
   </div>
-  <div class={`absolute inset-0 bg-gradient-to-t ${hasNameCard ? "from-tinta/55 via-transparent to-transparent" : "from-tinta/85 via-tinta/20 to-transparent"}`}></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-tinta/85 via-tinta/20 to-transparent"></div>
   <div class="relative p-5 sm:p-6">
-    {!hasNameCard && (
-      <>
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-dorado-soft">{town.tagline[locale]}</p>
-        <h3 class="mt-1 font-display text-2xl font-semibold text-arena-soft text-balance">{town.name.split(" / ")[0]}</h3>
-      </>
-    )}
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-dorado-soft">{town.tagline[locale]}</p>
+    <h3 class="mt-1 font-display text-2xl font-semibold text-arena-soft text-balance">{town.name.split(" / ")[0]}</h3>
     <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-arena-soft/90">
       {t(locale, "home.exploreTown")}
       <Icon name="chevron-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
     </span>
   </div>
 </a>
+
+<script>
+  const INTERVAL_MS = 4000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.querySelectorAll("[data-fade-carousel]").forEach((card) => {
+    const slides = Array.from(card.querySelectorAll("[data-fade-slide]"));
+    if (slides.length < 2 || reduceMotion) return;
+
+    let current = 0;
+    let timer: number | null = null;
+
+    function next() {
+      const nextIndex = (current + 1) % slides.length;
+      slides[current].classList.replace("opacity-100", "opacity-0");
+      slides[nextIndex].classList.replace("opacity-0", "opacity-100");
+      current = nextIndex;
+    }
+
+    function start() {
+      stop();
+      timer = window.setInterval(next, INTERVAL_MS);
+    }
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    start();
+    card.addEventListener("mouseenter", stop);
+    card.addEventListener("mouseleave", start);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
+  });
+</script>

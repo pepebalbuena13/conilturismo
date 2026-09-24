@@ -23,7 +23,6 @@
       "Fuente del Gallo"
     ],
     "gallerySeed": "conil",
-    "nameCardPhoto": 5,
     "gallery": [
       {
         "es": "Terrazas bajo las palmeras en el casco antiguo",
@@ -81,7 +80,6 @@
       "Centro"
     ],
     "gallerySeed": "chiclana",
-    "nameCardPhoto": 4,
     "gallery": [
       {
         "es": "Fuente en una plaza del centro",
@@ -133,7 +131,6 @@
       "Centro"
     ],
     "gallerySeed": "barbate",
-    "nameCardPhoto": 1,
     "gallery": [
       {
         "es": "El cartel de Barbate en el paseo de la playa",
@@ -184,8 +181,6 @@
       "El Palmar (zona Vejer)"
     ],
     "gallerySeed": "vejer",
-    "nameCardPhoto": 4,
-    "nameCardFocusY": 30,
     "gallery": [
       {
         "es": "Vejer iluminado al anochecer, con su iglesia y castillo sobre el pueblo",
@@ -236,7 +231,6 @@
       "Centro"
     ],
     "gallerySeed": "zahara",
-    "nameCardPhoto": 3,
     "gallery": [
       {
         "es": "Vista aérea de Zahara entre la laguna y la playa",
