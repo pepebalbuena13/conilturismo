@@ -2717,22 +2717,22 @@
     "zone": { "es": "El Palmar (zona Vejer)", "en": "El Palmar (Vejer area)", "de": "El Palmar (Vejer area)", "fr": "El Palmar (Vejer area)" },
     "name": "Discoteca El Cortijo",
     "description": {
-      "es": "Discoteca de verano al aire libre en pleno El Palmar, a un paso de la playa, con pista bajo las estrellas y el ambiente que reúne cada temporada a los veraneantes más jóvenes de la Costa de la Luz. Abre de junio a septiembre.",
-      "en": "An open-air summer nightclub right in El Palmar, steps from the beach, with a dance floor under the stars and the atmosphere that brings together the Costa de la Luz's younger summer crowd every season. Open June to September.",
-      "de": "Ein Open-Air-Sommerclub mitten in El Palmar, nur einen Steinwurf vom Strand entfernt, mit Tanzfläche unter freiem Himmel und der Atmosphäre, die jede Saison das jüngere Sommerpublikum der Costa de la Luz zusammenbringt. Geöffnet von Juni bis September.",
-      "fr": "Une discothèque d'été en plein air à El Palmar, à deux pas de la plage, avec une piste de danse à ciel ouvert et l'ambiance qui réunit chaque saison les jeunes vacanciers de la Costa de la Luz. Ouvert de juin à septembre."
+      "es": "La discoteca más grande de la provincia de Cádiz, al aire libre en pleno El Palmar, a un paso de la playa. Cuenta con su propia zona de botellón y servicio de autobuses para llegar. Abre todos los días de la semana desde mediados de julio hasta finales de agosto.",
+      "en": "The biggest nightclub in the province of Cádiz, open-air right in El Palmar, steps from the beach. It has its own botellón (pre-drinks) area and a bus service to get there. Open every day of the week from mid-July through the end of August.",
+      "de": "Die größte Diskothek der Provinz Cádiz, im Freien mitten in El Palmar, nur einen Steinwurf vom Strand entfernt. Mit eigenem Botellón-Bereich (Vortrinken im Freien) und Busverbindung dorthin. Von Mitte Juli bis Ende August jeden Tag der Woche geöffnet.",
+      "fr": "La plus grande discothèque de la province de Cadix, en plein air à El Palmar, à deux pas de la plage. Elle dispose de sa propre zone de botellón (pré-soirée) et d'un service de bus pour s'y rendre. Ouverte tous les jours de la semaine de mi-juillet à fin août."
     },
     "priceRange": 2,
     "rating": 4.5,
     "reviewCount": 0,
     "featured": true,
     "hours": {
-      "es": "Ju–Sá 23:00–06:00 (junio a septiembre)",
-      "en": "Thu–Sat 11pm–6am (June to September)",
-      "de": "Do–Sa 23:00–06:00 Uhr (Juni bis September)",
-      "fr": "Jeu–Sam 23h00–6h00 (juin à septembre)"
+      "es": "Todos los días 23:00–06:00 (mediados de julio a agosto)",
+      "en": "Every day 11pm–6am (mid-July to August)",
+      "de": "Täglich 23:00–06:00 Uhr (Mitte Juli bis August)",
+      "fr": "Tous les jours 23h00–6h00 (mi-juillet à août)"
     },
-    "phone": "+34 645 41 77 79",
+    "phone": "+34 665 09 20 20",
     "website": "https://www.facebook.com/p/El-Cortijo-100068268853898/",
     "instagram": "",
     "address": {
@@ -2743,7 +2743,7 @@
     },
     "lat": 36.223,
     "lng": -6.121,
-    "photos": 3,
+    "photos": 4,
     "reviews": []
   }
 ]
