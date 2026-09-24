@@ -12,10 +12,8 @@ interface Props {
 }
 
 const { lat, lng, label, locale, class: className = "", mapsUrl } = Astro.props;
-const delta = 0.008;
-const bbox = `${lng - delta},${lat - delta},${lng + delta},${lat + delta}`;
-const embedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`;
-const externalHref = mapsUrl ?? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=16/${lat}/${lng}`;
+const embedSrc = `https://www.google.com/maps?q=${lat},${lng}&z=16&output=embed`;
+const externalHref = mapsUrl ?? `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 ---
 
 <div class={`overflow-hidden rounded-3xl shadow-card ${className}`}>
