@@ -3,7 +3,7 @@ import type { Locale } from "../data/categories";
 import { CATEGORIES } from "../data/categories";
 import { TOWNS } from "../lib/business";
 import { t } from "../lib/i18n";
-import { townPath, homePath, promotePath } from "../lib/paths";
+import { townPath, homePath, promotePath, guidePath } from "../lib/paths";
 import Icon from "./Icon.astro";
 
 interface Props {
@@ -48,7 +48,8 @@ const year = new Date().getFullYear();
       <div>
         <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-dorado-soft">{t(locale, "footer.about")}</h3>
         <p class="mt-4 text-sm text-arena-soft/70">{t(locale, "footer.aboutText")}</p>
-        <a href={promotePath(locale)} class="mt-4 inline-block text-sm font-medium text-dorado-soft hover:text-dorado">{t(locale, "promote.metaTitle")}</a>
+        <a href={guidePath(locale)} class="mt-4 block text-sm font-medium text-dorado-soft hover:text-dorado">{t(locale, "guide.title")}</a>
+        <a href={promotePath(locale)} class="mt-2 block text-sm font-medium text-dorado-soft hover:text-dorado">{t(locale, "promote.metaTitle")}</a>
       </div>
     </div>
 

@@ -154,5 +154,25 @@
     "errorText": "We couldn't send the form. Please try again or email us directly.",
     "requiredHint": "* Required field",
     "sizeError": "The photos add up to more than 10 MB. Remove one or reduce their size."
+  },
+  "guide": {
+    "eyebrow": "Area guide",
+    "title": "What to do on the Costa de la Luz: a guide to Cádiz's 5 towns",
+    "metaDescription": "A complete guide to Cádiz's Costa de la Luz: beaches, whitewashed villages and almadraba tuna in Conil, Chiclana, Barbate, Vejer and Zahara de los Atunes.",
+    "intro": "The Costa de la Luz is the Atlantic stretch of Cádiz province, between La Breña y Marismas del Barbate Natural Park and the Strait of Gibraltar. Fine sandy beaches and untouched dunes, whitewashed villages perched on hilltops, steady wind that draws surfers from half the world, and a fishing tradition — the almadraba bluefin tuna trap — that shapes the food across the whole area. This guide covers the 5 towns that make up Costa de la Luz Turismo, so you can plan your visit.",
+    "whenTitle": "When to go",
+    "whenText": "Beach season runs from June to September, with July and August the busiest (and liveliest) months. If you're after quiet, near-empty beaches and good weather for wandering the old towns, spring and autumn are the sweet spot: less heat, lower prices, and the Levante and Poniente winds at their best for kitesurfing and windsurfing.",
+    "gettingAroundTitle": "Getting between the towns",
+    "gettingAroundText": "All 5 towns are linked by the coastal road (A-2233 and N-340), close enough together: it's about 35 km from Conil to Zahara de los Atunes. There's no train, so a car is the usual way to get around; in summer, bus lines also run between the main towns. Within each town, walking is the way to go — Vejer's and Conil's old quarters are made for strolling.",
+    "townsTitle": "The 5 towns, one by one",
+    "exploreTown": "See everything in {town}",
+    "ctaTitle": "Find your next plan",
+    "ctaText": "Search by town, category or whatever you're after: accommodation, restaurants, bars, nightclubs or activities.",
+    "ctaButton": "Go to search",
+    "townConil": "Conil de la Frontera pairs a whitewashed old town with some of the province's longest beaches, like La Fontanilla or Los Bateles. It's a good base for surfing, with beginner-friendly waves, and for trying bluefin tuna in season.",
+    "townChiclana": "Chiclana de la Frontera combines the huge urban beach of La Barrosa — several kilometres of fine sand — with an established hotel area in Novo Sancti Petri, golf courses, and a lively summer nightlife scene.",
+    "townBarbate": "Barbate is the birthplace of the almadraba, Europe's oldest bluefin tuna fishing technique. Next to La Breña y Marismas Natural Park, it hides coves like Zahora or Caños de Meca, with cliffs and pine forest running right down to the water.",
+    "townVejer": "Vejer de la Frontera is one of Cádiz's prettiest white villages, perched on a hilltop with Atlantic views. Its beach, El Palmar, is a surfing and sunset mecca, with beach bars and summer nightlife.",
+    "townZahara": "Zahara de los Atunes grew up around tuna fishing, and it still shows — it's one of the best places on the coast to eat it. Wide, less crowded beaches than elsewhere, with dunes and a quiet village outside of August."
   }
 }

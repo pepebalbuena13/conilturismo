@@ -154,5 +154,25 @@
     "errorText": "Nous n'avons pas pu envoyer le formulaire. Réessayez ou écrivez-nous directement.",
     "requiredHint": "* Champ obligatoire",
     "sizeError": "Les photos dépassent 10 Mo au total. Retirez-en une ou réduisez leur taille."
+  },
+  "guide": {
+    "eyebrow": "Guide de la région",
+    "title": "Que faire sur la Costa de la Luz : guide des 5 villages de Cadix",
+    "metaDescription": "Le guide complet de la Costa de la Luz à Cadix : plages, villages blancs et thon de l'almadraba à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes.",
+    "intro": "La Costa de la Luz est la façade atlantique de la province de Cadix, entre le parc naturel de La Breña y Marismas del Barbate et le détroit de Gibraltar. Des plages de sable fin et des dunes préservées, des villages blancs perchés sur des collines, un vent constant qui attire les surfeurs du monde entier, et une tradition de pêche — l'almadraba du thon rouge — qui marque la gastronomie de toute la région. Ce guide parcourt les 5 villages qui composent Costa de la Luz Turismo, pour vous aider à organiser votre séjour.",
+    "whenTitle": "Quand partir",
+    "whenText": "La saison balnéaire va de juin à septembre, juillet et août étant les mois les plus animés (et les plus fréquentés). Pour des plages tranquilles et presque désertes et un temps agréable pour flâner dans les vieux villages, le printemps et l'automne sont idéaux : moins de chaleur, des prix plus bas, et les vents de Levante et de Poniente au top pour le kitesurf et la planche à voile.",
+    "gettingAroundTitle": "Se déplacer entre les villages",
+    "gettingAroundText": "Les 5 villages sont reliés par la route côtière (A-2233 et N-340), assez proches les uns des autres : environ 35 km entre Conil et Zahara de los Atunes. Il n'y a pas de train, la voiture reste donc le moyen le plus courant ; en été, des lignes de bus relient aussi les principaux villages. Dans chaque village, mieux vaut marcher : les vieux quartiers de Vejer et de Conil sont faits pour la promenade.",
+    "townsTitle": "Les 5 villages, un par un",
+    "exploreTown": "Tout voir à {town}",
+    "ctaTitle": "Trouvez votre prochain plan",
+    "ctaText": "Cherchez par village, catégorie ou envie du moment : hébergement, restaurants, bars, discothèques ou activités.",
+    "ctaButton": "Aller à la recherche",
+    "townConil": "Conil de la Frontera associe un vieux village blanchi à la chaux à certaines des plages les plus longues de la province, comme La Fontanilla ou Los Bateles. Un bon point de départ pour le surf, avec des vagues accessibles aux débutants, et pour goûter le thon rouge en saison.",
+    "townChiclana": "Chiclana de la Frontera réunit l'immense plage urbaine de La Barrosa — plusieurs kilomètres de sable fin — avec une zone hôtelière bien établie à Novo Sancti Petri, des terrains de golf et une vie nocturne animée en été.",
+    "townBarbate": "Barbate est le berceau de l'almadraba, la plus ancienne technique de pêche au thon rouge d'Europe. Juste à côté du parc naturel de La Breña y Marismas, elle cache des criques comme Zahora ou Caños de Meca, avec des falaises et des pinèdes qui descendent jusqu'à l'eau.",
+    "townVejer": "Vejer de la Frontera est l'un des plus beaux villages blancs de Cadix, perché sur une colline avec vue sur l'Atlantique. Sa plage, El Palmar, est un haut lieu du surf et des couchers de soleil, avec ses chiringuitos et sa vie nocturne estivale.",
+    "townZahara": "Zahara de los Atunes s'est développé autour de la pêche au thon, et cela se voit encore : c'est l'un des meilleurs endroits de la côte pour le déguster. Des plages larges et moins fréquentées qu'ailleurs, avec des dunes et un village calme en dehors du mois d'août."
   }
 }

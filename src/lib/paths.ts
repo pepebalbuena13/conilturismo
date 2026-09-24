@@ -24,6 +24,13 @@ export const PROMOTE_SEGMENT: Record<Locale, string> = {
   fr: "promouvoir-votre-entreprise",
 };
 
+export const GUIDE_SEGMENT: Record<Locale, string> = {
+  es: "que-hacer-en-la-costa-de-la-luz",
+  en: "things-to-do-costa-de-la-luz",
+  de: "was-tun-costa-de-la-luz",
+  fr: "que-faire-costa-de-la-luz",
+};
+
 function buildPath(locale: Locale, ...segments: Array<string | undefined>): string {
   const parts = [LOCALE_PREFIX[locale], ...segments].filter((s): s is string => Boolean(s));
   return parts.length ? `/${parts.join("/")}/` : "/";
@@ -49,6 +56,10 @@ export function promotePath(locale: Locale): string {
   return buildPath(locale, PROMOTE_SEGMENT[locale]);
 }
 
+export function guidePath(locale: Locale): string {
+  return buildPath(locale, GUIDE_SEGMENT[locale]);
+}
+
 function allLocales<T>(build: (locale: Locale) => T): Record<Locale, T> {
   return Object.fromEntries(LOCALES.map((l) => [l, build(l)])) as Record<Locale, T>;
 }
@@ -67,6 +78,10 @@ export function localizedBusinessHrefs(slug: string): Record<Locale, string> {
 
 export function localizedPromoteHrefs(): Record<Locale, string> {
   return allLocales((l) => promotePath(l));
+}
+
+export function localizedGuideHrefs(): Record<Locale, string> {
+  return allLocales((l) => guidePath(l));
 }
 
 /** categoryId is the canonical category id (e.g. "restaurantes"), not a locale-specific slug. */

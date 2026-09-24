@@ -1,0 +1,17 @@
+---
+import GuideView from "../../../views/GuideView.astro";
+import type { Locale } from "../../../data/categories";
+import { GUIDE_SEGMENT } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.map((locale) => ({
+    params: { locale, guideSegment: GUIDE_SEGMENT[locale] },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<GuideView locale={locale} />

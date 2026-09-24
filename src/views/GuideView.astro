@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import { type Locale } from "../data/categories";
+import { TOWNS } from "../lib/business";
+import { t } from "../lib/i18n";
+import { searchPath, townPath, localizedGuideHrefs } from "../lib/paths";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const hrefs = localizedGuideHrefs();
+
+const TOWN_GUIDE_KEY: Record<string, string> = {
+  "conil-de-la-frontera": "townConil",
+  "chiclana-de-la-frontera": "townChiclana",
+  "barbate": "townBarbate",
+  "vejer-de-la-frontera": "townVejer",
+  "zahara-de-los-atunes": "townZahara",
+};
+
+const siteUrl = Astro.site ?? new URL("https://www.costadelaluzturismo.com");
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t(locale, "site.name"), item: siteUrl.toString() },
+      { "@type": "ListItem", position: 2, name: t(locale, "guide.title"), item: new URL(hrefs[locale], siteUrl).toString() },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t(locale, "guide.title"),
+    description: t(locale, "guide.metaDescription"),
+    inLanguage: locale,
+    url: new URL(hrefs[locale], siteUrl).toString(),
+    image: new URL("/images/home/cover.webp", siteUrl).toString(),
+  },
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={t(locale, "guide.title")}
+  description={t(locale, "guide.metaDescription")}
+  hrefs={hrefs}
+  jsonLd={jsonLd}
+  ogImage="/images/home/cover.webp"
+>
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-terracota">{t(locale, "guide.eyebrow")}</p>
+      <h1 class="mt-2 font-display text-4xl font-semibold text-atlantico sm:text-5xl text-balance">{t(locale, "guide.title")}</h1>
+      <p class="mt-5 text-lg leading-relaxed text-tinta/75">{t(locale, "guide.intro")}</p>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+      <div class="rounded-3xl bg-white/70 p-6 shadow-card ring-1 ring-tinta/5">
+        <h2 class="font-display text-xl font-semibold text-atlantico">{t(locale, "guide.whenTitle")}</h2>
+        <p class="mt-2 text-sm leading-relaxed text-tinta/75">{t(locale, "guide.whenText")}</p>
+      </div>
+      <div class="rounded-3xl bg-white/70 p-6 shadow-card ring-1 ring-tinta/5">
+        <h2 class="font-display text-xl font-semibold text-atlantico">{t(locale, "guide.gettingAroundTitle")}</h2>
+        <p class="mt-2 text-sm leading-relaxed text-tinta/75">{t(locale, "guide.gettingAroundText")}</p>
+      </div>
+    </div>
+
+    <section class="mt-14">
+      <h2 class="font-display text-2xl font-semibold text-atlantico">{t(locale, "guide.townsTitle")}</h2>
+      <div class="mt-6 space-y-5">
+        {TOWNS.map((town) => (
+          <div class="flex flex-col gap-3 rounded-3xl bg-white/70 p-6 shadow-card ring-1 ring-tinta/5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="font-display text-xl font-semibold text-tinta">{town.name}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-tinta/75">{t(locale, `guide.${TOWN_GUIDE_KEY[town.slug]}`)}</p>
+            </div>
+            <a
+              href={townPath(locale, town.slug)}
+              class="tap-target inline-flex shrink-0 items-center gap-1.5 self-start rounded-full border border-atlantico/20 px-4 py-2 text-sm font-medium text-atlantico transition-colors hover:bg-atlantico hover:text-arena-soft sm:self-center"
+            >
+              {t(locale, "guide.exploreTown", { town: town.name.split(" / ")[0] })}
+              <Icon name="chevron-right" class="h-4 w-4" />
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-14 rounded-3xl bg-atlantico px-6 py-10 text-center text-arena-soft sm:px-10">
+      <h2 class="font-display text-2xl font-semibold">{t(locale, "guide.ctaTitle")}</h2>
+      <p class="mx-auto mt-2 max-w-xl text-sm text-arena-soft/80">{t(locale, "guide.ctaText")}</p>
+      <a
+        href={searchPath(locale)}
+        class="tap-target mt-6 inline-flex items-center gap-2 rounded-full bg-terracota px-6 py-3 text-sm font-semibold text-arena-soft transition-colors hover:bg-terracota-light"
+      >
+        <Icon name="search" class="h-4 w-4" />
+        {t(locale, "guide.ctaButton")}
+      </a>
+    </section>
+  </div>
+</BaseLayout>

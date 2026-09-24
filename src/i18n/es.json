@@ -154,5 +154,25 @@
     "errorText": "No hemos podido enviar el formulario. Inténtalo de nuevo o escríbenos directamente.",
     "requiredHint": "* Campo obligatorio",
     "sizeError": "Las fotos superan los 10 MB en total. Quita alguna o reduce su tamaño."
+  },
+  "guide": {
+    "eyebrow": "Guía de la zona",
+    "title": "Qué hacer en la Costa de la Luz: guía de los 5 pueblos de Cádiz",
+    "metaDescription": "Guía completa de la Costa de la Luz gaditana: playas, pueblos blancos y atún de almadraba en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes.",
+    "intro": "La Costa de la Luz es el tramo atlántico de la provincia de Cádiz, entre el Parque Natural de La Breña y Marismas del Barbate y el Estrecho de Gibraltar. Playas de arena fina y dunas vírgenes, pueblos blancos encaramados en colinas, viento constante que atrae a surfistas de medio mundo y una tradición pesquera —la almadraba del atún rojo— que marca la gastronomía de toda la zona. Esta guía recorre los 5 pueblos que forman Costa de la Luz Turismo, para que organices tu visita.",
+    "whenTitle": "Cuándo ir",
+    "whenText": "La temporada de playa va de junio a septiembre, con julio y agosto como los meses de más ambiente (y más gente). Si buscas tranquilidad, playas casi vacías y buen tiempo para pasear por los cascos históricos, la primavera y el otoño son la mejor época: menos calor, precios más bajos y el viento de Levante y Poniente en su punto para el kitesurf y el windsurf.",
+    "gettingAroundTitle": "Cómo moverte entre los pueblos",
+    "gettingAroundText": "Los 5 pueblos están conectados por la carretera de la costa (A-2233 y N-340), a poca distancia entre sí: de Conil a Zahara de los Atunes hay unos 35 km. No hay tren, así que lo habitual es moverse en coche; en verano también funcionan líneas de autobús entre los principales núcleos. Dentro de cada pueblo, lo mejor es ir andando: los cascos antiguos de Vejer y Conil están pensados para pasear.",
+    "townsTitle": "Los 5 pueblos, uno a uno",
+    "exploreTown": "Ver todo en {town}",
+    "ctaTitle": "Encuentra tu próximo plan",
+    "ctaText": "Busca por pueblo, categoría o lo que te apetezca: alojamiento, restaurantes, bares, discotecas o actividades.",
+    "ctaButton": "Ir al buscador",
+    "townConil": "Conil de la Frontera combina un casco antiguo encalado con algunas de las playas más largas de la provincia, como La Fontanilla o Los Bateles. Es un buen punto de partida para el surf, con olas asequibles para principiantes, y para probar el atún rojo en temporada.",
+    "townChiclana": "Chiclana de la Frontera reúne la gran playa urbana de La Barrosa —varios kilómetros de arena fina— con una zona hotelera consolidada en Novo Sancti Petri, campos de golf y una animada vida nocturna en verano.",
+    "townBarbate": "Barbate es la cuna de la almadraba, la técnica de pesca del atún rojo más antigua de Europa. Junto al Parque Natural de La Breña y Marismas, esconde calas como Zahora o Caños de Meca, con acantilados y pinares hasta el mismo borde del agua.",
+    "townVejer": "Vejer de la Frontera es uno de los pueblos blancos más bonitos de Cádiz, en lo alto de una colina con vistas al Atlántico. Su playa, El Palmar, es meca del surf y de las puestas de sol, con chiringuitos y ambiente nocturno en verano.",
+    "townZahara": "Zahara de los Atunes creció alrededor de la pesca del atún y todavía se nota: es uno de los mejores sitios de la costa para comerlo. Playas amplias y menos masificadas que las de otros puntos, con dunas y un pueblo tranquilo fuera de agosto."
   }
 }

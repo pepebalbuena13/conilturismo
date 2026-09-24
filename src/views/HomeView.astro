@@ -7,7 +7,7 @@ import Icon from "../components/Icon.astro";
 import { CATEGORIES, type Locale } from "../data/categories";
 import { TOWNS, getFeaturedBusinesses } from "../lib/business";
 import { t } from "../lib/i18n";
-import { searchPath, localizedHomeHrefs } from "../lib/paths";
+import { searchPath, guidePath, localizedHomeHrefs } from "../lib/paths";
 
 interface Props {
   locale: Locale;
@@ -42,6 +42,7 @@ const jsonLd = {
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.townsTitle")}</h2>
       <p class="mt-3 text-tinta/70">{t(locale, "home.townsSubtitle")}</p>
+      <a href={guidePath(locale)} class="mt-3 inline-block text-sm font-medium text-terracota hover:text-terracota-light">{t(locale, "guide.title")} →</a>
     </div>
     <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
       {TOWNS.map((town) => (

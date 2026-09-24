@@ -154,5 +154,25 @@
     "errorText": "Das Formular konnte nicht gesendet werden. Versuchen Sie es erneut oder schreiben Sie uns direkt.",
     "requiredHint": "* Pflichtfeld",
     "sizeError": "Die Fotos ergeben zusammen mehr als 10 MB. Entfernen Sie eines oder verkleinern Sie die Dateigröße."
+  },
+  "guide": {
+    "eyebrow": "Regionalführer",
+    "title": "Was man an der Costa de la Luz unternehmen kann: Führer zu den 5 Orten in Cádiz",
+    "metaDescription": "Der komplette Guide zur Costa de la Luz in Cádiz: Strände, weiße Dörfer und Almadraba-Thunfisch in Conil, Chiclana, Barbate, Vejer und Zahara de los Atunes.",
+    "intro": "Die Costa de la Luz ist der Atlantikabschnitt der Provinz Cádiz, zwischen dem Naturpark La Breña y Marismas del Barbate und der Straße von Gibraltar. Feinsandige Strände und unberührte Dünen, weiße Dörfer auf Hügeln, beständiger Wind, der Surfer aus aller Welt anzieht, und eine Fischereitradition – die Almadraba-Thunfischfalle –, die die Küche der ganzen Region prägt. Dieser Guide stellt die 5 Orte von Costa de la Luz Turismo vor, damit du deinen Besuch planen kannst.",
+    "whenTitle": "Wann man hinfahren sollte",
+    "whenText": "Die Strandsaison geht von Juni bis September, wobei Juli und August die belebtesten (und lebendigsten) Monate sind. Wer Ruhe, fast leere Strände und gutes Wetter zum Bummeln durch die Altstädte sucht, ist im Frühling und Herbst am besten aufgehoben: weniger Hitze, niedrigere Preise und der Levante- und Ponientewind in Bestform für Kitesurfen und Windsurfen.",
+    "gettingAroundTitle": "Wie man zwischen den Orten unterwegs ist",
+    "gettingAroundText": "Alle 5 Orte sind durch die Küstenstraße (A-2233 und N-340) verbunden und liegen nah beieinander: von Conil nach Zahara de los Atunes sind es rund 35 km. Es gibt keinen Zug, daher ist das Auto das übliche Fortbewegungsmittel; im Sommer verkehren auch Busse zwischen den Hauptorten. Innerhalb der Orte lohnt es sich zu Fuß zu gehen – die Altstädte von Vejer und Conil sind wie gemacht zum Spazieren.",
+    "townsTitle": "Die 5 Orte im Einzelnen",
+    "exploreTown": "Alles in {town} ansehen",
+    "ctaTitle": "Finde deinen nächsten Plan",
+    "ctaText": "Suche nach Ort, Kategorie oder wonach dir gerade ist: Unterkünfte, Restaurants, Bars, Clubs oder Aktivitäten.",
+    "ctaButton": "Zur Suche",
+    "townConil": "Conil de la Frontera verbindet eine weiß getünchte Altstadt mit einigen der längsten Strände der Provinz, wie La Fontanilla oder Los Bateles. Ein guter Ausgangspunkt zum Surfen mit anfängerfreundlichen Wellen und um in der Saison roten Thunfisch zu probieren.",
+    "townChiclana": "Chiclana de la Frontera vereint den riesigen Stadtstrand La Barrosa – mehrere Kilometer feiner Sand – mit einem etablierten Hotelgebiet in Novo Sancti Petri, Golfplätzen und lebendigem Sommer-Nachtleben.",
+    "townBarbate": "Barbate ist die Wiege der Almadraba, der ältesten Thunfischfangtechnik Europas. Direkt neben dem Naturpark La Breña y Marismas verbergen sich Buchten wie Zahora oder Caños de Meca, mit Klippen und Pinienwäldern bis ans Wasser.",
+    "townVejer": "Vejer de la Frontera ist eines der schönsten weißen Dörfer Cádiz', hoch oben auf einem Hügel mit Blick auf den Atlantik. Sein Strand El Palmar ist ein Mekka für Surfer und Sonnenuntergänge, mit Strandbars und Sommer-Nachtleben.",
+    "townZahara": "Zahara de los Atunes ist rund um den Thunfischfang gewachsen, und das merkt man noch heute – hier isst man ihn an der ganzen Küste am besten. Breite, weniger überlaufene Strände als anderswo, mit Dünen und einem ruhigen Dorf außerhalb des Augusts."
   }
 }
