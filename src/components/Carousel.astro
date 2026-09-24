@@ -111,7 +111,7 @@ const total = slides.length;
     function goTo(index) {
       const wrapped = ((index % total) + total) % total;
       const slide = track.querySelector(`[data-slide-index="${wrapped}"]`);
-      slide?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      if (slide) track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
     }
 
     wrapper.querySelector("[data-carousel-prev]")?.addEventListener("click", () => goTo(current - 1));
