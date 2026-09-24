@@ -24,7 +24,7 @@ const OG_LOCALE: Record<Locale, string> = {
   fr: "fr_FR",
 };
 
-const siteUrl = Astro.site ?? new URL("https://costadelaluzturismo.com");
+const siteUrl = Astro.site ?? new URL("https://www.costadelaluzturismo.com");
 const canonicalUrl = new URL(hrefs[locale], siteUrl);
 const fullTitle = `${title} · ${t(locale, "site.name")}`;
 ---
