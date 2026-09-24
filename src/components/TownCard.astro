@@ -54,6 +54,8 @@ const photos = town.gallery.map((caption, i) => ({
 
 <script>
   const INTERVAL_MS = 4000;
+
+  document.addEventListener("astro:page-load", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   document.querySelectorAll("[data-fade-carousel]").forEach((card) => {
@@ -86,5 +88,6 @@ const photos = town.gallery.map((caption, i) => ({
       if (document.hidden) stop();
       else start();
     });
+  });
   });
 </script>

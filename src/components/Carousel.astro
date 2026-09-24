@@ -94,6 +94,7 @@ const total = slides.length;
 </div>
 
 <script define:vars={{ id, total, autoplay, autoplayInterval }}>
+  document.addEventListener("astro:page-load", () => {
   const wrapper = document.querySelector(`[data-carousel-wrapper="${id}"]`);
   if (wrapper) {
     const track = wrapper.querySelector(`#${id}-track`);
@@ -155,4 +156,5 @@ const total = slides.length;
       });
     }
   }
+  });
 </script>

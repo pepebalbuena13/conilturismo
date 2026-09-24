@@ -82,6 +82,7 @@ const suggestData = BUSINESSES.map((b) => {
 <script type="application/json" id="hero-suggest-data" set:html={JSON.stringify(suggestData)} />
 
 <script>
+  document.addEventListener("astro:page-load", () => {
   function normalize(str: string) {
     return str.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   }
@@ -145,5 +146,6 @@ const suggestData = BUSINESSES.map((b) => {
 
   input?.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeList();
+  });
   });
 </script>

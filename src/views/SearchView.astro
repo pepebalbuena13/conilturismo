@@ -104,8 +104,11 @@ const searchData = BUSINESSES.map((b) => {
     resultsCount: t(locale, "search.resultsCount"),
   },
 }}>
-  const data = JSON.parse(document.getElementById("search-data").textContent);
+  document.addEventListener("astro:page-load", () => {
+  const dataEl = document.getElementById("search-data");
   const form = document.getElementById("search-form");
+  if (!dataEl || !form) return;
+  const data = JSON.parse(dataEl.textContent);
   const qInput = document.getElementById("q");
   const townSelect = document.getElementById("town");
   const categorySelect = document.getElementById("category");
@@ -260,7 +263,7 @@ const searchData = BUSINESSES.map((b) => {
     if (town) params.set("town", town);
     if (category) params.set("cat", category);
     const newUrl = `${location.pathname}${params.toString() ? "?" + params.toString() : ""}`;
-    history.replaceState(null, "", newUrl);
+    history.replaceState(history.state, "", newUrl);
   }
 
   const initial = new URLSearchParams(location.search);
@@ -276,4 +279,5 @@ const searchData = BUSINESSES.map((b) => {
   });
 
   render();
+  });
 </script>

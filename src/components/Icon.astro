@@ -1,5 +1,5 @@
 ---
-export type IconName = "bed" | "fork" | "glass" | "music" | "compass" | "chevron-left" | "chevron-right" | "star" | "star-half" | "star-empty" | "map-pin" | "phone" | "globe" | "instagram" | "menu" | "close" | "search" | "clock" | "sun" | "check" | "waves";
+export type IconName = "bed" | "fork" | "glass" | "music" | "compass" | "chevron-left" | "chevron-right" | "star" | "star-half" | "star-empty" | "map-pin" | "phone" | "globe" | "instagram" | "menu" | "close" | "search" | "clock" | "sun" | "check" | "waves" | "brand";
 
 interface Props {
   name: IconName;
@@ -131,6 +131,14 @@ const { name, class: className = "", strokeWidth = 1.75 } = Astro.props;
       <path d="M2 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0" />
       <path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0" />
       <path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0" />
+    </>
+  )}
+  {name === "brand" && (
+    <>
+      <circle cx="12" cy="7.5" r="3.2" />
+      <path d="M12 2.3v1.4M12 11.3v1.4M6.3 7.5h1.4M16.3 7.5h1.4M7.9 3.9l1 1M15.1 10.1l1 1M7.9 11.1l1-1M15.1 4.9l1-1" />
+      <path d="M1.5 15.8c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0 3.6 1.8 5.4 0" />
+      <path d="M1.5 20.1c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0 3.6 1.8 5.4 0" />
     </>
   )}
 </svg>

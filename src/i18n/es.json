@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Costa de la Luz Guide",
+    "name": "Costa de la Luz Turismo",
     "description": "Directorio de alojamiento, restaurantes, bares, discotecas y actividades en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes."
   },
   "nav": {
@@ -91,7 +91,7 @@
     "towns": "Pueblos",
     "categories": "Categorías",
     "about": "Sobre el proyecto",
-    "aboutText": "Costa de la Luz Guide es un directorio independiente de turismo local. Los datos de este sitio son de ejemplo y están listos para sustituirse por negocios reales.",
+    "aboutText": "Costa de la Luz Turismo es un directorio independiente de turismo local. Los datos de este sitio son de ejemplo y están listos para sustituirse por negocios reales.",
     "rights": "Todos los derechos reservados."
   },
   "priceLabels": {
@@ -101,9 +101,9 @@
   },
   "promote": {
     "metaTitle": "Promociona tu negocio",
-    "metaDescription": "Aparece en Costa de la Luz Guide, la web que usan miles de turistas para elegir dónde alojarse, comer y salir en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes.",
+    "metaDescription": "Aparece en Costa de la Luz Turismo, la web que usan miles de turistas para elegir dónde alojarse, comer y salir en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes.",
     "eyebrow": "Para negocios locales",
-    "title": "Promociona tu negocio en Costa de la Luz Guide",
+    "title": "Promociona tu negocio en Costa de la Luz Turismo",
     "subtitle": "Consigue tu propia ficha —fotos, descripción, contacto y ubicación— en la web que usan los turistas para decidir dónde alojarse, comer y salir en los cinco pueblos de la Costa de la Luz.",
     "plansTitle": "Elige tu tipo de promoción",
     "plansSubtitle": "Dos formas de estar presente, según lo que necesite tu negocio.",

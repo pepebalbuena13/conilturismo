@@ -213,7 +213,9 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
     },
   }}
 >
+  document.addEventListener("astro:page-load", () => {
   const form = document.getElementById("promote-form");
+  if (!form) return;
   const successEl = document.getElementById("promote-success");
   const sizeErrorEl = document.getElementById("photo-size-error");
   const planAnnual = document.getElementById("plan-annual");
@@ -255,4 +257,5 @@ const formAction = `https://formsubmit.co/${PROMOTE_FORM_EMAIL}`;
     successEl?.classList.remove("hidden");
     successEl?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+  });
 </script>
