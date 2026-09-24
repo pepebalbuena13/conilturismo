@@ -16,6 +16,16 @@ interface Props {
 const { locale } = Astro.props;
 const featured = getFeaturedBusinesses(6);
 const hrefs = localizedHomeHrefs();
+
+const siteUrl = Astro.site ?? new URL("https://www.costadelaluzturismo.com");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: t(locale, "site.name"),
+  url: siteUrl.toString(),
+  description: t(locale, "site.description"),
+  inLanguage: locale,
+};
 ---
 
 <BaseLayout
@@ -23,6 +33,7 @@ const hrefs = localizedHomeHrefs();
   title={t(locale, "home.heroTitle")}
   description={t(locale, "site.description")}
   hrefs={hrefs}
+  jsonLd={jsonLd}
 >
   <Hero locale={locale} />
 

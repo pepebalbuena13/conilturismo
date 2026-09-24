@@ -1,4 +1,6 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Carousel from "../components/Carousel.astro";
 import RatingStars from "../components/RatingStars.astro";
@@ -30,6 +32,67 @@ const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
   label: business.name,
   alt: `${business.name} — ${t(locale, "business.gallery")} ${i + 1}`,
 }));
+
+const SCHEMA_TYPE_BY_CATEGORY: Record<string, string> = {
+  alojamiento: "LodgingBusiness",
+  restaurantes: "Restaurant",
+  bares: "BarOrPub",
+  discotecas: "NightClub",
+  actividades: "LocalBusiness",
+};
+
+const PHOTO_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
+const siteUrl = Astro.site ?? new URL("https://www.costadelaluzturismo.com");
+const businessUrl = new URL(hrefs[locale], siteUrl).toString();
+const photoUrls = Array.from({ length: business.photos }, (_, i) => `${business.townSlug}/${business.id}/${i + 1}`)
+  .map((relPath) => {
+    for (const ext of PHOTO_EXTENSIONS) {
+      if (fs.existsSync(path.join(process.cwd(), "public", "images", `${relPath}.${ext}`))) {
+        return new URL(`/images/${relPath}.${ext}`, siteUrl).toString();
+      }
+    }
+    return null;
+  })
+  .filter((url): url is string => url !== null);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": SCHEMA_TYPE_BY_CATEGORY[business.category] ?? "LocalBusiness",
+  name: business.name,
+  description: business.description[locale],
+  url: businessUrl,
+  telephone: business.phone,
+  priceRange: business.priceText ?? formatPrice(business.priceRange),
+  ...(photoUrls.length > 0 && { image: photoUrls }),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: business.address[locale],
+    addressLocality: town.name.split(" / ")[0],
+    addressRegion: "Cádiz",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.lat,
+    longitude: business.lng,
+  },
+  ...(business.reviewCount > 0 && {
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: business.rating,
+      reviewCount: business.reviewCount,
+    },
+  }),
+  ...(business.reviews.length > 0 && {
+    review: business.reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.date,
+      reviewRating: { "@type": "Rating", ratingValue: r.rating },
+      reviewBody: r.text[locale],
+    })),
+  }),
+};
 ---
 
 <BaseLayout
@@ -38,6 +101,7 @@ const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
   description={description}
   hrefs={hrefs}
   currentTownSlug={business.townSlug}
+  jsonLd={jsonLd}
 >
   <div class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
     <a href={townPath(locale, town.slug, category.slug[locale])} class="inline-flex items-center gap-1 text-sm font-medium text-atlantico/70 hover:text-atlantico">

@@ -13,9 +13,10 @@ interface Props {
   hrefs: Record<Locale, string>;
   currentTownSlug?: string;
   ogImage?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { locale, title, description, hrefs, currentTownSlug, ogImage } = Astro.props;
+const { locale, title, description, hrefs, currentTownSlug, ogImage, jsonLd } = Astro.props;
 
 const OG_LOCALE: Record<Locale, string> = {
   es: "es_ES",
@@ -50,6 +51,10 @@ const fullTitle = `${title} · ${t(locale, "site.name")}`;
     <meta property="og:locale" content={OG_LOCALE[locale]} />
     {ogImage && <meta property="og:image" content={new URL(ogImage, siteUrl)} />}
     <meta name="twitter:card" content="summary_large_image" />
+
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
 
     <ClientRouter />
   </head>
