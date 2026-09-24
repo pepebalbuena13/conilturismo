@@ -97,13 +97,20 @@ const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
             <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
               {t(locale, "business.priceRange")}
             </dt>
-            <dd class="mt-1 font-medium text-tinta">{formatPrice(business.priceRange)}</dd>
+            <dd class="mt-1 font-medium text-tinta">{business.priceText ?? formatPrice(business.priceRange)}</dd>
           </div>
           <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
             <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
               <Icon name="phone" class="h-4 w-4" /> {t(locale, "business.phone")}
             </dt>
-            <dd class="mt-1"><a href={`tel:${business.phone.replace(/\s+/g, "")}`} class="font-medium text-atlantico hover:text-terracota">{business.phone}</a></dd>
+            <dd class="mt-1">
+              <a
+                href={business.whatsapp ? `https://wa.me/${business.whatsapp}` : `tel:${business.phone.replace(/\s+/g, "")}`}
+                target={business.whatsapp ? "_blank" : undefined}
+                rel={business.whatsapp ? "noopener noreferrer" : undefined}
+                class="font-medium text-atlantico hover:text-terracota"
+              >{business.phone}</a>
+            </dd>
           </div>
           <div class="rounded-2xl bg-white/70 p-4 shadow-card ring-1 ring-tinta/5">
             <dt class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-tinta/50">
@@ -128,14 +135,14 @@ const gallerySlides = Array.from({ length: business.photos }).map((_, i) => ({
         <div class="mt-8">
           <h2 class="font-display text-xl font-semibold text-atlantico">{t(locale, "business.location")}</h2>
           <div class="mt-3">
-            <MapEmbed lat={business.lat} lng={business.lng} label={business.name} locale={locale} />
+            <MapEmbed lat={business.lat} lng={business.lng} label={business.name} locale={locale} mapsUrl={business.mapsUrl} />
           </div>
           <p class="mt-2 text-sm text-tinta/60">{business.address[locale]}</p>
         </div>
       </div>
 
       <div class="order-1 lg:order-2">
-        <Carousel id={`biz-${business.id}`} locale={locale} slides={gallerySlides} aspectClass="aspect-square sm:aspect-[4/5]" />
+        <Carousel id={`biz-${business.id}`} locale={locale} slides={gallerySlides} aspectClass="aspect-square sm:aspect-[4/5]" autoplay />
       </div>
     </div>
 

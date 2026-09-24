@@ -8,13 +8,14 @@ interface Props {
   label: string;
   locale: Locale;
   class?: string;
+  mapsUrl?: string;
 }
 
-const { lat, lng, label, locale, class: className = "" } = Astro.props;
+const { lat, lng, label, locale, class: className = "", mapsUrl } = Astro.props;
 const delta = 0.008;
 const bbox = `${lng - delta},${lat - delta},${lng + delta},${lat + delta}`;
 const embedSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`;
-const externalHref = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=16/${lat}/${lng}`;
+const externalHref = mapsUrl ?? `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=16/${lat}/${lng}`;
 ---
 
 <div class={`overflow-hidden rounded-3xl shadow-card ${className}`}>

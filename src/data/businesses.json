@@ -2717,23 +2717,25 @@
     "zone": { "es": "El Palmar (zona Vejer)", "en": "El Palmar (Vejer area)", "de": "El Palmar (Vejer area)", "fr": "El Palmar (Vejer area)" },
     "name": "Discoteca El Cortijo",
     "description": {
-      "es": "La discoteca más grande de la provincia de Cádiz, al aire libre en pleno El Palmar, a un paso de la playa. Cuenta con su propia zona de botellón y servicio de autobuses para llegar. Abre todos los días de la semana desde mediados de julio hasta finales de agosto.",
-      "en": "The biggest nightclub in the province of Cádiz, open-air right in El Palmar, steps from the beach. It has its own botellón (pre-drinks) area and a bus service to get there. Open every day of the week from mid-July through the end of August.",
-      "de": "Die größte Diskothek der Provinz Cádiz, im Freien mitten in El Palmar, nur einen Steinwurf vom Strand entfernt. Mit eigenem Botellón-Bereich (Vortrinken im Freien) und Busverbindung dorthin. Von Mitte Juli bis Ende August jeden Tag der Woche geöffnet.",
-      "fr": "La plus grande discothèque de la province de Cadix, en plein air à El Palmar, à deux pas de la plage. Elle dispose de sa propre zone de botellón (pré-soirée) et d'un service de bus pour s'y rendre. Ouverte tous les jours de la semaine de mi-juillet à fin août."
+      "es": "La discoteca más grande de la provincia de Cádiz, al aire libre en El Palmar, a un paso de la playa. Cuenta con su propia zona de botellón y servicio de autobuses para llegar.",
+      "en": "The biggest nightclub in the province of Cádiz, open-air in El Palmar, steps from the beach. It has its own botellón (pre-drinks) area and a bus service to get there.",
+      "de": "Die größte Diskothek der Provinz Cádiz, im Freien in El Palmar, nur einen Steinwurf vom Strand entfernt. Mit eigenem Botellón-Bereich (Vortrinken im Freien) und Busverbindung dorthin.",
+      "fr": "La plus grande discothèque de la province de Cadix, en plein air à El Palmar, à deux pas de la plage. Elle dispose de sa propre zone de botellón (pré-soirée) et d'un service de bus pour s'y rendre."
     },
     "priceRange": 2,
+    "priceText": "10–20 €",
     "rating": 4.5,
     "reviewCount": 0,
     "featured": true,
     "hours": {
-      "es": "Todos los días 23:00–06:00 (mediados de julio a agosto)",
-      "en": "Every day 11pm–6am (mid-July to August)",
-      "de": "Täglich 23:00–06:00 Uhr (Mitte Juli bis August)",
-      "fr": "Tous les jours 23h00–6h00 (mi-juillet à août)"
+      "es": "Todos los días en julio y agosto: L–V 00:00–06:00, S–D 00:00–07:00",
+      "en": "Every day in July and August: Mon–Fri 12am–6am, Sat–Sun 12am–7am",
+      "de": "Täglich im Juli und August: Mo–Fr 00:00–06:00 Uhr, Sa–So 00:00–07:00 Uhr",
+      "fr": "Tous les jours en juillet et août : lun–ven 00h00–6h00, sam–dim 00h00–7h00"
     },
     "phone": "+34 665 09 20 20",
-    "website": "https://www.facebook.com/p/El-Cortijo-100068268853898/",
+    "whatsapp": "34665092020",
+    "website": "https://elcortijoelpalmar.com/",
     "instagram": "",
     "address": {
       "es": "A-2233, km 246, El Palmar, Vejer de la Frontera",
@@ -2741,6 +2743,7 @@
       "de": "A-2233, km 246, El Palmar, Vejer de la Frontera",
       "fr": "A-2233, km 246, El Palmar, Vejer de la Frontera"
     },
+    "mapsUrl": "https://maps.app.goo.gl/ttDZskffqdubNBXq8y",
     "lat": 36.223,
     "lng": -6.121,
     "photos": 4,

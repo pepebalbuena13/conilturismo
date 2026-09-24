@@ -20,14 +20,20 @@ export interface Business {
   name: string;
   description: LocalizedText;
   priceRange: 1 | 2 | 3;
+  /** Optional explicit price text (e.g. "10–20 €") shown instead of the priceRange €/€€/€€€ badge. */
+  priceText?: string;
   rating: number;
   reviewCount: number;
   featured: boolean;
   hours: LocalizedText;
   phone: string;
+  /** Phone number in international format with no "+" or spaces (e.g. "34665092020"), used to link the phone number to WhatsApp instead of a phone dialer. */
+  whatsapp?: string;
   website: string;
   instagram: string;
   address: LocalizedText;
+  /** Full Google Maps URL, used for the "open in maps" link instead of one built from lat/lng. */
+  mapsUrl?: string;
   lat: number;
   lng: number;
   photos: number;
