@@ -1,4 +1,6 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Carousel from "../components/Carousel.astro";
 import CategoryChips from "../components/CategoryChips.astro";
@@ -7,7 +9,7 @@ import Icon from "../components/Icon.astro";
 import { getCategoryById, type Locale } from "../data/categories";
 import { getTown, filterBusinesses } from "../lib/business";
 import { t } from "../lib/i18n";
-import { homePath, localizedTownHrefs } from "../lib/paths";
+import { homePath, townPath, localizedTownHrefs } from "../lib/paths";
 
 interface Props {
   locale: Locale;
@@ -36,6 +38,39 @@ const gallerySlides = town.gallery.map((caption, i) => ({
   alt: caption[locale],
   showInitials: false,
 }));
+
+const PHOTO_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
+const siteUrl = Astro.site ?? new URL("https://www.costadelaluzturismo.com");
+const townOgImage = (() => {
+  for (const ext of PHOTO_EXTENSIONS) {
+    if (fs.existsSync(path.join(process.cwd(), "public", "images", `${town.slug}/hero/1.${ext}`))) {
+      return `/images/${town.slug}/hero/1.${ext}`;
+    }
+  }
+  return "/images/home/cover.webp";
+})();
+
+const breadcrumbItems = [
+  { "@type": "ListItem", position: 1, name: t(locale, "site.name"), item: siteUrl.toString() },
+  { "@type": "ListItem", position: 2, name: town.name.split(" / ")[0], item: new URL(townPath(locale, townSlug), siteUrl).toString() },
+  ...(category ? [{ "@type": "ListItem", position: 3, name: category.label[locale], item: new URL(hrefs[locale], siteUrl).toString() }] : []),
+];
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: breadcrumbItems },
+  ...(!category
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "TouristDestination",
+          name: town.name,
+          description: town.welcome[locale],
+          url: new URL(hrefs[locale], siteUrl).toString(),
+          geo: { "@type": "GeoCoordinates", latitude: town.lat, longitude: town.lng },
+        },
+      ]
+    : []),
+];
 ---
 
 <BaseLayout
@@ -44,6 +79,8 @@ const gallerySlides = town.gallery.map((caption, i) => ({
   description={description}
   hrefs={hrefs}
   currentTownSlug={townSlug}
+  jsonLd={jsonLd}
+  ogImage={townOgImage}
 >
   <div class="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
     <a href={homePath(locale)} class="inline-flex items-center gap-1 text-sm font-medium text-atlantico/70 hover:text-atlantico">
