@@ -2724,8 +2724,8 @@
     },
     "priceRange": 2,
     "priceText": "10–20 €",
-    "rating": 4.5,
-    "reviewCount": 0,
+    "rating": 3.4,
+    "reviewCount": 1496,
     "featured": true,
     "hours": {
       "es": "Todos los días en julio y agosto: L–V 00:00–06:00, S–D 00:00–07:00",
@@ -2746,6 +2746,62 @@
     "lat": 36.244941,
     "lng": -6.058022,
     "photos": 4,
-    "reviews": []
+    "reviews": [
+      {
+        "author": "Juan Luis Gil de Miguel",
+        "rating": 5,
+        "date": "2025-08-15",
+        "text": {
+          "es": "Fui por primera vez a la discoteca, me corté con un vaso, el trato fue impresionante. Los porteros y el personal de enfermería actuaron de inmediato y con muchísima amabilidad. Me llevaron a enfermería sin perder tiempo y me atendieron genial. Me sorprendió muy positivamente la organización y la atención.",
+          "en": "I went to the club for the first time and cut myself on a glass — the way they treated me was impressive. The doormen and the first-aid staff acted immediately and were extremely kind. They took me to the first-aid station right away and took great care of me. The organisation and attention really surprised me, in a good way.",
+          "de": "Ich war zum ersten Mal in der Diskothek und habe mich an einem Glas geschnitten — die Behandlung war beeindruckend. Die Türsteher und das Sanitätspersonal reagierten sofort und mit sehr viel Freundlichkeit. Sie brachten mich ohne Zeitverlust zur Sanitätsstation und kümmerten sich hervorragend um mich. Die Organisation und die Betreuung haben mich sehr positiv überrascht.",
+          "fr": "J'y suis allé pour la première fois et je me suis coupé avec un verre — l'accueil a été impressionnant. Les videurs et le personnel infirmier sont intervenus immédiatement et avec beaucoup de gentillesse. Ils m'ont emmené sans perdre de temps au poste de secours et se sont très bien occupés de moi. L'organisation et l'attention m'ont agréablement surpris."
+        }
+      },
+      {
+        "author": "JMS",
+        "rating": 5,
+        "date": "2025-06-20",
+        "text": {
+          "es": "No venia desde hace 4 años y que buen cambio la verdad! Su botellón propio, con mesitas, los porteros sorprendentemente amables, camareros lo mismo, música de diez y sin problemas ni filtros raros en la entrada. Se puede ir fresquito con pantalón corto o camisa playera, no por fuerza con pantalón largo y camisa de marca, y las mujeres sin pegas con poca ropa. Bien bien la verdad. 15€ con copa.",
+          "en": "Hadn't been in 4 years and what a great change, honestly! They've got their own pre-party area with little tables, the doormen were surprisingly nice, same with the waiters, great music, and no weird issues or dress-code filtering at the door. You can go casual in shorts or a beach shirt, you don't have to wear long trousers and a branded shirt, and women aren't given any trouble no matter how little they're wearing. All in all, really good. 15€ with a drink.",
+          "de": "War seit 4 Jahren nicht mehr da, und was für eine positive Veränderung, wirklich! Eigener Vorglüh-Bereich mit kleinen Tischen, die Türsteher überraschend freundlich, die Kellner genauso, super Musik und keine merkwürdigen Probleme oder Filter am Eingang. Man kann leger in kurzer Hose oder Strandhemd kommen, muss nicht unbedingt lange Hose und Markenhemd tragen, und Frauen werden nicht schräg angeschaut, egal wie wenig sie anhaben. Alles in allem wirklich gut. 15€ mit Getränk.",
+          "fr": "Je n'y étais pas allé depuis 4 ans, et quel changement, vraiment ! Ils ont leur propre espace pré-soirée avec des petites tables, les videurs étonnamment sympas, les serveurs pareil, une super musique et aucun souci ni filtre bizarre à l'entrée. On peut venir décontracté en short ou chemise de plage, pas besoin de pantalon long et chemise de marque, et les femmes ne sont jamais embêtées peu importe leur tenue. Vraiment bien. 15€ avec une conso."
+        }
+      },
+      {
+        "author": "Ezequiel",
+        "rating": 4,
+        "date": "2025-11-02",
+        "text": {
+          "es": "El sitio es grande, la fiesta suele empezar tarde mientras esperas en un descampado bebiendo. No recomiendo nada pillar un reservado, están apartados de la pista.",
+          "en": "The place is big, things tend to get going late while you wait around drinking in a bit of a wasteland. I wouldn't recommend getting a reserved table — they're set apart from the dance floor.",
+          "de": "Der Ort ist groß, es geht meist spät los, während man wartend auf einem Brachgelände trinkt. Ich würde nicht empfehlen, einen reservierten Bereich zu nehmen — die liegen abseits der Tanzfläche.",
+          "fr": "L'endroit est grand, ça commence généralement tard pendant que tu attends en buvant sur un terrain vague. Je ne recommande pas de prendre une table réservée, elles sont à l'écart de la piste."
+        }
+      },
+      {
+        "author": "Marta Robledano",
+        "rating": 3,
+        "date": "2023-09-01",
+        "text": {
+          "es": "Única alternativa para continuar de fiesta después de que cierren los barecitos en El Palmar, por lo que no es de extrañar que pongan precio de entrada a 20 euros, con una consumición. La discoteca se llena enseguida, demasiado. La media de edad del público es muy joven. Música bien y el trato del personal bastante bueno.",
+          "en": "The only option to keep partying once the little bars in El Palmar close, so it's no surprise they charge 20 euros to get in, with one drink included. The club fills up fast — too fast. The crowd skews very young. Music is good and the staff treat you pretty well.",
+          "de": "Die einzige Möglichkeit, weiterzufeiern, nachdem die kleinen Bars in El Palmar geschlossen haben — kein Wunder also, dass der Eintritt 20 Euro kostet, inklusive eines Getränks. Die Diskothek füllt sich schnell, zu schnell. Das Publikum ist im Schnitt sehr jung. Die Musik ist gut und das Personal behandelt einen ziemlich gut.",
+          "fr": "La seule option pour continuer la fête une fois que les petits bars d'El Palmar ferment, ce qui explique le prix d'entrée à 20 euros, avec une consommation incluse. La discothèque se remplit très vite, trop vite. Le public est en moyenne très jeune. La musique est bonne et le personnel plutôt agréable."
+        }
+      },
+      {
+        "author": "Celia Gutiérrez García",
+        "rating": 5,
+        "date": "2026-09-10",
+        "text": {
+          "es": "Gran servicio de los porteros, hasta me pusieron una tirita. Lalo es la alegría de la huerta. El Placa, un crack.",
+          "en": "Great service from the doormen, they even patched me up with a plaster. Lalo is the life of the party. 'El Placa' is a legend.",
+          "de": "Toller Service von den Türstehern, sie haben mir sogar ein Pflaster spendiert. Lalo ist der Stimmungsmacher schlechthin. 'El Placa' ist einfach klasse.",
+          "fr": "Super service des videurs, ils m'ont même mis un pansement. Lalo est l'âme de la fête. 'El Placa' est un crack."
+        }
+      }
+    ]
   }
 ]
