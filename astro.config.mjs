@@ -8,8 +8,9 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: 'es',
-        locales: { es: 'es-ES', en: 'en-GB' },
+        locales: { es: 'es-ES', en: 'en-GB', de: 'de-DE', fr: 'fr-FR' },
       },
+      lastmod: new Date(),
     }),
   ],
   i18n: {
