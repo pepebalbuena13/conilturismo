@@ -8,4 +8,4 @@
  * 2. Submit the form once — FormSubmit sends that address a one-time
  *    confirmation email, and submissions won't arrive until it's clicked.
  */
-export const PROMOTE_FORM_EMAIL = "TU-EMAIL-AQUI@ejemplo.com";
+export const PROMOTE_FORM_EMAIL = "jose.balbuenalario@gmail.com";
