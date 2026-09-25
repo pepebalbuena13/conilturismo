@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Costa de la Luz Turismo",
-    "description": "Directory of accommodation, restaurants, bars, nightclubs and activities in Conil, Chiclana, Barbate, Vejer and Zahara de los Atunes."
+    "description": "Directory of accommodation, restaurants, bars, nightclubs, activities and other businesses in Conil, Chiclana, Barbate, Vejer and Zahara de los Atunes."
   },
   "nav": {
     "home": "Home",
@@ -91,7 +91,7 @@
     "towns": "Towns",
     "categories": "Categories",
     "about": "About this project",
-    "aboutText": "Costa de la Luz Turismo is an independent local tourism directory: accommodation, restaurants, bars, nightclubs and activities in Conil, Chiclana, Barbate, Vejer and Zahara de los Atunes.",
+    "aboutText": "Costa de la Luz Turismo is an independent local tourism directory: accommodation, restaurants, bars, nightclubs, activities and other businesses in Conil, Chiclana, Barbate, Vejer and Zahara de los Atunes.",
     "rights": "All rights reserved."
   },
   "priceLabels": {
@@ -167,7 +167,7 @@
     "townsTitle": "The 5 towns, one by one",
     "exploreTown": "See everything in {town}",
     "ctaTitle": "Find your next plan",
-    "ctaText": "Search by town, category or whatever you're after: accommodation, restaurants, bars, nightclubs or activities.",
+    "ctaText": "Search by town, category or whatever you're after: accommodation, restaurants, bars, nightclubs, activities or other businesses.",
     "ctaButton": "Go to search",
     "townConil": "Conil de la Frontera pairs a whitewashed old town with some of the province's longest beaches, like La Fontanilla or Los Bateles. It's a good base for surfing, with beginner-friendly waves, and for trying bluefin tuna in season.",
     "townChiclana": "Chiclana de la Frontera combines the huge urban beach of La Barrosa — several kilometres of fine sand — with an established hotel area in Novo Sancti Petri, golf courses, and a lively summer nightlife scene.",

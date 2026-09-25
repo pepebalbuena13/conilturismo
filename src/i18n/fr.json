@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Costa de la Luz Turismo",
-    "description": "Annuaire des hébergements, restaurants, bars, discothèques et activités à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes."
+    "description": "Annuaire des hébergements, restaurants, bars, discothèques, activités et autres commerces à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes."
   },
   "nav": {
     "home": "Accueil",
@@ -91,7 +91,7 @@
     "towns": "Villages",
     "categories": "Catégories",
     "about": "À propos de ce projet",
-    "aboutText": "Costa de la Luz Turismo est un annuaire touristique local indépendant : hébergement, restaurants, bars, discothèques et activités à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes.",
+    "aboutText": "Costa de la Luz Turismo est un annuaire touristique local indépendant : hébergement, restaurants, bars, discothèques, activités et autres commerces à Conil, Chiclana, Barbate, Vejer et Zahara de los Atunes.",
     "rights": "Tous droits réservés."
   },
   "priceLabels": {
@@ -167,7 +167,7 @@
     "townsTitle": "Les 5 villages, un par un",
     "exploreTown": "Tout voir à {town}",
     "ctaTitle": "Trouvez votre prochain plan",
-    "ctaText": "Cherchez par village, catégorie ou envie du moment : hébergement, restaurants, bars, discothèques ou activités.",
+    "ctaText": "Cherchez par village, catégorie ou envie du moment : hébergement, restaurants, bars, discothèques, activités ou autres commerces.",
     "ctaButton": "Aller à la recherche",
     "townConil": "Conil de la Frontera associe un vieux village blanchi à la chaux à certaines des plages les plus longues de la province, comme La Fontanilla ou Los Bateles. Un bon point de départ pour le surf, avec des vagues accessibles aux débutants, et pour goûter le thon rouge en saison.",
     "townChiclana": "Chiclana de la Frontera réunit l'immense plage urbaine de La Barrosa — plusieurs kilomètres de sable fin — avec une zone hôtelière bien établie à Novo Sancti Petri, des terrains de golf et une vie nocturne animée en été.",

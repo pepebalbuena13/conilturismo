@@ -1,5 +1,5 @@
 ---
-export type IconName = "bed" | "fork" | "glass" | "music" | "compass" | "chevron-left" | "chevron-right" | "star" | "star-half" | "star-empty" | "map-pin" | "phone" | "globe" | "instagram" | "menu" | "close" | "search" | "clock" | "sun" | "check" | "waves" | "brand";
+export type IconName = "bed" | "fork" | "glass" | "music" | "compass" | "store" | "chevron-left" | "chevron-right" | "star" | "star-half" | "star-empty" | "map-pin" | "phone" | "globe" | "instagram" | "menu" | "close" | "search" | "clock" | "sun" | "check" | "waves" | "brand";
 
 interface Props {
   name: IconName;
@@ -55,6 +55,14 @@ const { name, class: className = "", strokeWidth = 1.75 } = Astro.props;
     <>
       <circle cx="12" cy="12" r="9" />
       <path d="M15 9l-2 6-6 2 2-6 6-2Z" />
+    </>
+  )}
+  {name === "store" && (
+    <>
+      <path d="M4 9l1-5h14l1 5" />
+      <path d="M4 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
+      <path d="M5 9v11h14V9" />
+      <path d="M10 20v-5a2 2 0 0 1 4 0v5" />
     </>
   )}
   {name === "chevron-left" && <path d="M15 18l-6-6 6-6" />}

@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Costa de la Luz Turismo",
-    "description": "Directorio de alojamiento, restaurantes, bares, discotecas y actividades en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes."
+    "description": "Directorio de alojamiento, restaurantes, bares, discotecas, actividades y otros negocios en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes."
   },
   "nav": {
     "home": "Inicio",
@@ -91,7 +91,7 @@
     "towns": "Pueblos",
     "categories": "Categorías",
     "about": "Sobre el proyecto",
-    "aboutText": "Costa de la Luz Turismo es un directorio independiente de turismo local: alojamiento, restaurantes, bares, discotecas y actividades en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes.",
+    "aboutText": "Costa de la Luz Turismo es un directorio independiente de turismo local: alojamiento, restaurantes, bares, discotecas, actividades y otros negocios en Conil, Chiclana, Barbate, Vejer y Zahara de los Atunes.",
     "rights": "Todos los derechos reservados."
   },
   "priceLabels": {
@@ -167,7 +167,7 @@
     "townsTitle": "Los 5 pueblos, uno a uno",
     "exploreTown": "Ver todo en {town}",
     "ctaTitle": "Encuentra tu próximo plan",
-    "ctaText": "Busca por pueblo, categoría o lo que te apetezca: alojamiento, restaurantes, bares, discotecas o actividades.",
+    "ctaText": "Busca por pueblo, categoría o lo que te apetezca: alojamiento, restaurantes, bares, discotecas, actividades u otros negocios.",
     "ctaButton": "Ir al buscador",
     "townConil": "Conil de la Frontera combina un casco antiguo encalado con algunas de las playas más largas de la provincia, como La Fontanilla o Los Bateles. Es un buen punto de partida para el surf, con olas asequibles para principiantes, y para probar el atún rojo en temporada.",
     "townChiclana": "Chiclana de la Frontera reúne la gran playa urbana de La Barrosa —varios kilómetros de arena fina— con una zona hotelera consolidada en Novo Sancti Petri, campos de golf y una animada vida nocturna en verano.",

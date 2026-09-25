@@ -3,8 +3,8 @@ export type Locale = "es" | "en" | "de" | "fr";
 export const LOCALES: Locale[] = ["es", "en", "de", "fr"];
 
 export interface CategoryDef {
-  id: "alojamiento" | "restaurantes" | "bares" | "discotecas" | "actividades";
-  icon: "bed" | "fork" | "glass" | "music" | "compass";
+  id: "alojamiento" | "restaurantes" | "bares" | "discotecas" | "actividades" | "otros";
+  icon: "bed" | "fork" | "glass" | "music" | "compass" | "store";
   slug: Record<Locale, string>;
   label: Record<Locale, string>;
   labelSingular: Record<Locale, string>;
@@ -45,6 +45,13 @@ export const CATEGORIES: CategoryDef[] = [
     slug: { es: "actividades", en: "activities", de: "aktivitaeten", fr: "activites" },
     label: { es: "Actividades", en: "Activities", de: "Aktivitäten", fr: "Activités" },
     labelSingular: { es: "Actividad", en: "Activity", de: "Aktivität", fr: "Activité" },
+  },
+  {
+    id: "otros",
+    icon: "store",
+    slug: { es: "otros-negocios", en: "other-businesses", de: "weitere-unternehmen", fr: "autres-commerces" },
+    label: { es: "Otros negocios", en: "Other businesses", de: "Weitere Unternehmen", fr: "Autres commerces" },
+    labelSingular: { es: "Negocio", en: "Business", de: "Unternehmen", fr: "Commerce" },
   },
 ];
 

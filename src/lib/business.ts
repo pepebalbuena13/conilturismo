@@ -14,7 +14,7 @@ export interface Review {
 export interface Business {
   id: string;
   townSlug: string;
-  category: "alojamiento" | "restaurantes" | "bares" | "discotecas" | "actividades";
+  category: "alojamiento" | "restaurantes" | "bares" | "discotecas" | "actividades" | "otros";
   tags: string[];
   zone: LocalizedText;
   name: string;
