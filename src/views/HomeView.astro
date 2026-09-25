@@ -69,7 +69,7 @@ const jsonLd = {
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.categoriesTitle")}</h2>
     </div>
-    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
       {CATEGORIES.map((cat) => (
         <a
           href={`${searchPath(locale)}?cat=${cat.id}`}
