@@ -5,6 +5,7 @@ import { LOCALES, type Locale } from "../data/categories";
 import { t } from "../lib/i18n";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ADSENSE_CLIENT_ID } from "../lib/adsenseConfig";
 
 interface Props {
   locale: Locale;
@@ -54,6 +55,14 @@ const fullTitle = `${title} · ${t(locale, "site.name")}`;
 
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+
+    {ADSENSE_CLIENT_ID && (
+      <script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+        crossorigin="anonymous"
+      ></script>
     )}
 
     <ClientRouter />
