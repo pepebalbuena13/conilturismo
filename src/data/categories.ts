@@ -4,7 +4,7 @@ export const LOCALES: Locale[] = ["es", "en", "de", "fr"];
 
 export interface CategoryDef {
   id: "alojamiento" | "restaurantes" | "bares" | "discotecas" | "actividades" | "otros";
-  icon: "bed" | "fork" | "glass" | "music" | "compass" | "store";
+  icon: "bed" | "fork" | "glass" | "music" | "compass" | "store" | "surfer";
   slug: Record<Locale, string>;
   label: Record<Locale, string>;
   labelSingular: Record<Locale, string>;
@@ -41,7 +41,7 @@ export const CATEGORIES: CategoryDef[] = [
   },
   {
     id: "actividades",
-    icon: "compass",
+    icon: "surfer",
     slug: { es: "actividades", en: "activities", de: "aktivitaeten", fr: "activites" },
     label: { es: "Actividades", en: "Activities", de: "Aktivitäten", fr: "Activités" },
     labelSingular: { es: "Actividad", en: "Activity", de: "Aktivität", fr: "Activité" },
