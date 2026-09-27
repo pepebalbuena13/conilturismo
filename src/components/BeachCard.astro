@@ -1,6 +1,7 @@
 ---
 import type { Locale } from "../data/categories";
 import type { Beach } from "../lib/business";
+import { t } from "../lib/i18n";
 import Icon from "./Icon.astro";
 import SmartImage from "./SmartImage.astro";
 
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const { beach, locale } = Astro.props;
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${beach.lat},${beach.lng}`;
 ---
 
 <div class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
@@ -34,5 +36,14 @@ const { beach, locale } = Astro.props;
       {beach.name}
     </h3>
     <p class="text-sm leading-relaxed text-tinta/70">{beach.description[locale]}</p>
+    <a
+      href={mapsHref}
+      target="_blank"
+      rel="noopener"
+      class="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium text-atlantico hover:text-terracota"
+    >
+      <Icon name="map-pin" class="h-3.5 w-3.5" />
+      {t(locale, "business.viewOnMap")}
+    </a>
   </div>
 </div>

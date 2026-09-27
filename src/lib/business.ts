@@ -61,6 +61,8 @@ export interface Beach {
   vibe: LocalizedText;
   description: LocalizedText;
   photos: number;
+  lat: number;
+  lng: number;
 }
 
 export const BUSINESSES = businessesData as Business[];
