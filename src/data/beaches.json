@@ -16,8 +16,8 @@
       "fr": "La plage principale de Conil : large, au sable doré, juste à côté de la vieille ville. Promenade avec chiringuitos, eau calme et ambiance animée en été."
     },
     "photos": 2,
-    "lat": 36.2735,
-    "lng": -6.0967
+    "lat": 36.2725,
+    "lng": -6.0923
   },
   {
     "id": "fontanilla",
@@ -36,8 +36,8 @@
       "fr": "Le prolongement naturel de Bateles vers le nord, avec de meilleures vagues pour le surf et de basses falaises à son extrémité offrant les plus beaux couchers de soleil de Conil."
     },
     "photos": 2,
-    "lat": 36.2825,
-    "lng": -6.0875
+    "lat": 36.2819,
+    "lng": -6.1013
   },
   {
     "id": "cala-del-aceite",
@@ -56,8 +56,8 @@
       "fr": "Une petite crique rocheuse près du port de pêche, aux eaux claires et calmes, idéale pour le snorkeling. Plus tranquille et familiale que les plages principales."
     },
     "photos": 2,
-    "lat": 36.2895,
-    "lng": -6.0795
+    "lat": 36.2969,
+    "lng": -6.1325
   },
   {
     "id": "roche",
@@ -76,8 +76,8 @@
       "fr": "Au sud de Conil, un littoral où les pins descendent presque jusqu'au sable, avec plusieurs criques aux falaises basses, bien plus calme que le centre du village."
     },
     "photos": 2,
-    "lat": 36.243,
-    "lng": -6.132
+    "lat": 36.308,
+    "lng": -6.145
   },
   {
     "id": "barrosa",
@@ -96,8 +96,8 @@
       "fr": "L'une des plus longues plages de Cadix, près de 8 km de sable fin et de dunes. Hôtels et chiringuitos à une extrémité, tronçons plus sauvages à l'autre."
     },
     "photos": 2,
-    "lat": 36.385,
-    "lng": -6.183
+    "lat": 36.3467,
+    "lng": -6.1656
   },
   {
     "id": "barrosa-norte",
@@ -116,8 +116,8 @@
       "fr": "L'extrémité nord de la Barrosa, bordée de dunes et de pins, avec beaucoup moins d'hôtels. Le choix préféré pour plus d'espace et de tranquillité."
     },
     "photos": 2,
-    "lat": 36.405,
-    "lng": -6.172
+    "lat": 36.3686,
+    "lng": -6.1819
   },
   {
     "id": "sancti-petri",
@@ -130,14 +130,14 @@
       "fr": "Sauvage et venteuse"
     },
     "description": {
-      "es": "En el extremo sur, frente al islote del Castillo de Sancti Petri, entre marismas y dunas vírgenes. Zona con más viento, muy buscada para windsurf y kitesurf.",
-      "en": "At the southern tip, facing the Sancti Petri castle islet, between marshland and untouched dunes. Windier stretch, popular for windsurfing and kitesurfing.",
-      "de": "Am südlichen Ende, gegenüber der Festungsinsel Sancti Petri, zwischen Marschland und unberührten Dünen. Windigerer Abschnitt, beliebt bei Windsurfern und Kitesurfern.",
-      "fr": "À l'extrémité sud, face à l'îlot du château de Sancti Petri, entre marais et dunes intactes. Zone plus venteuse, prisée pour le windsurf et le kitesurf."
+      "es": "En el extremo norte, frente al islote del Castillo de Sancti Petri, entre marismas y dunas vírgenes. Zona con más viento, muy buscada para windsurf y kitesurf.",
+      "en": "At the northern tip, facing the Sancti Petri castle islet, between marshland and untouched dunes. Windier stretch, popular for windsurfing and kitesurfing.",
+      "de": "Am nördlichen Ende, gegenüber der Festungsinsel Sancti Petri, zwischen Marschland und unberührten Dünen. Windigerer Abschnitt, beliebt bei Windsurfern und Kitesurfern.",
+      "fr": "À l'extrémité nord, face à l'îlot du château de Sancti Petri, entre marais et dunes intactes. Zone plus venteuse, prisée pour le windsurf et le kitesurf."
     },
     "photos": 2,
-    "lat": 36.359,
-    "lng": -6.207
+    "lat": 36.3858,
+    "lng": -6.2038
   },
   {
     "id": "playa-de-barbate",
@@ -156,8 +156,8 @@
       "fr": "La plage du village, longue et au sable sombre, avec le port de pêche en toile de fond. Promenade avec terrasses et l'ambiance authentique de Barbate."
     },
     "photos": 2,
-    "lat": 36.189,
-    "lng": -5.925
+    "lat": 36.1948,
+    "lng": -5.9163
   },
   {
     "id": "canos-de-meca",
@@ -176,8 +176,8 @@
       "fr": "Falaises basses, pins jusqu'au bord de l'eau et une ambiance alternative et détendue. Près du phare de Trafalgar, avec certains des couchers de soleil les plus célèbres de la côte."
     },
     "photos": 2,
-    "lat": 36.166,
-    "lng": -6.034
+    "lat": 36.1863,
+    "lng": -6.0233
   },
   {
     "id": "zahora",
@@ -196,8 +196,8 @@
       "fr": "Large et quasiment vierge, avec des dunes et un vent presque constant. Elle prolonge la côte de Caños de Meca vers le sud, avec bien moins de monde toute l'année."
     },
     "photos": 2,
-    "lat": 36.182,
-    "lng": -6.042
+    "lat": 36.1949,
+    "lng": -6.0429
   },
   {
     "id": "el-palmar",
@@ -216,8 +216,8 @@
       "fr": "Une plage longue et rectiligne, mecque du surf de la Costa de la Luz, avec des chiringuitos les pieds dans le sable et une ambiance décontractée animée par de la musique live au coucher du soleil en été."
     },
     "photos": 2,
-    "lat": 36.1985,
-    "lng": -6.0435
+    "lat": 36.2245,
+    "lng": -6.0668
   },
   {
     "id": "castilnovo",
@@ -236,8 +236,8 @@
       "fr": "À l'extrémité sud d'El Palmar, en direction de Conil, une crique plus petite et rocheuse près d'une ancienne tour de guet, bien moins fréquentée que la plage principale."
     },
     "photos": 2,
-    "lat": 36.22,
-    "lng": -6.101
+    "lat": 36.2564,
+    "lng": -6.0846
   },
   {
     "id": "zahara",
@@ -256,8 +256,8 @@
       "fr": "La plage du village : longue, large, au sable fin bordé de dunes. Eau calme, idéale en famille, avec des chiringuitos face à la Sierra de la Plata."
     },
     "photos": 2,
-    "lat": 36.136,
-    "lng": -5.843
+    "lat": 36.1539,
+    "lng": -5.8743
   },
   {
     "id": "los-alemanes",
@@ -270,14 +270,14 @@
       "fr": "La plus photographiée"
     },
     "description": {
-      "es": "Una de las calas más fotografiadas de toda la Costa de la Luz: agua turquesa entre acantilados bajos y arena blanca, camino de Caños de Meca. Merece la caminata.",
-      "en": "One of the most photographed coves on the whole Costa de la Luz: turquoise water between low cliffs and white sand, on the way to Caños de Meca. Worth the walk in.",
-      "de": "Eine der meistfotografierten Buchten der gesamten Costa de la Luz: türkisfarbenes Wasser zwischen niedrigen Klippen und weißem Sand, auf dem Weg nach Caños de Meca. Der Fußweg lohnt sich.",
-      "fr": "L'une des criques les plus photographiées de toute la Costa de la Luz : eau turquoise entre falaises basses et sable blanc, en direction de Caños de Meca. La marche en vaut la peine."
+      "es": "Una de las calas más fotografiadas de toda la Costa de la Luz: agua turquesa entre acantilados bajos y arena blanca, cruzando Atlanterra, camino del Faro de Camarinal. Merece la caminata.",
+      "en": "One of the most photographed coves on the whole Costa de la Luz: turquoise water between low cliffs and white sand, past Atlanterra, on the way to the Camarinal lighthouse. Worth the walk in.",
+      "de": "Eine der meistfotografierten Buchten der gesamten Costa de la Luz: türkisfarbenes Wasser zwischen niedrigen Klippen und weißem Sand, hinter Atlanterra, auf dem Weg zum Leuchtturm von Camarinal. Der Fußweg lohnt sich.",
+      "fr": "L'une des criques les plus photographiées de toute la Costa de la Luz : eau turquoise entre falaises basses et sable blanc, après Atlanterra, en direction du phare de Camarinal. La marche en vaut la peine."
     },
     "photos": 2,
-    "lat": 36.155,
-    "lng": -5.991
+    "lat": 36.0959,
+    "lng": -5.8152
   },
   {
     "id": "atlanterra",
@@ -296,7 +296,7 @@
       "fr": "Au sud de Zahara, vers Bolonia, un long tronçon de hautes dunes et de resorts discrets. Très calme hors haute saison, avec vue sur l'Afrique par temps clair."
     },
     "photos": 2,
-    "lat": 36.105,
-    "lng": -5.825
+    "lat": 36.1159,
+    "lng": -5.8274
   }
 ]
