@@ -72,6 +72,23 @@ export function getCategoryById(id: string): CategoryDef | undefined {
   return CATEGORIES.find((c) => c.id === id);
 }
 
+/**
+ * Beaches aren't businesses (different data shape, no category/rating/etc.), so they're
+ * kept out of `CATEGORIES` and `filterBusinesses`. This pseudo-category only exists so the
+ * "Playas y calas" chip can live in the same row and use the same /town/<slug>/ URL scheme.
+ */
+export const BEACH_CATEGORY = {
+  id: "playas" as const,
+  icon: "waves" as const,
+  slug: { es: "playas", en: "beaches", de: "straende", fr: "plages" } satisfies Record<Locale, string>,
+  label: {
+    es: "Playas y calas",
+    en: "Beaches & coves",
+    de: "Strände & Buchten",
+    fr: "Plages & criques",
+  } satisfies Record<Locale, string>,
+};
+
 export function getCategoryBySlug(slug: string, locale: Locale): CategoryDef | undefined {
   return CATEGORIES.find((c) => c.slug[locale] === slug);
 }

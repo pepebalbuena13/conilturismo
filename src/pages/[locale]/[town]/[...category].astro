@@ -1,6 +1,6 @@
 ---
 import TownView from "../../../views/TownView.astro";
-import { CATEGORIES, type Locale } from "../../../data/categories";
+import { CATEGORIES, BEACH_CATEGORY, type Locale } from "../../../data/categories";
 import { TOWNS } from "../../../lib/business";
 
 export function getStaticPaths() {
@@ -15,6 +15,10 @@ export function getStaticPaths() {
         params: { locale, town: town.slug, category: cat.slug[locale] },
         props: { locale, townSlug: town.slug, categoryId: cat.id },
       })),
+      {
+        params: { locale, town: town.slug, category: BEACH_CATEGORY.slug[locale] },
+        props: { locale, townSlug: town.slug, categoryId: BEACH_CATEGORY.id },
+      },
     ])
   );
 }

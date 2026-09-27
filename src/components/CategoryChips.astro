@@ -1,6 +1,6 @@
 ---
 import type { Locale } from "../data/categories";
-import { CATEGORIES } from "../data/categories";
+import { CATEGORIES, BEACH_CATEGORY } from "../data/categories";
 import { t } from "../lib/i18n";
 import { townPath } from "../lib/paths";
 import Icon from "./Icon.astro";
@@ -41,4 +41,18 @@ const { locale, townSlug, activeCategory } = Astro.props;
       {cat.label[locale]}
     </a>
   ))}
+
+  <a
+    href={townPath(locale, townSlug, BEACH_CATEGORY.slug[locale])}
+    role="tab"
+    aria-selected={activeCategory === BEACH_CATEGORY.id}
+    class={`tap-target flex flex-none items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-medium transition-colors ${
+      activeCategory === BEACH_CATEGORY.id
+        ? "border-atlantico bg-atlantico text-arena-soft"
+        : "border-tinta/15 bg-white/60 text-tinta/80 hover:border-atlantico hover:text-atlantico"
+    }`}
+  >
+    <Icon name={BEACH_CATEGORY.icon} class="h-4 w-4" />
+    {BEACH_CATEGORY.label[locale]}
+  </a>
 </div>

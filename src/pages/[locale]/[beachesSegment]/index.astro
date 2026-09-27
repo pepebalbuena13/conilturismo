@@ -1,0 +1,17 @@
+---
+import BeachesView from "../../../views/BeachesView.astro";
+import type { Locale } from "../../../data/categories";
+import { BEACHES_SEGMENT } from "../../../lib/paths";
+
+export function getStaticPaths() {
+  const locales: Locale[] = ["en", "de", "fr"];
+  return locales.map((locale) => ({
+    params: { locale, beachesSegment: BEACHES_SEGMENT[locale] },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<BeachesView locale={locale} />

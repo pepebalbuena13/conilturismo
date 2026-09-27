@@ -7,7 +7,7 @@ import CategoryChips from "../components/CategoryChips.astro";
 import BusinessGrid from "../components/BusinessGrid.astro";
 import BeachGrid from "../components/BeachGrid.astro";
 import Icon from "../components/Icon.astro";
-import { getCategoryById, type Locale } from "../data/categories";
+import { getCategoryById, BEACH_CATEGORY, type Locale } from "../data/categories";
 import { getTown, filterBusinesses, getBeachesByTown } from "../lib/business";
 import { t } from "../lib/i18n";
 import { homePath, townPath, localizedTownHrefs } from "../lib/paths";
@@ -20,14 +20,20 @@ interface Props {
 
 const { locale, townSlug, categoryId } = Astro.props;
 const town = getTown(townSlug)!;
-const category = categoryId ? getCategoryById(categoryId) : undefined;
-const businesses = filterBusinesses({ townSlug, category: categoryId, locale });
+const isBeachesView = categoryId === BEACH_CATEGORY.id;
+const category = !isBeachesView && categoryId ? getCategoryById(categoryId) : undefined;
+const businesses = isBeachesView ? [] : filterBusinesses({ townSlug, category: categoryId, locale });
 const beaches = getBeachesByTown(townSlug);
+const resultCount = isBeachesView ? beaches.length : businesses.length;
 
-const title = category
+const title = isBeachesView
+  ? `${BEACH_CATEGORY.label[locale]} — ${town.name.split(" / ")[0]}`
+  : category
   ? `${category.label[locale]} — ${town.name.split(" / ")[0]}`
   : `${town.name.split(" / ")[0]} — ${t(locale, "site.name")}`;
-const description = category
+const description = isBeachesView
+  ? `${BEACH_CATEGORY.label[locale]}: ${town.welcome[locale]}`
+  : category
   ? `${category.label[locale]}: ${town.welcome[locale]}`
   : town.welcome[locale];
 
@@ -55,12 +61,16 @@ const townOgImage = (() => {
 const breadcrumbItems = [
   { "@type": "ListItem", position: 1, name: t(locale, "site.name"), item: siteUrl.toString() },
   { "@type": "ListItem", position: 2, name: town.name.split(" / ")[0], item: new URL(townPath(locale, townSlug), siteUrl).toString() },
-  ...(category ? [{ "@type": "ListItem", position: 3, name: category.label[locale], item: new URL(hrefs[locale], siteUrl).toString() }] : []),
+  ...(category
+    ? [{ "@type": "ListItem", position: 3, name: category.label[locale], item: new URL(hrefs[locale], siteUrl).toString() }]
+    : isBeachesView
+    ? [{ "@type": "ListItem", position: 3, name: BEACH_CATEGORY.label[locale], item: new URL(hrefs[locale], siteUrl).toString() }]
+    : []),
 ];
 
 const jsonLd = [
   { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: breadcrumbItems },
-  ...(!category
+  ...(!category && !isBeachesView
     ? [
         {
           "@context": "https://schema.org",
@@ -105,7 +115,7 @@ const jsonLd = [
       />
     </div>
 
-    {beaches.length > 0 && !category && (
+    {beaches.length > 0 && !categoryId && (
       <section class="mt-14">
         <h2 class="font-display text-2xl font-semibold text-atlantico sm:text-3xl">{t(locale, "beaches.title")}</h2>
         <p class="mt-1 text-tinta/70">{t(locale, "beaches.subtitle")}</p>
@@ -120,11 +130,15 @@ const jsonLd = [
     </div>
 
     <div class="mt-6 flex items-center justify-between">
-      <p class="text-sm font-medium text-tinta/60">{t(locale, "town.resultsCount", { count: businesses.length })}</p>
+      <p class="text-sm font-medium text-tinta/60">{t(locale, "town.resultsCount", { count: resultCount })}</p>
     </div>
 
     <div class="mt-6 pb-20">
-      <BusinessGrid businesses={businesses} locale={locale} />
+      {isBeachesView ? (
+        <BeachGrid beaches={beaches} locale={locale} />
+      ) : (
+        <BusinessGrid businesses={businesses} locale={locale} />
+      )}
     </div>
   </div>
 </BaseLayout>

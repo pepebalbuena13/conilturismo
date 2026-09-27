@@ -1,4 +1,4 @@
-import { LOCALES, getCategoryById, type Locale } from "../data/categories";
+import { LOCALES, getCategoryById, BEACH_CATEGORY, type Locale } from "../data/categories";
 
 /** Empty for the default locale (no URL prefix), otherwise the locale code. */
 export const LOCALE_PREFIX: Record<Locale, string> = { es: "", en: "en", de: "de", fr: "fr" };
@@ -31,6 +31,8 @@ export const GUIDE_SEGMENT: Record<Locale, string> = {
   fr: "que-faire-costa-de-la-luz",
 };
 
+export const BEACHES_SEGMENT: Record<Locale, string> = BEACH_CATEGORY.slug;
+
 function buildPath(locale: Locale, ...segments: Array<string | undefined>): string {
   const parts = [LOCALE_PREFIX[locale], ...segments].filter((s): s is string => Boolean(s));
   return parts.length ? `/${parts.join("/")}/` : "/";
@@ -60,6 +62,10 @@ export function guidePath(locale: Locale): string {
   return buildPath(locale, GUIDE_SEGMENT[locale]);
 }
 
+export function beachesPath(locale: Locale): string {
+  return buildPath(locale, BEACHES_SEGMENT[locale]);
+}
+
 function allLocales<T>(build: (locale: Locale) => T): Record<Locale, T> {
   return Object.fromEntries(LOCALES.map((l) => [l, build(l)])) as Record<Locale, T>;
 }
@@ -84,8 +90,13 @@ export function localizedGuideHrefs(): Record<Locale, string> {
   return allLocales((l) => guidePath(l));
 }
 
-/** categoryId is the canonical category id (e.g. "restaurantes"), not a locale-specific slug. */
+export function localizedBeachesHrefs(): Record<Locale, string> {
+  return allLocales((l) => beachesPath(l));
+}
+
+/** categoryId is the canonical category id (e.g. "restaurantes" or "playas"), not a locale-specific slug. */
 export function localizedTownHrefs(townSlug: string, categoryId?: string): Record<Locale, string> {
-  const category = categoryId ? getCategoryById(categoryId) : undefined;
-  return allLocales((l) => townPath(l, townSlug, category?.slug[l]));
+  const categorySlug =
+    categoryId === BEACH_CATEGORY.id ? BEACH_CATEGORY.slug : categoryId ? getCategoryById(categoryId)?.slug : undefined;
+  return allLocales((l) => townPath(l, townSlug, categorySlug?.[l]));
 }

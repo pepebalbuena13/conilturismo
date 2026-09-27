@@ -4,10 +4,10 @@ import Hero from "../components/Hero.astro";
 import TownCard from "../components/TownCard.astro";
 import BusinessCard from "../components/BusinessCard.astro";
 import Icon from "../components/Icon.astro";
-import { CATEGORIES, type Locale } from "../data/categories";
+import { CATEGORIES, BEACH_CATEGORY, type Locale } from "../data/categories";
 import { TOWNS, getFeaturedBusinesses } from "../lib/business";
 import { t } from "../lib/i18n";
-import { searchPath, guidePath, localizedHomeHrefs } from "../lib/paths";
+import { searchPath, guidePath, beachesPath, localizedHomeHrefs } from "../lib/paths";
 
 interface Props {
   locale: Locale;
@@ -69,7 +69,7 @@ const jsonLd = {
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="font-display text-3xl font-semibold text-atlantico sm:text-4xl">{t(locale, "home.categoriesTitle")}</h2>
     </div>
-    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
+    <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
       {CATEGORIES.map((cat) => (
         <a
           href={`${searchPath(locale)}?cat=${cat.id}`}
@@ -81,6 +81,15 @@ const jsonLd = {
           <span class="font-display text-base font-semibold text-tinta">{cat.label[locale]}</span>
         </a>
       ))}
+      <a
+        href={beachesPath(locale)}
+        class="group flex flex-col items-center gap-3 rounded-2xl bg-white/70 px-4 py-8 text-center shadow-card ring-1 ring-tinta/5 transition-all hover:-translate-y-1 hover:shadow-lift"
+      >
+        <span class="flex h-12 w-12 items-center justify-center rounded-full bg-terracota/10 text-terracota transition-colors group-hover:bg-terracota group-hover:text-arena-soft">
+          <Icon name={BEACH_CATEGORY.icon} class="h-6 w-6" />
+        </span>
+        <span class="font-display text-base font-semibold text-tinta">{BEACH_CATEGORY.label[locale]}</span>
+      </a>
     </div>
   </section>
 </BaseLayout>

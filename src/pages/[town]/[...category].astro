@@ -1,6 +1,6 @@
 ---
 import TownView from "../../views/TownView.astro";
-import { CATEGORIES } from "../../data/categories";
+import { CATEGORIES, BEACH_CATEGORY } from "../../data/categories";
 import { TOWNS } from "../../lib/business";
 
 export function getStaticPaths() {
@@ -10,6 +10,10 @@ export function getStaticPaths() {
       params: { town: town.slug, category: cat.slug.es },
       props: { townSlug: town.slug, categoryId: cat.id },
     })),
+    {
+      params: { town: town.slug, category: BEACH_CATEGORY.slug.es },
+      props: { townSlug: town.slug, categoryId: BEACH_CATEGORY.id },
+    },
   ]);
 }
 
