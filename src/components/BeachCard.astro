@@ -1,9 +1,12 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import type { Locale } from "../data/categories";
 import type { Beach } from "../lib/business";
 import { t } from "../lib/i18n";
 import Icon from "./Icon.astro";
 import SmartImage from "./SmartImage.astro";
+import Carousel from "./Carousel.astro";
 
 interface Props {
   beach: Beach;
@@ -12,20 +15,45 @@ interface Props {
 
 const { beach, locale } = Astro.props;
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${beach.lat},${beach.lng}`;
+
+const PHOTO_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
+function photoExists(i: number): boolean {
+  return PHOTO_EXTENSIONS.some((ext) =>
+    fs.existsSync(path.join(process.cwd(), "public", "images", beach.townSlug, "playas", beach.id, `${i}.${ext}`))
+  );
+}
+let realPhotoCount = 0;
+for (let i = 1; i <= beach.photos; i++) {
+  if (!photoExists(i)) break;
+  realPhotoCount = i;
+}
+
+const slides = Array.from({ length: realPhotoCount }, (_, i) => ({
+  relPath: `${beach.townSlug}/playas/${beach.id}/${i + 1}`,
+  seed: `${beach.id}-${i}`,
+  label: beach.name,
+  alt: beach.name,
+}));
 ---
 
 <div class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-  <div class="relative aspect-[4/3] overflow-hidden">
-    <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
-      <SmartImage
-        relPath={`${beach.townSlug}/playas/${beach.id}/1`}
-        seed={beach.id}
-        label={beach.name}
-        alt={beach.name}
-        class="h-full w-full object-cover"
-      />
+  {realPhotoCount > 1 ? (
+    <div class="relative aspect-[4/3] overflow-hidden">
+      <Carousel id={`beach-${beach.id}`} locale={locale} slides={slides} aspectClass="aspect-[4/3]" roundedClass="" autoplay autoplayInterval={4000} />
     </div>
-  </div>
+  ) : (
+    <div class="relative aspect-[4/3] overflow-hidden">
+      <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
+        <SmartImage
+          relPath={`${beach.townSlug}/playas/${beach.id}/1`}
+          seed={beach.id}
+          label={beach.name}
+          alt={beach.name}
+          class="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+  )}
 
   <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
     <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-atlantico">
