@@ -1,0 +1,18 @@
+---
+import type { Locale } from "../data/categories";
+import type { Beach } from "../lib/business";
+import BeachCard from "./BeachCard.astro";
+
+interface Props {
+  beaches: Beach[];
+  locale: Locale;
+}
+
+const { beaches, locale } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {beaches.map((beach) => (
+    <BeachCard beach={beach} locale={locale} />
+  ))}
+</div>

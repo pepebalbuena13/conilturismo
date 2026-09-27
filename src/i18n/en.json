@@ -42,6 +42,10 @@
     "noResults": "No businesses matched those filters. Try another category.",
     "welcomeLabel": "Welcome"
   },
+  "beaches": {
+    "title": "Beaches & coves",
+    "subtitle": "Our pick of the best beaches and coves in the area."
+  },
   "business": {
     "featuredBadge": "Featured",
     "from": "From",

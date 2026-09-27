@@ -42,6 +42,10 @@
     "noResults": "Aucune adresse ne correspond à ces filtres. Essayez une autre catégorie.",
     "welcomeLabel": "Bienvenue"
   },
+  "beaches": {
+    "title": "Plages & criques",
+    "subtitle": "Notre sélection des plus belles plages et criques de la région."
+  },
   "business": {
     "featuredBadge": "Sélection",
     "from": "À partir de",

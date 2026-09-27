@@ -1,0 +1,38 @@
+---
+import type { Locale } from "../data/categories";
+import type { Beach } from "../lib/business";
+import Icon from "./Icon.astro";
+import SmartImage from "./SmartImage.astro";
+
+interface Props {
+  beach: Beach;
+  locale: Locale;
+}
+
+const { beach, locale } = Astro.props;
+---
+
+<div class="group flex flex-col overflow-hidden rounded-3xl bg-white/70 shadow-card ring-1 ring-tinta/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+  <div class="relative aspect-[4/3] overflow-hidden">
+    <div class="h-full w-full transition-transform duration-500 ease-out group-hover:scale-110">
+      <SmartImage
+        relPath={`${beach.townSlug}/playas/${beach.id}/1`}
+        seed={beach.id}
+        label={beach.name}
+        alt={beach.name}
+        class="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+
+  <div class="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+    <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-atlantico">
+      <Icon name="waves" class="h-3.5 w-3.5" />
+      {beach.vibe[locale]}
+    </div>
+    <h3 class="font-display text-lg font-semibold leading-snug text-tinta text-balance">
+      {beach.name}
+    </h3>
+    <p class="text-sm leading-relaxed text-tinta/70">{beach.description[locale]}</p>
+  </div>
+</div>

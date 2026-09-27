@@ -42,6 +42,10 @@
     "noResults": "Mit diesen Filtern wurden keine Einträge gefunden. Versuche eine andere Kategorie.",
     "welcomeLabel": "Willkommen"
   },
+  "beaches": {
+    "title": "Strände & Buchten",
+    "subtitle": "Unsere Auswahl der schönsten Strände und Buchten der Gegend."
+  },
   "business": {
     "featuredBadge": "Empfohlen",
     "from": "Ab",

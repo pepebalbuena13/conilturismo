@@ -42,6 +42,10 @@
     "noResults": "No hemos encontrado negocios con esos filtros. Prueba con otra categoría.",
     "welcomeLabel": "Bienvenida"
   },
+  "beaches": {
+    "title": "Playas y calas",
+    "subtitle": "Nuestra selección de las mejores playas y calas de la zona."
+  },
   "business": {
     "featuredBadge": "Destacado",
     "from": "Desde",

@@ -1,0 +1,197 @@
+[
+  {
+    "id": "bateles",
+    "townSlug": "conil-de-la-frontera",
+    "name": "Playa de los Bateles",
+    "vibe": { "es": "Playa urbana", "en": "Town beach", "de": "Stadtstrand", "fr": "Plage urbaine" },
+    "description": {
+      "es": "La playa principal de Conil, ancha y de arena dorada, pegada al casco antiguo. Paseo marítimo con chiringuitos, aguas tranquilas y mucho ambiente en verano.",
+      "en": "Conil's main beach: wide, golden sand right next to the old town. A seafront promenade with beach bars, calm water and a lively summer atmosphere.",
+      "de": "Conils Hauptstrand: breiter, goldener Sand direkt neben der Altstadt. Strandpromenade mit Strandbars, ruhiges Wasser und im Sommer viel Trubel.",
+      "fr": "La plage principale de Conil : large, au sable doré, juste à côté de la vieille ville. Promenade avec chiringuitos, eau calme et ambiance animée en été."
+    },
+    "photos": 2
+  },
+  {
+    "id": "fontanilla",
+    "townSlug": "conil-de-la-frontera",
+    "name": "Playa de la Fontanilla",
+    "vibe": { "es": "Surf y atardeceres", "en": "Surf & sunsets", "de": "Surfen & Sonnenuntergänge", "fr": "Surf et couchers de soleil" },
+    "description": {
+      "es": "Continuación natural de los Bateles hacia el norte, con olas más generosas para el surf y unos acantilados bajos al final que regalan los mejores atardeceres de Conil.",
+      "en": "The natural extension of Bateles to the north, with better waves for surfing and low cliffs at the far end that offer Conil's best sunsets.",
+      "de": "Die natürliche Fortsetzung von Bateles nach Norden, mit besseren Wellen zum Surfen und niedrigen Klippen am Ende mit den schönsten Sonnenuntergängen von Conil.",
+      "fr": "Le prolongement naturel de Bateles vers le nord, avec de meilleures vagues pour le surf et de basses falaises à son extrémité offrant les plus beaux couchers de soleil de Conil."
+    },
+    "photos": 2
+  },
+  {
+    "id": "cala-del-aceite",
+    "townSlug": "conil-de-la-frontera",
+    "name": "Cala del Aceite",
+    "vibe": { "es": "Cala escondida", "en": "Hidden cove", "de": "Versteckte Bucht", "fr": "Crique cachée" },
+    "description": {
+      "es": "Pequeña cala rocosa junto al puerto pesquero, con aguas transparentes y tranquilas ideales para el snorkel. Mucho más recogida y familiar que las playas principales.",
+      "en": "A small rocky cove next to the fishing harbour, with clear, calm water perfect for snorkelling. Quieter and more family-friendly than the main beaches.",
+      "de": "Eine kleine felsige Bucht neben dem Fischerhafen mit klarem, ruhigem Wasser, ideal zum Schnorcheln. Ruhiger und familienfreundlicher als die Hauptstrände.",
+      "fr": "Une petite crique rocheuse près du port de pêche, aux eaux claires et calmes, idéale pour le snorkeling. Plus tranquille et familiale que les plages principales."
+    },
+    "photos": 2
+  },
+  {
+    "id": "roche",
+    "townSlug": "conil-de-la-frontera",
+    "name": "Playa de Roche",
+    "vibe": { "es": "Pinares y calas", "en": "Pines & coves", "de": "Pinien & Buchten", "fr": "Pins et criques" },
+    "description": {
+      "es": "Al sur de Conil, un tramo de costa con pinares que llegan casi hasta la arena y varias calas de acantilados bajos, mucho más tranquilo que el centro del pueblo.",
+      "en": "South of Conil, a stretch of coast where pine groves reach almost to the sand, with several low-cliff coves — far quieter than the village centre.",
+      "de": "Südlich von Conil ein Küstenabschnitt, an dem Pinienwälder fast bis zum Sand reichen, mit mehreren Buchten unter niedrigen Klippen — deutlich ruhiger als das Ortszentrum.",
+      "fr": "Au sud de Conil, un littoral où les pins descendent presque jusqu'au sable, avec plusieurs criques aux falaises basses, bien plus calme que le centre du village."
+    },
+    "photos": 2
+  },
+  {
+    "id": "barrosa",
+    "townSlug": "chiclana-de-la-frontera",
+    "name": "Playa de la Barrosa",
+    "vibe": { "es": "Playa infinita", "en": "Endless beach", "de": "Endloser Strand", "fr": "Plage infinie" },
+    "description": {
+      "es": "Una de las playas más largas de Cádiz, con casi 8 km de arena fina y dunas. Zona hotelera y chiringuitos en un extremo, tramos vírgenes en el otro.",
+      "en": "One of Cádiz's longest beaches, almost 8 km of fine sand and dunes. Resorts and beach bars at one end, wilder stretches at the other.",
+      "de": "Einer der längsten Strände Cádiz', fast 8 km feiner Sand und Dünen. An einem Ende Hotels und Strandbars, am anderen wildere Abschnitte.",
+      "fr": "L'une des plus longues plages de Cadix, près de 8 km de sable fin et de dunes. Hôtels et chiringuitos à une extrémité, tronçons plus sauvages à l'autre."
+    },
+    "photos": 2
+  },
+  {
+    "id": "barrosa-norte",
+    "townSlug": "chiclana-de-la-frontera",
+    "name": "La Barrosa Norte",
+    "vibe": { "es": "Dunas y calma", "en": "Dunes & calm", "de": "Dünen & Ruhe", "fr": "Dunes et calme" },
+    "description": {
+      "es": "El extremo norte de la Barrosa, respaldado por dunas y pinares, con mucha menos densidad de hoteles. La opción favorita para quienes buscan más espacio y tranquilidad.",
+      "en": "The northern end of the Barrosa, backed by dunes and pine woods, with far fewer hotels. The favourite for anyone after more space and quiet.",
+      "de": "Das nördliche Ende der Barrosa, gesäumt von Dünen und Pinienwäldern, mit deutlich weniger Hotels. Die beliebte Wahl für mehr Platz und Ruhe.",
+      "fr": "L'extrémité nord de la Barrosa, bordée de dunes et de pins, avec beaucoup moins d'hôtels. Le choix préféré pour plus d'espace et de tranquillité."
+    },
+    "photos": 2
+  },
+  {
+    "id": "sancti-petri",
+    "townSlug": "chiclana-de-la-frontera",
+    "name": "Playa de Sancti Petri",
+    "vibe": { "es": "Salvaje y ventosa", "en": "Wild & windy", "de": "Wild & windig", "fr": "Sauvage et venteuse" },
+    "description": {
+      "es": "En el extremo sur, frente al islote del Castillo de Sancti Petri, entre marismas y dunas vírgenes. Zona con más viento, muy buscada para windsurf y kitesurf.",
+      "en": "At the southern tip, facing the Sancti Petri castle islet, between marshland and untouched dunes. Windier stretch, popular for windsurfing and kitesurfing.",
+      "de": "Am südlichen Ende, gegenüber der Festungsinsel Sancti Petri, zwischen Marschland und unberührten Dünen. Windigerer Abschnitt, beliebt bei Windsurfern und Kitesurfern.",
+      "fr": "À l'extrémité sud, face à l'îlot du château de Sancti Petri, entre marais et dunes intactes. Zone plus venteuse, prisée pour le windsurf et le kitesurf."
+    },
+    "photos": 2
+  },
+  {
+    "id": "playa-de-barbate",
+    "townSlug": "barbate",
+    "name": "Playa de Barbate",
+    "vibe": { "es": "Ambiente marinero", "en": "Fishing-village feel", "de": "Fischerdorf-Flair", "fr": "Ambiance de pêcheurs" },
+    "description": {
+      "es": "La playa del pueblo, larga y de arena oscura, con el puerto pesquero como telón de fondo. Paseo marítimo con terrazas y el ambiente auténtico de Barbate.",
+      "en": "The village's own beach, long and dark-sanded, with the fishing harbour as a backdrop. A seafront promenade with terraces and Barbate's authentic character.",
+      "de": "Der Ortsstrand, lang und mit dunklem Sand, mit dem Fischereihafen im Hintergrund. Strandpromenade mit Terrassen und dem authentischen Charakter von Barbate.",
+      "fr": "La plage du village, longue et au sable sombre, avec le port de pêche en toile de fond. Promenade avec terrasses et l'ambiance authentique de Barbate."
+    },
+    "photos": 2
+  },
+  {
+    "id": "canos-de-meca",
+    "townSlug": "barbate",
+    "name": "Playa de Caños de Meca",
+    "vibe": { "es": "Acantilados y bohemia", "en": "Cliffs & bohemian spirit", "de": "Klippen & Bohème", "fr": "Falaises et esprit bohème" },
+    "description": {
+      "es": "Acantilados bajos, pinares hasta el borde del agua y un ambiente alternativo y relajado. Junto al Faro de Trafalgar, con algunas de las puestas de sol más famosas de la costa.",
+      "en": "Low cliffs, pine trees down to the water's edge and a relaxed, alternative vibe. Next to the Trafalgar lighthouse, with some of the coast's most famous sunsets.",
+      "de": "Niedrige Klippen, Pinien bis ans Wasser und eine entspannte, alternative Atmosphäre. Direkt beim Leuchtturm von Trafalgar, mit einigen der berühmtesten Sonnenuntergänge der Küste.",
+      "fr": "Falaises basses, pins jusqu'au bord de l'eau et une ambiance alternative et détendue. Près du phare de Trafalgar, avec certains des couchers de soleil les plus célèbres de la côte."
+    },
+    "photos": 2
+  },
+  {
+    "id": "zahora",
+    "townSlug": "barbate",
+    "name": "Playa de Zahora",
+    "vibe": { "es": "Playa virgen", "en": "Wild beach", "de": "Unberührter Strand", "fr": "Plage sauvage" },
+    "description": {
+      "es": "Amplia y prácticamente virgen, con dunas y viento casi constante. Continúa la costa de Caños de Meca hacia el sur, con mucho menos gente en cualquier época del año.",
+      "en": "Wide and largely untouched, with dunes and near-constant wind. It continues the Caños de Meca coastline south, with far fewer people year-round.",
+      "de": "Breit und weitgehend unberührt, mit Dünen und fast ständigem Wind. Setzt die Küste von Caños de Meca nach Süden fort, das ganze Jahr über deutlich weniger besucht.",
+      "fr": "Large et quasiment vierge, avec des dunes et un vent presque constant. Elle prolonge la côte de Caños de Meca vers le sud, avec bien moins de monde toute l'année."
+    },
+    "photos": 2
+  },
+  {
+    "id": "el-palmar",
+    "townSlug": "vejer-de-la-frontera",
+    "name": "Playa de El Palmar",
+    "vibe": { "es": "Meca del surf", "en": "Surfers' mecca", "de": "Surf-Mekka", "fr": "Mecque du surf" },
+    "description": {
+      "es": "Playa larga y recta, meca del surf en la Costa de la Luz, con chiringuitos frente al mar y un ambiente relajado que se anima al atardecer con música en directo en verano.",
+      "en": "A long, straight beach and the Costa de la Luz's surfing mecca, with beach bars right on the sand and a laid-back vibe that livens up with live music at sunset in summer.",
+      "de": "Ein langer, gerader Strand und das Surf-Mekka der Costa de la Luz, mit Strandbars direkt am Sand und entspannter Stimmung, die im Sommer bei Sonnenuntergang mit Live-Musik auflebt.",
+      "fr": "Une plage longue et rectiligne, mecque du surf de la Costa de la Luz, avec des chiringuitos les pieds dans le sable et une ambiance décontractée animée par de la musique live au coucher du soleil en été."
+    },
+    "photos": 2
+  },
+  {
+    "id": "castilnovo",
+    "townSlug": "vejer-de-la-frontera",
+    "name": "Playa de Castilnovo",
+    "vibe": { "es": "Cala tranquila", "en": "Quiet cove", "de": "Ruhige Bucht", "fr": "Crique paisible" },
+    "description": {
+      "es": "En el extremo sur de El Palmar, camino de Conil, una cala más pequeña y rocosa junto a una antigua torre vigía, con muchísima menos gente que la playa principal.",
+      "en": "At the southern end of El Palmar, toward Conil, a smaller, rockier cove next to an old watchtower, with far fewer people than the main beach.",
+      "de": "Am südlichen Ende von El Palmar, Richtung Conil, eine kleinere, felsigere Bucht neben einem alten Wachturm, deutlich weniger besucht als der Hauptstrand.",
+      "fr": "À l'extrémité sud d'El Palmar, en direction de Conil, une crique plus petite et rocheuse près d'une ancienne tour de guet, bien moins fréquentée que la plage principale."
+    },
+    "photos": 2
+  },
+  {
+    "id": "zahara",
+    "townSlug": "zahara-de-los-atunes",
+    "name": "Playa de Zahara",
+    "vibe": { "es": "Familiar y amplia", "en": "Wide & family-friendly", "de": "Breit & familienfreundlich", "fr": "Large et familiale" },
+    "description": {
+      "es": "La playa del pueblo, larga, ancha y de arena fina, respaldada por dunas. Aguas tranquilas ideales para familias y chiringuitos con vistas a la Sierra de la Plata.",
+      "en": "The village beach: long, wide, fine sand backed by dunes. Calm water that's great for families, with beach bars looking out to the Sierra de la Plata.",
+      "de": "Der Ortsstrand: lang, breit, feiner Sand mit Dünen im Hintergrund. Ruhiges Wasser, ideal für Familien, mit Strandbars und Blick auf die Sierra de la Plata.",
+      "fr": "La plage du village : longue, large, au sable fin bordé de dunes. Eau calme, idéale en famille, avec des chiringuitos face à la Sierra de la Plata."
+    },
+    "photos": 2
+  },
+  {
+    "id": "los-alemanes",
+    "townSlug": "zahara-de-los-atunes",
+    "name": "Playa de los Alemanes",
+    "vibe": { "es": "La más fotografiada", "en": "Most photographed", "de": "Meistfotografiert", "fr": "La plus photographiée" },
+    "description": {
+      "es": "Una de las calas más fotografiadas de toda la Costa de la Luz: agua turquesa entre acantilados bajos y arena blanca, camino de Caños de Meca. Merece la caminata.",
+      "en": "One of the most photographed coves on the whole Costa de la Luz: turquoise water between low cliffs and white sand, on the way to Caños de Meca. Worth the walk in.",
+      "de": "Eine der meistfotografierten Buchten der gesamten Costa de la Luz: türkisfarbenes Wasser zwischen niedrigen Klippen und weißem Sand, auf dem Weg nach Caños de Meca. Der Fußweg lohnt sich.",
+      "fr": "L'une des criques les plus photographiées de toute la Costa de la Luz : eau turquoise entre falaises basses et sable blanc, en direction de Caños de Meca. La marche en vaut la peine."
+    },
+    "photos": 2
+  },
+  {
+    "id": "atlanterra",
+    "townSlug": "zahara-de-los-atunes",
+    "name": "Playa de Atlanterra",
+    "vibe": { "es": "Dunas y resorts", "en": "Dunes & resorts", "de": "Dünen & Resorts", "fr": "Dunes et resorts" },
+    "description": {
+      "es": "Al sur de Zahara, camino de Bolonia, un tramo largo de dunas altas y resorts discretos. Tramos muy tranquilos fuera de temporada alta, con vistas a África en los días claros.",
+      "en": "South of Zahara, toward Bolonia, a long stretch of tall dunes and discreet resorts. Very quiet outside peak season, with views of Africa on clear days.",
+      "de": "Südlich von Zahara, Richtung Bolonia, ein langer Abschnitt mit hohen Dünen und dezenten Resorts. Außerhalb der Hochsaison sehr ruhig, an klaren Tagen mit Blick auf Afrika.",
+      "fr": "Au sud de Zahara, vers Bolonia, un long tronçon de hautes dunes et de resorts discrets. Très calme hors haute saison, avec vue sur l'Afrique par temps clair."
+    },
+    "photos": 2
+  }
+]

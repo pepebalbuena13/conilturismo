@@ -1,5 +1,6 @@
 import businessesData from "../data/businesses.json";
 import townsData from "../data/towns.json";
+import beachesData from "../data/beaches.json";
 import { getCategoryById, type Locale } from "../data/categories";
 
 export type LocalizedText = Record<Locale, string>;
@@ -52,11 +53,26 @@ export interface Town {
   gallery: LocalizedText[];
 }
 
+export interface Beach {
+  id: string;
+  townSlug: string;
+  name: string;
+  /** Short badge shown on the card, e.g. "Playa virgen", "Cala escondida". */
+  vibe: LocalizedText;
+  description: LocalizedText;
+  photos: number;
+}
+
 export const BUSINESSES = businessesData as Business[];
 export const TOWNS = townsData as Town[];
+export const BEACHES = beachesData as Beach[];
 
 export function getTown(townSlug: string): Town | undefined {
   return TOWNS.find((town) => town.slug === townSlug);
+}
+
+export function getBeachesByTown(townSlug: string): Beach[] {
+  return BEACHES.filter((beach) => beach.townSlug === townSlug);
 }
 
 export function getBusinessesByTown(townSlug: string): Business[] {
